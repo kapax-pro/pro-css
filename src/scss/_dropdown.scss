@@ -1,0 +1,224 @@
+// The dropdown wrapper (`<div>`)
+.dropup,
+.dropend,
+.dropdown,
+.dropstart {
+    position: relative;
+}
+
+.dropdown-toggle {
+    white-space: nowrap;
+    // Generate the caret automatically
+    @include caret();
+}
+
+// The dropdown menu
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none; // none by default, but block on "open" of the menu
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0; // override default ul
+    font-size: 1rem;
+    color: $pro5;
+    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+    list-style: none;
+    background-color: $pro10;
+    background-clip: padding-box;
+    border: none;
+    border-radius: .25rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+    &[style] {
+        right: auto !important;
+    }
+    .dark-mode & {
+        background-color: $pro0;
+    }
+}
+
+// scss-docs-start responsive-breakpoints
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+        .dropdown-menu#{$infix}-left {
+            right: auto;
+            left: 0;
+        }
+
+        .dropdown-menu#{$infix}-right {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+// scss-docs-end responsive-breakpoints
+
+// Allow for dropdowns to go bottom up (aka, dropup-menu)
+// Just add .dropup after the standard .dropdown class and you're set.
+.dropup {
+    .dropdown-menu {
+        top: auto;
+        bottom: 100%;
+        margin-top: 0;
+        margin-bottom: .125rem;
+    }
+
+    .dropdown-toggle {
+        @include caret(up);
+    }
+}
+
+.dropright {
+    .dropdown-menu {
+        top: 0;
+        right: auto;
+        left: 100%;
+        margin-top: 0;
+        margin-left: .125rem;
+    }
+
+    .dropdown-toggle {
+        @include caret(right);
+        &::after {
+            vertical-align: 0;
+        }
+    }
+}
+
+.dropleft {
+    .dropdown-menu {
+        top: 0;
+        right: 100%;
+        left: auto;
+        margin-top: 0;
+        margin-right: .125rem;
+    }
+
+    .dropdown-toggle {
+        @include caret(left);
+        &::before {
+            vertical-align: 0;
+        }
+    }
+}
+
+// When enabled Popper.js, reset basic dropdown position
+// stylelint-disable-next-line no-duplicate-selectors
+.dropdown-menu {
+    &[x-placement^="top"],
+    &[x-placement^="right"],
+    &[x-placement^="bottom"],
+    &[x-placement^="left"] {
+        right: auto;
+        bottom: auto;
+    }
+}
+
+// Dividers (basically an `<hr>`) within the dropdown
+.dropdown-divider {
+    height: 0;
+    margin: .5rem 0;
+    overflow: hidden;
+    border-top: 1px solid $pro7;
+    .dark-mode & {
+        border-top: 1px solid $pro3;
+    }
+}
+
+// Links, buttons, and more within the dropdown menu
+//
+// `<button>`-specific styles are denoted with `// For <button>s`
+.dropdown-item {
+    display: block;
+    width: 100%; // For `<button>`s
+    padding: .25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: $pro4;
+    text-align: inherit; // For `<button>`s
+    text-decoration: none;
+    white-space: nowrap; // prevent links from randomly breaking onto new lines
+    background-color: transparent; // For `<button>`s
+    border: 0; // For `<button>`s
+
+    // Prevent dropdown overflow if there's no padding
+    // See https://github.com/twbs/bootstrap/pull/27703
+    // @if $dropdown-padding-y == 0 {
+    //     &:first-child {
+    //         // @include border-top-radius($dropdown-inner-border-radius);
+    //         // border-top-left-radius: ;
+    //     }
+
+    //     &:last-child {
+    //         // @include border-bottom-radius($dropdown-inner-border-radius);
+    //     }
+    // }
+
+    &:hover,
+    &:focus {
+        background-color: $pro9;
+        color: $pro4;
+        text-decoration: none;
+    }
+
+    &.active,
+    &:active {
+        color: $pro6;
+        text-decoration: none;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $pro6;
+        pointer-events: none;
+        background-color: transparent;
+    }
+
+    .dark-mode & {
+        &:hover,
+        &:focus {
+            background-color: $pro1;
+            color: $pro6;
+            text-decoration: none;
+        }
+        &.active,
+        &:active {
+            color: $pro4;
+            text-decoration: none;
+        }
+        &.disabled,
+        &:disabled {
+            color: $pro4;
+            pointer-events: none;
+            background-color: transparent;
+        }
+    }
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+// Dropdown section headers
+.dropdown-header {
+    display: block;
+    padding: .5rem 1rem;
+    margin-bottom: 0; // for use with heading elements
+    font-size: .875rem;
+    color: $pro4;
+    white-space: nowrap; // as with > li > a
+    .dark-mode & {
+        color: $pro6;
+    }
+}
+
+// Dropdown text
+.dropdown-item-text {
+    display: block;
+    padding: .5rem 1rem;
+    color: $pro5;
+}

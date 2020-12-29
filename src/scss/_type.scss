@@ -1,0 +1,48 @@
+.h1 {
+    @extend h1;
+}
+
+.h2 {
+    @extend h2;
+}
+
+.h3 {
+    @extend h3;
+}
+
+.h4 {
+    @extend h4;
+}
+
+.h5 {
+    @extend h5;
+}
+
+.h6 {
+    @extend h6;
+}
+
+.mark {
+    @extend mark;
+}
+
+.small {
+    @extend small;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    .list-item {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+    }
+}
+

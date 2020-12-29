@@ -1,0 +1,18 @@
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.figure {
+    display: inline-block;
+}
+
+.figure-img {
+    margin-bottom: .5rem;
+    line-height: 1;
+}
+
+.figure-caption {
+    font-size: .875rem;
+    color: $pro5;
+}

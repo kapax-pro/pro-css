@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap');
+
+$font-family-heading: 'Roboto', sans-serif;
+$font-family-base: 'Roboto', sans-serif;
+$font-family-mono: 'Roboto Mono', sans-serif;
+
+$pro0: #1f1f1f;
+$pro1: #252525;
+$pro2: #2c2c2c;
+$pro3: #323232; // Dividers, borders on dark background
+$pro4: #484848; // Headings on light background
+$pro5: #777777; // Text on all backgrounds
+$pro6: #b8b8b8; // Headings on dark background
+$pro7: #dcdcdc; // Dividers, borders on light background
+$pro8: #e5e5e5;
+$pro9: #eeeeee;
+$pro10: #f8f8f8;
+
+$pro11: #7b95af;
+$pro12: #b56169;
+$pro13: #bd816f;
+$pro14: #d4ba85;
+$pro15: #9ab187;
+$pro16: #a889a3;
+
+// $spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: .25rem,
+    2: .5rem,
+    3: .75rem,
+    4: 1rem,
+    5: 1.25rem,
+    6: 1.5rem,
+    7: 1.75rem,
+    8: 2rem,
+    9: 3rem,
+    10: 6rem,
+    11: 12rem,
+    12: 16rem
+);
+
+$negative-spacers: negativify-map($spacers);
+
+$grid-columns:                12;
+$grid-gutter-width:           1.5rem;
+$grid-row-columns:            6;
+
+$gutters: $spacers;
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+);
+
+$escaped-characters: (
+    ("<","%3c"),
+    (">","%3e"),
+    ("#","%23"),
+    ("(","%28"),
+    (")","%29"),
+);
+
+$aspect-ratios: (
+    "1x1": 100%,
+    "4x3": calc(3 / 4 * 100%),
+    "16x9": calc(9 / 16 * 100%),
+    "21x9": calc(9 / 21 * 100%)
+);

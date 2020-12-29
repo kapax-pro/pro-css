@@ -1,0 +1,95 @@
+.accordion-button {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: $pro5;
+    background-color: $pro8;
+    padding: .85rem 1.25rem;
+    overflow-anchor: none;
+    outline: 0;
+    border: none;
+    border-radius: 0;
+    transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out, border-radius 150ms ease;
+    &.collapsed {
+        border-bottom-width: 0;
+    }
+    &:not(.collapsed) {
+        &::after {
+            transform: rotate(180deg);
+        }
+    }
+    // Accordion icon
+    &::after {
+        flex-shrink: 0;
+        width: 1.25rem;
+        height: 1.25rem;
+        background-color: $pro5;
+        margin-left: auto;
+        content: "";
+        mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>"));
+        mask-repeat: no-repeat;
+        mask-size: 28px;
+        mask-position: center;
+        transition: transform 200ms ease-in-out;
+    }
+    &:hover {
+        background-color: $pro7;
+        color: $pro3;
+        z-index: 2;
+    }
+    &:focus {
+        z-index: 3;
+        outline: 0;
+    }
+    .dark-mode & {
+        background-color: $pro2;
+        &:hover {
+            background-color: $pro3;
+            color: $pro7;
+        }
+    }
+}
+
+.accordion-header {
+    margin-bottom: 0;
+}
+
+.accordion-item {
+    &:first-of-type {
+        .accordion-button {
+            border-top-left-radius: .25rem;
+            border-top-right-radius: .25rem;
+        }
+    }
+
+    &:last-of-type {
+        .accordion-button {
+            // Only set a border-radius on the last item if the accordion is collapsed
+            &.collapsed {
+                border-bottom-right-radius: .25rem;
+                border-bottom-left-radius: .25rem;
+            }
+        }
+
+        .accordion-collapse {
+            border-bottom-right-radius: .25rem;
+            border-bottom-left-radius: .25rem;
+        }
+    }
+}
+
+.accordion-collapse {
+    
+}
+
+.accordion-body {
+    background-color: $pro8;
+    padding: 1rem 1.25rem;
+    .dark-mode & {
+        background-color: $pro1;
+    }
+}
+  

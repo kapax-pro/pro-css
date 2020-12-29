@@ -1,0 +1,65 @@
+.table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-hover-color: #{$pro5};
+    --bs-table-hover-bg: #{$pro9};
+
+    width: 100%;
+    margin-bottom: 1rem;
+    color: $pro5;
+    vertical-align: top;
+    border-color: $pro7;
+
+    // Target th & td
+    // We need the child combinator to prevent styles leaking to nested tables which doesn't have a `.table` class.
+    // We use the universal selectors here to simplify the selector (else we would need 6 different selectors).
+    // Another advantage is that this generates less code and makes the selector less specific making it easier to override.
+    > :not(caption) > * > * {
+        padding: .5rem .5rem;
+        background-color: var(--bs-table-bg);
+        background-image: linear-gradient(var(--bs-table-accent-bg), var(--bs-table-accent-bg));
+        border-bottom-width: 1px;
+    }
+
+    > tbody {
+        vertical-align: inherit;
+    }
+
+    > thead {
+        vertical-align: bottom;
+        th {
+            color: $pro4;
+            border-bottom-width: 2px;
+        }
+    }
+    .dark-mode & {
+        --bs-table-hover-bg: #{$pro1};
+        border-color: $pro3;
+        > thead th {
+            color: $pro6;
+        }
+    }
+}
+
+.table-hover {
+    > tbody > tr:hover {
+        --bs-table-accent-bg: var(--bs-table-hover-bg);
+        color: var(--bs-table-hover-color);
+    }
+}
+
+// Responsive tables
+//
+// Generate series of `.table-responsive-*` classes for configuring the screen
+// size of where your table will overflow.
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @include media-breakpoint-down($breakpoint) {
+        .table-responsive#{$infix} {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+    }
+}

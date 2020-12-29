@@ -1,0 +1,40 @@
+.pagination {
+    display: flex;
+}
+
+.page-item {
+    position: relative;
+    display: block;
+    background-color: $pro7;
+    color: $pro5;
+    text-decoration: none;
+    padding: .75rem 1.25rem;
+    border-radius: .25rem;
+    transition: background-color 300ms, color 300ms;
+    &:hover {
+        background-color: $pro6;
+        color: $pro4;
+        text-decoration: none;
+    }
+    .dark-mode & {
+        background-color: $pro3;
+        color: $pro7;
+        &:hover {
+            background-color: $pro4;
+            color: $pro8;
+        }
+    }
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+    &.active {
+        background-color: $pro6;
+        .dark-mode & {
+            background-color: $pro4;
+        }
+    }
+    &.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}

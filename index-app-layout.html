@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#171717">
+        <meta name="msapplication-navbutton-color" content="#171717">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#171717">
+
+        <title>Pro UI App Layout</title>
+
+        <link rel="icon" href="https://storage.googleapis.com/kapax-prod/images/logos/kapax-icon.png">
+        <link href="dist/css/pro.css" rel="stylesheet">
+
+        <script src="dist/js/pro.sync.min.js"></script>
+        <script src="dist/js/pro.defer.min.js" defer></script>
+    </head>
+    <body>
+        <!-- NAV OVERLAY -->
+        <div class="nav-side-overlay" data-pro-toggle data-pro-targets=".nav-side,.nav-side-overlay"></div>
+        <!-- END NAV OVERLAY -->
+
+        <!-- NAV DASHBOARD -->
+        <div class="nav nav-side nav-dashboard">
+            <div class="d-flex justify-content-between align-items-center p-3">
+                <a href="#"><img class="img-fluid mh-5" src="https://storage.googleapis.com/kapax-prod/images/logos/kapax.webp"></a>
+                <button class="btn btn-close" data-pro-toggle data-pro-targets=".nav-side,.nav-side-overlay"></button>
+            </div>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link</a>
+            <button class="nav-link nav-dropdown" data-toggle="collapse" data-target="#navSideOption">Dropdown</button>
+            <div id="navSideOption" class="collapse">
+                <a class="nav-link" href="#">Nested option</a>
+                <a class="nav-link" href="#">Nested option</a>
+                <a class="nav-link" href="#">Nested option</a>
+            </div>
+            <hr>
+            <a class="btn btn-primary" href="#">Login</a>
+        </div>
+        <!-- END NAV DASHBOARD -->
+
+        <div class="ml-lg-12">
+
+            <!-- NAVBAR -->
+            <nav id="navbarTop" class="navbar is-at-top" data-pro-toggle data-pro-classes="is-at-top" data-pro-event="scroll" data-pro-targets="#navbarTop">
+                <div class="container">
+                    <div class="d-flex align-items-center">
+                        <div class="navbar-brand mr-5">
+                            <a href="#"><img src="https://storage.googleapis.com/kapax-prod/images/logos/kapax.webp"></a>
+                        </div>
+                        <div class="navbar-nav d-none d-lg-flex">
+                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link disabled" href="#">Disabled</a>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-theme-toggle mr-1" data-pro-toggle data-pro-classes="dark-mode" data-pro-targets="html" data-pro-local-storage="darkMode"></button>
+                        <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-pro-toggle data-pro-targets=".nav-side,.nav-side-overlay"></button>
+                        <a class="btn btn-primary d-none d-lg-inline-block" href="#">Log in</a>
+                    </div>
+                </div>
+            </nav>
+            <!-- END NAVBAR -->
+
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h1>Hello there</h1>
+                            <p>This is a call</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </body>
+</html>

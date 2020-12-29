@@ -1,0 +1,18 @@
+.fade {
+    transition: opacity 150ms linear;
+    &:not(.show) {
+        opacity: 0;
+    }
+}
+
+.collapse {
+    &:not(.show) {
+        display: none;
+    }
+}
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 350ms ease;
+}

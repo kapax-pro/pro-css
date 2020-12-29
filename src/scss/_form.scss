@@ -1,0 +1,727 @@
+.form-control {
+    display: block;
+    width: 100%;
+    min-height: 3rem;
+    padding: .375rem .75rem;
+    color: $pro5;
+    background-color: $pro8;
+    background-clip: padding-box;
+    border: none;
+    border-radius: .25rem;
+    appearance: none;
+    transition: background-color 300ms, color 300ms;
+    &:focus {
+        background-color: darken($pro8, 1%);
+        outline: 0;
+    }
+    &::placeholder {
+        color: $pro6;
+        opacity: 1;
+    }
+    &:disabled,
+    &[readonly] {
+        background-color: lighten($pro8, 4%);
+        opacity: 1;
+    }
+    &[type="file"] {
+        overflow: hidden;
+        &:not(:disabled):not([readonly]) {
+            cursor: pointer;
+        }
+    }
+    &::file-selector-button {
+        height: 3rem;
+        padding: .375rem .75rem;
+        margin: (-.375rem) (-.75rem);
+        margin-inline-end: .75rem;
+        color: $pro5;
+        background-color: $pro7;
+        pointer-events: none;
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+        border-radius: 0;
+        transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+    }
+    &:hover:not(:disabled):not([readonly])::file-selector-button {
+        background-color: darken($pro7, 5%);
+    }
+    &::-webkit-file-upload-button {
+        height: 3rem;
+        padding: .375rem .75rem;
+        margin: (-.375rem) (-.75rem);
+        margin-inline-end: .75rem;
+        color: $pro5;
+        background-color: $pro7;
+        pointer-events: none;
+        border-color: inherit;
+        border-style: solid;
+        border-width: 0;
+        border-radius: 0;
+        transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+    }
+    &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+        background-color: darken($pro7, 5%);
+    }
+    .dark-mode & {
+        background-color: $pro2;
+        &:focus {
+            background-color: lighten($pro2, 1%);
+            outline: 0;
+        }
+        &::placeholder {
+            color: $pro4;
+            opacity: 1;
+        }
+        &:disabled,
+        &[readonly] {
+            background-color: darken($pro2, 3%);
+            opacity: 1;
+        }
+    }
+    .dark-mode &::file-selector-button {
+        background-color: $pro3;
+    }
+    .dark-mode &::-webkit-file-upload-button {
+        background-color: $pro3;
+    }
+    .dark-mode &:hover:not(:disabled):not([readonly])::file-selector-button {
+        background-color: lighten($pro3, 5%);
+    }
+    .dark-mode &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+        background-color: lighten($pro3, 5%);
+    }
+}
+
+textarea.form-control {
+    min-height: 3rem;
+}
+
+.form-control-color {
+    max-width: 3rem;
+    padding: .375rem;
+    &::-moz-color-swatch {
+        border-radius: .25rem;
+    }
+    &::-webkit-color-swatch {
+        border-radius: .25rem;
+    }
+}
+
+.form-text {
+    margin-top: .25rem;
+    font-size: .875rem;
+    color: $pro6;
+    .dark-mode & {
+        color: $pro4;
+    }
+}
+
+.form-label {
+    font-size: 1rem;
+}
+
+.col-form-label {
+    font-size: inherit;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    margin-bottom: 0;
+}
+
+.form-select {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: .5rem 1.75rem .5rem 1rem;
+    color: $pro5;
+    background-color: $pro8;
+    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path fill='#{$pro5}' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>"));
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 26px;
+    border: none;
+    border-radius: .25rem;
+    appearance: none;
+
+    &:focus {
+        outline: 0;
+        &::-ms-value {
+            color: $pro5;
+            background-color: $pro8;
+        }
+    }
+
+    &[multiple],
+    &[size]:not([size="1"]) {
+        height: auto;
+        padding-right: .75rem;
+        background-image: none;
+    }
+
+    &:disabled {
+        background-color: lighten($pro8, 4%);
+    }
+
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 $pro5;
+    }
+
+    .dark-mode & {
+        background-color: $pro2;
+        &:focus {
+            outline: 0;
+            &::-ms-value {
+                color: $pro5;
+                background-color: $pro2;
+            }
+        }
+        &:disabled {
+            background-color: darken($pro2, 2%);
+        }
+    }
+}
+
+.form-check,
+.form-radio {
+    display: block;
+    min-height: 1.5em;
+    padding-left: 1.75em;
+    margin-bottom: .125em;
+}
+
+.form-switch {
+    padding-left: 2.5em;
+}
+
+.form-check-label,
+.form-radio-label,
+.form-switch-label {
+    color: $pro5;
+    cursor: null;
+}
+
+.form-check-input {
+    float: left;
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: top;
+    background-color: $pro8;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: .25rem;
+    margin-left: -1.75em;
+    margin-top: .125em;
+    appearance: none;
+    color-adjust: exact;
+    transition: all 150ms;
+    &:active {
+        filter: brightness(90%);
+    }
+    &:focus {
+        background-color: darken($pro8, 2%);
+        outline: 0;
+    }
+    &:checked {
+        background-color: darken($pro8, 10%);
+        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'  viewBox='0 0 24 24'><path fill='#{$pro5}' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /></svg>"));
+        background-size: 16px;
+    }
+    &:disabled {
+        pointer-events: none;
+        filter: none;
+        opacity: .5;
+    }
+
+    &[disabled],
+    &:disabled {
+        ~ .form-check-label {
+            opacity: .5;
+        }
+    }
+
+    .dark-mode & {
+        background-color: $pro2;
+        &:focus {
+            background-color: lighten($pro2, 1%);
+            outline: 0;
+        }
+        &:checked {
+            background-color: lighten($pro2, 1%);
+        }
+    }
+}
+
+.form-radio-input {
+    @extend .form-check-input;
+    border-radius: 50%;
+    &:checked {
+        background-color: darken($pro8, 10%);
+        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$pro5}'/></svg>"));
+    }
+    &[disabled],
+    &:disabled {
+        ~ .form-radio-label {
+            opacity: .5;
+        }
+    }
+}
+
+.form-switch-input {
+    @extend .form-check-input;
+    width: 2em;
+    margin-left: -2.5em;
+    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$pro6}'/></svg>"));
+    background-position: left center;
+    border-radius: 2em;
+    &:checked {
+        background-color: darken($pro8, 10%);
+        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$pro5}'/></svg>"));
+        background-size: contain;
+        background-position: right center;
+    }
+    &[disabled],
+    &:disabled {
+        ~ .form__switch-label {
+            opacity: .5;
+        }
+    }
+    .dark-mode & {
+        background-color: $pro2;
+        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$pro4}'/></svg>"));
+        &:focus {
+            background-color: lighten($pro2, 1%);
+            outline: 0;
+        }
+        &:checked {
+            background-color: $pro4;
+            background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$pro5}'/></svg>"));
+        }
+    }
+}
+
+.form-check-inline,
+.form-radio-inline {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.form-range {
+    width: 100%;
+    height: 1.4rem;
+    padding: 0;
+    background-color: transparent;
+    appearance: none;
+
+    &:focus {
+        outline: none;
+
+        // Pseudo-elements must be split across multiple rulesets to have an effect.
+        // No box-shadow() mixin for focus accessibility.
+        &::-webkit-slider-thumb { box-shadow: 0 0 0 0 $pro10; }
+        &::-moz-range-thumb     { box-shadow: 0 0 0 0 $pro10; }
+        &::-ms-thumb            { box-shadow: 0 0 0 0 $pro10; }
+    }
+
+    &::-moz-focus-outer {
+        border: 0;
+    }
+
+    &::-webkit-slider-thumb {
+        width: 1rem;
+        height: 1rem;
+        margin-top: -.25rem; // Webkit specific
+        background-color: $pro6;
+        // border: $form-range-thumb-border;
+        border-radius: 1rem;
+        box-shadow: 0 0 0 1px $pro10;
+        transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        appearance: none;
+
+        &:active {
+            background-color: darken($pro6, 4%);
+        }
+    }
+
+    &::-webkit-slider-runnable-track {
+        width: 100%;
+        height: .5rem;
+        color: transparent; // Why?
+        cursor: pointer;
+        background-color: $pro8;
+        border-color: transparent;
+        border-radius: 1rem;
+        box-shadow: 0 0 0 0 $pro10;
+    }
+
+    &::-moz-range-thumb {
+        width: 1rem;
+        height: 1rem;
+        background-color: $pro6;
+        // border: $form-range-thumb-border;
+        border-radius: 1rem;
+        box-shadow: 0 0 0 1px $pro10;
+        transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        appearance: none;
+
+        &:active {
+            background-color: darken($pro6, 4%);
+        }
+    }
+
+    &::-moz-range-track {
+        width: 100%;
+        height: .5rem;
+        color: transparent; // Why?
+        cursor: pointer;
+        background-color: $pro8;
+        border-color: transparent;
+        border-radius: 1rem;
+        box-shadow: 0 0 0 0 $pro10;
+    }
+
+    &::-ms-thumb {
+        width: 1rem;
+        height: 1rem;
+        margin-top: 0; // Edge specific
+        margin-right: .2rem; // Workaround that overflowed box-shadow is hidden.
+        margin-left: .2rem;  // Workaround that overflowed box-shadow is hidden.
+        background-color: $pro6;
+        // border: $form-range-thumb-border;
+        border-radius: 1rem;
+        box-shadow: 0 0 0 1px $pro10;
+        transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        appearance: none;
+
+        &:active {
+            background-color: darken($pro6, 4%);
+        }
+    }
+
+    &::-ms-track {
+        width: 100%;
+        height: .5rem;
+        color: transparent; // Why?
+        cursor: pointer;
+        background-color: $pro8;
+        border-color: transparent;
+        border-radius: 1rem;
+        box-shadow: 0 0 0 0 $pro10;
+    }
+
+    &::-ms-fill-lower {
+        background-color: $pro8;
+        border-radius: 1rem;
+    }
+
+    &::-ms-fill-upper {
+        margin-right: 15px; // arbitrary?
+        background-color: $pro8;
+        border-radius: 1rem;
+    }
+
+    &:disabled {
+        pointer-events: none;
+
+        &::-webkit-slider-thumb {
+            background-color: lighten($pro8, 4%);
+        }
+        &::-webkit-slider-runnable-track {
+            background-color: lighten($pro8, 4%);
+        }
+
+        &::-moz-range-thumb {
+            background-color: lighten($pro8, 4%);
+        }
+        &::-moz-range-track {
+            background-color: lighten($pro8, 4%);
+        }
+
+        &::-ms-thumb {
+            background-color: lighten($pro8, 4%);
+        }
+        &::-ms-track {
+            background-color: lighten($pro8, 4%);
+        }
+        &::-ms-fill-lower {
+            background-color: lighten($pro8, 4%);
+        }
+        &::-ms-fill-upper {
+            background-color: lighten($pro8, 4%);
+        }
+    }
+
+    .dark-mode & {
+        &:focus {
+            outline: none;
+
+            // Pseudo-elements must be split across multiple rulesets to have an effect.
+            // No box-shadow() mixin for focus accessibility.
+            &::-webkit-slider-thumb { box-shadow: 0 0 0 0 $pro0; }
+            &::-moz-range-thumb     { box-shadow: 0 0 0 0 $pro0; }
+            &::-ms-thumb            { box-shadow: 0 0 0 0 $pro0; }
+        }
+
+        &::-moz-focus-outer {
+            border: 0;
+        }
+
+        &::-webkit-slider-thumb {
+            width: 1rem;
+            height: 1rem;
+            margin-top: -.25rem; // Webkit specific
+            background-color: $pro4;
+            // border: $form-range-thumb-border;
+            border-radius: 1rem;
+            box-shadow: 0 0 0 1px $pro0;
+            transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            appearance: none;
+
+            &:active {
+                background-color: lighten($pro4, 4%);
+            }
+        }
+
+        &::-webkit-slider-runnable-track {
+            width: 100%;
+            height: .5rem;
+            color: transparent; // Why?
+            cursor: pointer;
+            background-color: $pro2;
+            border-color: transparent;
+            border-radius: 1rem;
+            box-shadow: 0 0 0 0 $pro0;
+        }
+
+        &::-moz-range-thumb {
+            width: 1rem;
+            height: 1rem;
+            background-color: $pro4;
+            // border: $form-range-thumb-border;
+            border-radius: 1rem;
+            box-shadow: 0 0 0 1px $pro0;
+            transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            appearance: none;
+
+            &:active {
+                background-color: lighten($pro4, 4%);
+            }
+        }
+
+        &::-moz-range-track {
+            width: 100%;
+            height: .5rem;
+            color: transparent; // Why?
+            cursor: pointer;
+            background-color: $pro2;
+            border-color: transparent;
+            border-radius: 1rem;
+            box-shadow: 0 0 0 0 $pro0;
+        }
+
+        &::-ms-thumb {
+            width: 1rem;
+            height: 1rem;
+            margin-top: 0; // Edge specific
+            margin-right: .2rem; // Workaround that overflowed box-shadow is hidden.
+            margin-left: .2rem;  // Workaround that overflowed box-shadow is hidden.
+            background-color: $pro4;
+            // border: $form-range-thumb-border;
+            border-radius: 1rem;
+            box-shadow: 0 0 0 1px $pro0;
+            transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+            appearance: none;
+
+            &:active {
+                background-color: lighten($pro4, 4%);
+            }
+        }
+
+        &::-ms-track {
+            width: 100%;
+            height: .5rem;
+            color: transparent; // Why?
+            cursor: pointer;
+            background-color: $pro2;
+            border-color: transparent;
+            border-radius: 1rem;
+            box-shadow: 0 0 0 0 $pro0;
+        }
+
+        &::-ms-fill-lower {
+            background-color: $pro2;
+            border-radius: 1rem;
+        }
+
+        &::-ms-fill-upper {
+            margin-right: 15px; // arbitrary?
+            background-color: $pro2;
+            border-radius: 1rem;
+        }
+
+        &:disabled {
+            pointer-events: none;
+
+            &::-webkit-slider-thumb {
+                background-color: darken($pro2, 4%);
+            }
+            &::-webkit-slider-runnable-track {
+                background-color: darken($pro2, 4%);
+            }
+
+            &::-moz-range-thumb {
+                background-color: darken($pro2, 4%);
+            }
+            &::-moz-range-track {
+                background-color: darken($pro2, 4%);
+            }
+
+            &::-ms-thumb {
+                background-color: darken($pro2, 4%);
+            }
+            &::-ms-track {
+                background-color: darken($pro2, 4%);
+            }
+            &::-ms-fill-lower {
+                background-color: darken($pro2, 4%);
+            }
+            &::-ms-fill-upper {
+                background-color: darken($pro2, 4%);
+            }
+        }
+    }
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    > .form-control,
+    > .form-select {
+        position: relative;
+        flex: 1 1 auto;
+        width: 1%;
+        min-width: 0;
+    }
+    > .form-control:focus,
+    > .form-select:focus {
+        z-index: 3;
+    }
+    > .form-control {
+        min-height: 48px;
+        padding: .5rem 1rem
+    }
+    > .form-select {
+        height: 48px;
+        padding: .5rem 1rem;
+        padding-right: 1.75rem;
+    }
+}
+
+.input-group-text {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    color: $pro5;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $pro7;
+    border: 0;
+    border-radius: .25rem;
+    .dark-mode & {
+        background-color: $pro3;
+    }
+}
+
+.input-group {
+    > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
+    > .dropdown-toggle:nth-last-child(n + 3) {
+        border-radius: .25rem 0 0 .25rem;
+    }
+
+    > :not(:first-child):not(.dropdown-menu) {
+        margin-left: -1px;
+        border-radius: 0 .25rem .25rem 0;
+    }
+}
+
+.form-floating {
+    position: relative;
+    > .form-control,
+    > .form-select {
+        height: 3rem;
+        padding: .375rem .75rem;
+    }
+  
+    > label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%; // allow textareas
+        padding: .75rem .75rem;
+        pointer-events: none;
+        border: 0;
+        transform-origin: 0 0;
+        transition: opacity 100ms ease-in-out, transform 100ms ease-in-out;
+    }
+  
+    > .form-control {
+        &::placeholder {
+            color: transparent;
+        }
+        &:focus,
+        &:not(:placeholder-shown) {
+            // padding-top: 1.625rem;
+            // padding-bottom: .625rem;
+            padding-top: 1.25rem;
+            padding-bottom: .25rem;
+        }
+        &:-webkit-autofill {
+            // padding-top: 1.625rem;
+            // padding-bottom: .625rem;
+            padding-top: 1.25rem;
+            padding-bottom: .25rem;
+        }
+    }
+  
+    > .form-select {
+        padding-top: 1.25rem;
+        padding-bottom: .25rem;
+    }
+  
+    > .form-control:focus,
+    > .form-control:not(:placeholder-shown),
+    > .form-select {
+        ~ label {
+            opacity: .65;
+            transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+        }
+    }
+    > .form-control:-webkit-autofill {
+        ~ label {
+            opacity: .65;
+            transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+        }
+    }
+}
+
+.form-control.is-invalid {
+    border: solid 2px $pro12;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.invalid-feedback {
+    margin: 0;
+    font-size: 14px !important;
+    color: lighten($pro12, 30%) !important;
+    display: block;
+    background: $pro12;
+    padding: 7px 14px;
+    line-height: 1.3;
+    border-radius: 0 0 .25rem .25rem;
+}

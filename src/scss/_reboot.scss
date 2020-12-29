@@ -1,0 +1,452 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    scroll-behavior: smooth;
+    &.js {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+body {
+    position: relative;
+    background-color: $pro10;
+    font-family: $font-family-base;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $pro5;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    .dark-mode & {
+        background-color: $pro0;
+    }
+}
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+body,
+div,
+section,
+footer,
+p,
+ul,
+li,
+span,
+code,
+pre,
+mark,
+hr {
+    transition: background-color 300ms, color 300ms, border-color 300ms, margin 300ms;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid $pro7;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    .dark-mode & {
+        border-top: 1px solid $pro3;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $pro4;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    transition: color 300ms;
+    .dark-mode & {
+        color: $pro6;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-bs-original-title] {
+    text-decoration: underline;
+    text-decoration: underline dotted;
+    cursor: help;
+    text-decoration-skip-ink: none;
+}
+
+address {
+    margin-bottom: 1rem;
+    font-style: normal;
+    line-height: inherit;
+}
+
+ol,
+ul {
+    padding-left: 2rem;
+}
+
+ol,
+ul,
+dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-bottom: .5rem;
+    margin-left: 0;
+}
+
+blockquote {
+    color: $pro4;
+    padding-left: 1.5rem;
+    border-left: .2rem solid $pro4;
+    margin: 0 0 1rem;
+    margin-bottom: 1rem;
+    footer {
+        display: block;
+        font-size: 80%;
+        color: $pro5;
+        &::before {
+            content: "\2014\00A0"; // em dash, nbsp
+        }
+    }
+    .dark-mode & {
+        color: $pro6;
+        border-left: .2rem solid $pro6;
+    }
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+small {
+    font-size: .875em;
+}
+
+mark {
+    background-color: $pro9;
+    padding: .2rem;
+    .dark-mode & {
+        background-color: $pro1;
+    }
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: .75em;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sub { bottom: -.25em; }
+sup { top: -.5em; }
+
+a {
+    color: $pro5;
+    text-decoration: none;
+    transition: background-color 300ms, padding 300ms, color 300ms;
+    &:hover {
+        color: $pro3;
+        text-decoration: none;
+    }
+    .dark-mode & {
+        color: $pro5;
+        text-decoration: none;
+        background-color: transparent;
+        transition: background-color 300ms, padding 300ms, color 300ms;
+        &:hover {
+            color: $pro7;
+            text-decoration: none;
+        }
+    }
+}
+
+a:not([href]):not([class]) {
+    &,
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+pre,
+code,
+kbd,
+samp {
+    font-family: $font-family-mono;
+    font-size: 1em;
+    direction: ltr;
+    unicode-bidi: bidi-override;
+}
+
+pre {
+    display: block;
+    background-color: $pro9;
+    color: $pro4;
+    font-size: .875em;
+    padding: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    overflow: auto;
+    // Account for some code outputs that place code tags in pre tags
+    code {
+        font-size: inherit;
+        color: inherit;
+        word-break: normal;
+    }
+    .dark-mode & {
+        background-color: $pro1;
+        color: $pro6;
+    }
+}
+
+code {
+    background-color: $pro9;
+    font-size: .875em;
+    color: $pro4;
+    word-wrap: break-word;
+    padding: 0 .25rem;
+    // Streamline the style when inside anchors to avoid broken underline and more
+    a > & {
+        color: inherit;
+    }
+    .dark-mode & {
+        background-color: $pro1;
+        color: $pro6;
+    }
+}
+
+figure {
+    margin: 0 0 1rem;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+table {
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+
+caption {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    color: $pro5;
+    text-align: left;
+    caption-side: bottom;
+}
+
+th {
+    font-weight: 700;
+    text-align: inherit;
+    text-align: -webkit-match-parent;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+}
+
+label {
+    display: inline-block;
+}
+
+button {
+    border-radius: 0;
+}
+
+button:focus {
+    outline: dotted 1px;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+select {
+    word-wrap: normal;
+}
+
+[list]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+}
+
+::-moz-focus-inner {
+    padding: 0;
+    border-style: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+legend {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    font-weight: null;
+    line-height: inherit;
+
+    + * {
+        clear: left;
+    }
+}
+
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+    padding: 0;
+}
+
+::-webkit-inner-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    outline-offset: -2px;
+    -webkit-appearance: textfield;
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+::file-selector-button {
+    font: inherit;
+}
+
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+}
+
+output {
+    display: inline-block;
+}
+
+iframe {
+    border: 0;
+}
+
+summary {
+    display: list-item;
+    cursor: pointer;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+[hidden] {
+    display: none !important;
+}

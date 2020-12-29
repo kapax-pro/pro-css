@@ -1,0 +1,133 @@
+.tooltip {
+    position: absolute;
+    display: block;
+    z-index: 1070;
+    font-size: .875rem;
+    word-wrap: break-word;
+    margin: 0;
+    opacity: 0;
+
+    &.show {
+        opacity: 1;
+    }
+
+    .tooltip-arrow {
+        position: absolute;
+        display: block;
+        width: .8rem;
+        height: .4rem;
+
+        &::before {
+            position: absolute;
+            content: "";
+            border-color: transparent;
+            border-style: solid;
+        }
+    }
+}
+  
+.bs-tooltip-top {
+    padding: .4rem 0;
+    .tooltip-arrow {
+        bottom: 0;
+
+        &::before {
+            top: 0;
+            border-width: .4rem .4rem 0;
+            border-top-color: $pro3;
+        }
+    }
+    .dark-mode & {
+        .tooltip-arrow::before {
+            border-top-color: $pro7;
+        }
+    }
+}
+  
+.bs-tooltip-right {
+    padding: 0 .4rem;
+    .tooltip-arrow {
+        left: 0;
+        width: .4rem;
+        height: .8rem;
+
+        &::before {
+            right: 0;
+            border-width: .4rem .4rem .4rem 0;
+            border-right-color: $pro3;
+        }
+    }
+    .dark-mode & {
+        .tooltip-arrow::before {
+            border-right-color: $pro7;
+        }
+    }
+}
+  
+.bs-tooltip-bottom {
+    padding: .4rem 0;
+    .tooltip-arrow {
+        top: 0;
+
+        &::before {
+            bottom: 0;
+            border-width: 0 (.8rem / 2) .4rem;
+            border-bottom-color: $pro3;
+        }
+    }
+    .dark-mode & {
+        .tooltip-arrow::before {
+            border-bottom-color: $pro7;
+        }
+    }
+}
+  
+.bs-tooltip-left {
+    padding: 0 .4rem;
+    .tooltip-arrow {
+        right: 0;
+        width: .4rem;
+        height: .8rem;
+
+        &::before {
+            left: 0;
+            border-width: (.8rem / 2) 0 (.8rem / 2) .4rem;
+            border-left-color: $pro3;
+        }
+    }
+    .dark-mode & {
+        .tooltip-arrow::before {
+            border-left-color: $pro7;
+        }
+    }
+}
+  
+.bs-tooltip-auto {
+    &[x-placement^="top"] {
+        @extend .bs-tooltip-top;
+    }
+    &[x-placement^="right"] {
+        @extend .bs-tooltip-right;
+    }
+    &[x-placement^="bottom"] {
+        @extend .bs-tooltip-bottom;
+    }
+    &[x-placement^="left"] {
+        @extend .bs-tooltip-left;
+    }
+}
+  
+  // Wrapper for the tooltip content
+.tooltip-inner {
+    max-width: 200px;
+    background-color: $pro3;
+    color: $pro6;
+    text-align: center;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+    .dark-mode & {
+        background-color: $pro7;
+        color: $pro4;
+    }
+}
+  

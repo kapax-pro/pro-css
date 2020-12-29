@@ -1,0 +1,60 @@
+@mixin caret-down {
+    border-top: .3rem solid;
+    border-right: .3rem solid transparent;
+    border-bottom: 0;
+    border-left: .3rem solid transparent;
+}
+
+@mixin caret-up {
+    border-top: 0;
+    border-right: .3rem solid transparent;
+    border-bottom: .3rem solid;
+    border-left: .3rem solid transparent;
+}
+
+@mixin caret-right {
+    border-top: .3rem solid transparent;
+    border-right: 0;
+    border-bottom: .3rem solid transparent;
+    border-left: .3rem solid;
+}
+
+@mixin caret-left {
+    border-top: .3rem solid transparent;
+    border-right: .3rem solid;
+    border-bottom: .3rem solid transparent;
+}
+
+@mixin caret($direction: down) {
+    &::after {
+        display: inline-block;
+        margin-left: 4px;
+        vertical-align: 3px;
+        content: "";
+        @if $direction == down {
+            @include caret-down();
+        } @else if $direction == up {
+            @include caret-up();
+        } @else if $direction == right {
+            @include caret-right();
+        }
+    }
+
+    @if $direction == left {
+        &::after {
+            display: none;
+        }
+
+        &::before {
+            display: inline-block;
+            margin-right: 4px;
+            vertical-align: 3px;
+            content: "";
+            @include caret-left();
+        }
+    }
+
+    &:empty::after {
+        margin-left: 0;
+    }
+}

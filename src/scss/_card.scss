@@ -1,0 +1,139 @@
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: $pro9;
+    background-clip: border-box;
+    border: none;
+    border-radius: .25rem;
+    .dark-mode & {
+        background-color: $pro1;
+    }
+}
+
+.card-hover {
+    transition: transform 300ms;
+    will-change: transform;
+    &:hover {
+        transform: translate3d(0,-3px,0);
+    }
+}
+
+.card-highlight {
+    border: 2px solid $pro2;
+    > .card-header {
+        background-color: $pro2 !important;
+        > .card-title {
+            color: $pro6 !important;
+        }
+    }
+    .card-header:first-child {
+        border-radius: 0;
+    }
+    .dark-mode & {
+        border: 2px solid $pro8;
+        > .card-header {
+            background-color: $pro8 !important;
+            > .card-title {
+                color: $pro4 !important;
+            }
+        }
+    }
+}
+
+.card-badge {
+    display: inline-block;
+    background-color: $pro7;
+    color: $pro4;
+    font-size: .75em;
+    font-weight: 500;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    padding: .25em .5em;
+    border-radius: .25rem;
+    &:empty {
+        display: none;
+    }
+    .dark-mode & {
+        background-color: $pro3;
+        color: $pro6;
+    }
+}
+
+.card-avatar {
+    width: 80px;
+    height: auto;
+    max-width: 100%;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.card-title {
+    margin-bottom: .5rem;
+}
+
+.card-subtitle {
+    margin-top: -.25rem;
+    margin-bottom: 0;
+}
+
+.card-text:last-child {
+    margin-bottom: 0;
+}
+
+.card-header {
+    background-color: $pro8;
+    padding: .5rem 1rem;
+    margin-bottom: 0;
+    &:first-child {
+        border-radius: .25rem .25rem 0 0;
+    }
+    .dark-mode & {
+        background-color: $pro2;
+    }
+}
+
+.card-footer {
+    background-color: $pro8;
+    padding: .5rem 1rem;
+    &:last-child {
+        border-radius: 0 0 .25rem .25rem;
+    }
+    .dark-mode & {
+        background-color: $pro2;
+    }
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    border-radius: .25rem;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom {
+    width: 100%;
+}
+
+.card-img,
+.card-img-top {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.card-img,
+.card-img-bottom {
+    border-bottom-left-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}

@@ -1,0 +1,13 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "bugfixes": true
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-class-properties"
+    ]
+}
