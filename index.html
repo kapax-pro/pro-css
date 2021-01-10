@@ -30,14 +30,14 @@
     </head>
     <body>
         <!-- NAV OVERLAY -->
-        <div class="nav-side-overlay" data-pro-toggle data-pro-targets=".nav-side,.nav-side-overlay"></div>
+        <div class="nav-side-overlay" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></div>
         <!-- END NAV OVERLAY -->
 
         <!-- NAV SIDE -->
         <div class="nav nav-side">
             <div class="d-flex justify-content-between align-items-center p-3">
                 <a href="#"><img class="img-fluid mh-5" src="https://storage.googleapis.com/kapax-prod/images/logos/kapax.webp"></a>
-                <button class="btn btn-close" data-pro-toggle data-pro-targets=".nav-side,.nav-side-overlay"></button>
+                <button class="btn btn-close" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></button>
             </div>
             <a class="nav-link" href="#">Link</a>
             <a class="nav-link" href="#">Link</a>
@@ -55,7 +55,7 @@
         <!-- END NAV SIDE -->
         
         <!-- NAVBAR -->
-        <nav id="navbarTop" class="navbar fixed-top is-at-top shadow-sm" data-pro-toggle data-pro-classes="is-at-top" data-pro-event="scroll" data-pro-targets="#navbarTop">
+        <nav id="navbarTop" class="navbar fixed-top is-at-top shadow-sm">
             <div class="container">
                 <div class="d-flex align-items-center">
                     <div class="navbar-brand mr-5">
@@ -70,7 +70,7 @@
                 </div>
                 <div>
                     <button class="btn btn-theme-toggle mr-1" data-toggle-theme="dark"></button>
-                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-pro-toggle data-pro-targets=".nav-side,.nav-side-overlay"></button>
+                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></button>
                     <a class="btn btn-primary d-none d-lg-inline-block" href="#">Log in</a>
                 </div>
             </div>
@@ -2222,8 +2222,8 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn btn-theme-toggle mr-1" data-toggle-dark-mode></button>
-                                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-toggle-class="is-visible" data-target="#navWebSide,#navWebSideOverlay"></button>
+                                    <button class="btn btn-theme-toggle mr-1" data-toggle-theme="dark"></button>
+                                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></button>
                                     <a class="btn btn-primary d-none d-lg-inline-block" href="#">Log in</a>
                                 </div>
                             </div>

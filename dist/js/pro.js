@@ -7852,62 +7852,6 @@
     return new Tooltip(tooltipTriggerEl);
   });
 
-  // OPTIONS DEFINED IN DATA ATTRIBUTES
-  // OPTIONS INCLUDE EVENT(CLICK, SCROLL), TARGET(OTHER ELEMENT, multiple targets), CLASSES TO TOGGLE (multiple classes).
-  // YOU CAN DEFINE MULTIPLE TARGETS AND CLASSES BY SEPARATING BY COMMA, OR COMMA AND SPACE
-
-  var Toggle = function Toggle(toggleElement) {
-    var _this = this;
-
-    _classCallCheck(this, Toggle);
-
-    _defineProperty(this, "event", 'click');
-
-    _defineProperty(this, "cssClasses", ['is-visible']);
-
-    _defineProperty(this, "targetSelectors", []);
-
-    _defineProperty(this, "targetElements", []);
-
-    _defineProperty(this, "scrollY", '0');
-
-    if (toggleElement.getAttribute('data-pro-event')) {
-      this.event = toggleElement.getAttribute('data-pro-event');
-    }
-
-    if (toggleElement.getAttribute('data-pro-classes')) {
-      this.cssClasses = toggleElement.getAttribute('data-pro-classes').split(/, */);
-    }
-
-    this.targetElements = document.querySelectorAll(toggleElement.getAttribute('data-pro-targets'));
-    this.scrollY = toggleElement.getAttribute('data-pro-scrolly');
-
-    if (this.event == 'click') {
-      toggleElement.addEventListener('click', function () {
-        if (_this.targetElements) {
-          _this.targetElements.forEach(function (targetElement) {
-            _this.cssClasses.forEach(function (cssClass) {
-              targetElement.classList.toggle(cssClass);
-            });
-          });
-        }
-      });
-    } else if (this.event == 'scroll') {
-      window.addEventListener('scroll', throttle(function () {
-        if (scrollY > _this.scrollY) {
-          _this.targetElements[0].classList.remove(_this.cssClasses[0]);
-        } else {
-          _this.targetElements[0].classList.add(_this.cssClasses[0]);
-        }
-      }, 50));
-    }
-  };
-
-  var toggleElements = [].slice.call(document.querySelectorAll('[data-pro-toggle]'));
-  var toggleList = toggleElements.map(function (toggleElement) {
-    return new Toggle(toggleElement);
-  });
-
   var ThemeToggle = function ThemeToggle(themeToggleElement) {
     var _this = this;
 
@@ -7929,6 +7873,36 @@
   var themeToggleElements = [].slice.call(document.querySelectorAll('[data-toggle-theme]'));
   var themeToggleList = themeToggleElements.map(function (themeToggleElement) {
     return new ThemeToggle(themeToggleElement);
+  });
+
+  var ClassToggle = function ClassToggle(toggleElement) {
+    var _this = this;
+
+    _classCallCheck(this, ClassToggle);
+
+    _defineProperty(this, "cssClasses", ['is-visible']);
+
+    _defineProperty(this, "targetElements", []);
+
+    if (toggleElement.getAttribute('data-toggle-class')) {
+      this.cssClasses = toggleElement.getAttribute('data-toggle-class').split(/, */);
+    }
+
+    this.targetElements = document.querySelectorAll(toggleElement.getAttribute('data-target'));
+    toggleElement.addEventListener('click', function () {
+      if (_this.targetElements) {
+        _this.targetElements.forEach(function (targetElement) {
+          _this.cssClasses.forEach(function (cssClass) {
+            targetElement.classList.toggle(cssClass);
+          });
+        });
+      }
+    });
+  };
+
+  var classToggleElements = [].slice.call(document.querySelectorAll('[data-toggle-class]'));
+  var classToggleList = classToggleElements.map(function (toggleElement) {
+    return new ClassToggle(toggleElement);
   });
 
 }());
