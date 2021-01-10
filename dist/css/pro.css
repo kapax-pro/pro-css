@@ -4099,13 +4099,6 @@ fieldset:disabled .btn {
     justify-content: space-between;
 }
 
-.navbar.is-at-top {
-    background-color: transparent;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    box-shadow: none;
-}
-
 .dark .navbar {
     background-color: #1f1f1f;
 }
