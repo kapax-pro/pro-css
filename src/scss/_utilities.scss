@@ -548,12 +548,6 @@ $utilities: (
     }
 }
 
-.bg-image-1 {
-    background: linear-gradient(to bottom, rgba(31, 31, 31, .75), rgba(31, 31, 31, .75)),url('https://storage.googleapis.com/kapax-prod/images/backgrounds/apps-short.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .clearfix {
     @include clearfix();
 }
@@ -607,6 +601,14 @@ $utilities: (
     .dark & {
         color: $pro4;
     }
+}
+
+.text-light-bg {
+    color: $pro4 !important;
+}
+
+.text-dark-bg {
+    color: $pro6 !important;
 }
 
 .text-truncate {

@@ -49,6 +49,22 @@
             color: $pro3;
         }
     }
+    &.btn-light-bg {
+        background-color: $pro3 !important;
+        color: $pro7 !important;
+        &:hover {
+            background-color: $pro0 !important;
+            color: $pro7 !important;
+        }
+    }
+    &.btn-dark-bg {
+        background-color: $pro7 !important;
+        color: $pro3 !important;
+        &:hover {
+            background-color: $pro10 !important;
+            color: $pro3 !important;
+        }
+    }
 }
 
 .btn-primary-outline {
@@ -70,6 +86,26 @@
             border-color: $pro10;
         }
     }
+    &.btn-light-bg {
+        background-color: transparent !important;
+        color: $pro3 !important;
+        border-color: $pro3 !important;
+        &:hover {
+            background-color: transparent !important;
+            border-color: $pro0 !important;
+            color: $pro0 !important;
+        }
+    }
+    &.btn-dark-bg {
+        background-color: transparent !important;
+        color: $pro7 !important;
+        border-color: $pro7 !important;
+        &:hover {
+            background-color: transparent !important;
+            color: $pro10 !important;
+            border-color: $pro10 !important;
+        }
+    }
 }
 
 .btn-secondary {
@@ -85,6 +121,22 @@
         &:hover {
             background-color: $pro4;
             color: $pro8;
+        }
+    }
+    &.btn-light-bg {
+        background-color: $pro7 !important;
+        color: $pro5 !important;
+        &:hover {
+            background-color: $pro6 !important;
+            color: $pro4 !important;
+        }
+    }
+    &.btn-dark-bg {
+        background-color: $pro3 !important;
+        color: $pro7 !important;
+        &:hover {
+            background-color: $pro4 !important;
+            color: $pro8 !important;
         }
     }
 }

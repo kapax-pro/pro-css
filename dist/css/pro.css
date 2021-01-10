@@ -87,12 +87,6 @@
     fill: #e5e5e5;
 }
 
-.bg-image-1 {
-    background: linear-gradient(to bottom, rgba(31, 31, 31, 0.75), rgba(31, 31, 31, 0.75)), url("https://storage.googleapis.com/kapax-prod/images/backgrounds/apps-short.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .clearfix::after {
     display: block;
     clear: both;
@@ -202,6 +196,14 @@
 
 .dark .text-muted {
     color: #484848;
+}
+
+.text-light-bg {
+    color: #484848 !important;
+}
+
+.text-dark-bg {
+    color: #b8b8b8 !important;
 }
 
 .text-truncate {
@@ -3303,6 +3305,26 @@ fieldset:disabled .btn {
     color: #323232;
 }
 
+.btn-primary.btn-light-bg {
+    background-color: #323232 !important;
+    color: #dcdcdc !important;
+}
+
+.btn-primary.btn-light-bg:hover {
+    background-color: #1f1f1f !important;
+    color: #dcdcdc !important;
+}
+
+.btn-primary.btn-dark-bg {
+    background-color: #dcdcdc !important;
+    color: #323232 !important;
+}
+
+.btn-primary.btn-dark-bg:hover {
+    background-color: #f8f8f8 !important;
+    color: #323232 !important;
+}
+
 .btn-primary-outline {
     background-color: transparent;
     color: #323232;
@@ -3327,6 +3349,30 @@ fieldset:disabled .btn {
     border-color: #f8f8f8;
 }
 
+.btn-primary-outline.btn-light-bg {
+    background-color: transparent !important;
+    color: #323232 !important;
+    border-color: #323232 !important;
+}
+
+.btn-primary-outline.btn-light-bg:hover {
+    background-color: transparent !important;
+    border-color: #1f1f1f !important;
+    color: #1f1f1f !important;
+}
+
+.btn-primary-outline.btn-dark-bg {
+    background-color: transparent !important;
+    color: #dcdcdc !important;
+    border-color: #dcdcdc !important;
+}
+
+.btn-primary-outline.btn-dark-bg:hover {
+    background-color: transparent !important;
+    color: #f8f8f8 !important;
+    border-color: #f8f8f8 !important;
+}
+
 .btn-secondary {
     background-color: #dcdcdc;
     color: #777777;
@@ -3345,6 +3391,26 @@ fieldset:disabled .btn {
 .dark .btn-secondary:hover {
     background-color: #484848;
     color: #e5e5e5;
+}
+
+.btn-secondary.btn-light-bg {
+    background-color: #dcdcdc !important;
+    color: #777777 !important;
+}
+
+.btn-secondary.btn-light-bg:hover {
+    background-color: #b8b8b8 !important;
+    color: #484848 !important;
+}
+
+.btn-secondary.btn-dark-bg {
+    background-color: #323232 !important;
+    color: #dcdcdc !important;
+}
+
+.btn-secondary.btn-dark-bg:hover {
+    background-color: #484848 !important;
+    color: #e5e5e5 !important;
 }
 
 .btn-danger {
