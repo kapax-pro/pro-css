@@ -471,45 +471,45 @@ $utilities: (
     )
 );
 
-.bg-1 {
+.bg-0 {
     background-color: $pro10;
     .dark & {
         background-color: $pro0;
     }
 }
 
-.bg-2 {
+.bg-1 {
     background-color: darken($pro10, 1%);
     .dark & {
         background-color: darken($pro0, .5%);
     }
 }
 
-.bg-3 {
+.bg-2 {
     background-color: darken($pro10, 2%);
+    .dark & {
+        background-color: darken($pro0, 0.75%);
+    }
+}
+
+.bg-3 {
+    background-color: darken($pro10, 3%);
     .dark & {
         background-color: darken($pro0, 1%);
     }
 }
 
 .bg-4 {
-    background-color: darken($pro10, 3%);
+    background-color: $pro9;
     .dark & {
         background-color: darken($pro0, 1.5%);
     }
 }
 
 .bg-5 {
-    background-color: $pro9;
-    .dark & {
-        background-color: $pro1;
-    }
-}
-
-.bg-6 {
     background-color: $pro8;
     .dark & {
-        background-color: $pro2;
+        background-color: darken($pro0, 1.85%);
     }
 }
 

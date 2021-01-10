@@ -1,22 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap");
-.bg-1 {
+.bg-0 {
     background-color: #f8f8f8;
 }
 
-.dark .bg-1 {
+.dark .bg-0 {
     background-color: #1f1f1f;
 }
 
-.bg-2 {
+.bg-1 {
     background-color: whitesmoke;
 }
 
-.dark .bg-2 {
+.dark .bg-1 {
     background-color: #1e1e1e;
 }
 
-.bg-3 {
+.bg-2 {
     background-color: #f3f3f3;
+}
+
+.dark .bg-2 {
+    background-color: #1d1d1d;
+}
+
+.bg-3 {
+    background-color: #f0f0f0;
 }
 
 .dark .bg-3 {
@@ -24,7 +32,7 @@
 }
 
 .bg-4 {
-    background-color: #f0f0f0;
+    background-color: #eeeeee;
 }
 
 .dark .bg-4 {
@@ -32,19 +40,11 @@
 }
 
 .bg-5 {
-    background-color: #eeeeee;
-}
-
-.dark .bg-5 {
-    background-color: #252525;
-}
-
-.bg-6 {
     background-color: #e5e5e5;
 }
 
-.dark .bg-6 {
-    background-color: #2c2c2c;
+.dark .bg-5 {
+    background-color: #1a1a1a;
 }
 
 .bg-transparent {
