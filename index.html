@@ -1,19 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#171717">
         <meta name="msapplication-navbutton-color" content="#171717">
         <meta name="apple-mobile-web-app-status-bar-style" content="#171717">
 
         <title>Pro UI</title>
-
+        
         <link rel="icon" href="https://storage.googleapis.com/kapax-prod/images/logos/kapax-icon.png">
-        <link href="dist/css/pro.css" rel="stylesheet">
+        
+        <!-- AVOID FOUC -->
+        <style>.hidden {display: none;}</style>
+        <script>
+            document.querySelector('html').classList.add('hidden');
+            window.onload = function(event) {
+                document.querySelector('html').classList.remove('hidden');
+            };
+            </script>
+        <!-- END AVOID FOUC -->
+        
+        <!-- DARK MODE -->
+        <script>if(localStorage.theme == 'dark'){document.querySelector('html').classList.add('dark');}</script>
+        <!-- END DARK MODE -->
 
-        <script src="dist/js/pro.sync.min.js"></script>
-        <script src="dist/js/pro.defer.min.js" defer></script>
+        <link href="dist/css/pro.min.css" rel="stylesheet">
+        <script src="dist/js/pro.min.js" defer></script>
     </head>
     <body>
         <!-- NAV OVERLAY -->
@@ -56,7 +69,7 @@
                     </div>
                 </div>
                 <div>
-                    <button class="btn btn-theme-toggle mr-1" data-pro-toggle data-pro-classes="dark-mode" data-pro-targets="html" data-pro-local-storage="darkMode"></button>
+                    <button class="btn btn-theme-toggle mr-1" data-toggle-theme="dark"></button>
                     <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-pro-toggle data-pro-targets=".nav-side,.nav-side-overlay"></button>
                     <a class="btn btn-primary d-none d-lg-inline-block" href="#">Log in</a>
                 </div>

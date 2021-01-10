@@ -17,7 +17,7 @@
         color: $pro3;
         text-decoration: none;
     }
-    .dark-mode &:hover {
+    .dark &:hover {
         background-color: $pro3;
         color: $pro7;
         text-decoration: none;
@@ -41,7 +41,7 @@
         background-color: $pro0;
         color: $pro7;
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro7;
         color: $pro3;
         &:hover {
@@ -60,7 +60,7 @@
         border-color: $pro0;
         color: $pro0;
     }
-    .dark-mode & {
+    .dark & {
         background-color: transparent;
         color: $pro7;
         border-color: $pro7;
@@ -79,7 +79,7 @@
         background-color: $pro6;
         color: $pro4;
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro3;
         color: $pro7;
         &:hover {
@@ -96,7 +96,7 @@
         background-color: darken($pro12, 5%);
         color: $pro7;
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro12;
         color: $pro7;
         &:hover {
@@ -132,7 +132,7 @@
             background-color: $pro3;
         }
     }
-    .dark-mode & {
+    .dark & {
         &::before {
             mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M3.55,18.54L4.96,19.95L6.76,18.16L5.34,16.74M11,22.45C11.32,22.45 13,22.45 13,22.45V19.5H11M12,5.5A6,6 0 0,0 6,11.5A6,6 0 0,0 12,17.5A6,6 0 0,0 18,11.5C18,8.18 15.31,5.5 12,5.5M20,12.5H23V10.5H20M17.24,18.16L19.04,19.95L20.45,18.54L18.66,16.74M20.45,4.46L19.04,3.05L17.24,4.84L18.66,6.26M13,0.55H11V3.5H13M4,10.5H1V12.5H4M6.76,4.84L4.96,3.05L3.55,4.46L5.34,6.26L6.76,4.84Z' /></svg>"));
         }
@@ -168,7 +168,7 @@
             background-color: $pro3;
         }
     }
-    .dark-mode & {
+    .dark & {
         &:hover::before {
             background-color: $pro7;
         }
@@ -194,7 +194,7 @@
         text-decoration: none;
         outline: 0;
     }
-    .dark-mode & {
+    .dark & {
         &:hover {
             background-color: $pro7;
         }

@@ -4,16 +4,9 @@ import babel from '@rollup/plugin-babel';
 
 export default [
     {
-        input: 'src/js/sync/index.js',
+        input: 'src/js/index.js',
         output: {
-            file: 'dist/js/pro.sync.js',
-            format: 'iife'
-        }
-    },
-    {
-        input: 'src/js/defer/index.js',
-        output: {
-            file: 'dist/js/pro.defer.js',
+            file: 'dist/js/pro.js',
             format: 'iife'
         },
         plugins: [

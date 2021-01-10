@@ -10,7 +10,6 @@ class Toggle {
     targetSelectors = [];
     targetElements = [];
     scrollY = '0';
-    localStorageItems = [];
 
     constructor(toggleElement) {
         if(toggleElement.getAttribute('data-pro-event')) {
@@ -21,9 +20,6 @@ class Toggle {
         }
         this.targetElements = document.querySelectorAll(toggleElement.getAttribute('data-pro-targets'));
         this.scrollY = toggleElement.getAttribute('data-pro-scrolly');
-        if(toggleElement.getAttribute('data-pro-local-storage')) {
-            this.localStorageItems = toggleElement.getAttribute('data-pro-local-storage').split(/, */);
-        }
         
         if(this.event == 'click') {
             toggleElement.addEventListener('click', () => {
@@ -33,15 +29,6 @@ class Toggle {
                             targetElement.classList.toggle(cssClass);
                         });
                     });
-                }
-                if(this.localStorageItems) {
-                    this.localStorageItems.forEach((storageItem) => {
-                        if(localStorage.getItem(storageItem) !== null) {
-                            localStorage.removeItem(storageItem);
-                        } else {
-                            localStorage.setItem(storageItem, 'true');
-                        }
-                    })
                 }
             });
         } else if(this.event == 'scroll') {

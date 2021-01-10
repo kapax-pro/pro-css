@@ -15,7 +15,7 @@
     &:hover {
         text-decoration: underline;
     }
-    .dark-mode & {
+    .dark & {
         text-decoration: underline;
         &:hover {
             text-decoration: underline;
@@ -42,7 +42,7 @@
             background-color: lighten($pro7, 13%);
         }
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro7;
         color: $pro3;
         .alert-link {
@@ -72,7 +72,7 @@
             background-color: darken($pro15, 23%);
         }
     }
-    .dark-mode & {
+    .dark & {
         background-color: lighten($pro15, 20%);
         color: darken($pro15, 15%);
         .alert-link {
@@ -96,7 +96,7 @@
             background-color: darken($pro12, 23%);
         }
     }
-    .dark-mode & {
+    .dark & {
         background-color: lighten($pro12, 20%);
         color: darken($pro12, 15%);
         .alert-link {

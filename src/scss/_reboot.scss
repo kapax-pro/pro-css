@@ -7,13 +7,7 @@
 html {
     font-family: sans-serif;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    visibility: hidden;
-    opacity: 0;
     scroll-behavior: smooth;
-    &.js {
-        visibility: visible;
-        opacity: 1;
-    }
 }
 
 body {
@@ -28,7 +22,7 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
-    .dark-mode & {
+    .dark & {
         background-color: $pro0;
     }
 }
@@ -57,7 +51,7 @@ hr {
     border-top: 1px solid $pro7;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    .dark-mode & {
+    .dark & {
         border-top: 1px solid $pro3;
     }
 }
@@ -69,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: .5rem;
     transition: color 300ms;
-    .dark-mode & {
+    .dark & {
         color: $pro6;
     }
 }
@@ -165,7 +159,7 @@ blockquote {
             content: "\2014\00A0"; // em dash, nbsp
         }
     }
-    .dark-mode & {
+    .dark & {
         color: $pro6;
         border-left: .2rem solid $pro6;
     }
@@ -183,7 +177,7 @@ small {
 mark {
     background-color: $pro9;
     padding: .2rem;
-    .dark-mode & {
+    .dark & {
         background-color: $pro1;
     }
 }
@@ -207,7 +201,7 @@ a {
         color: $pro3;
         text-decoration: none;
     }
-    .dark-mode & {
+    .dark & {
         color: $pro5;
         text-decoration: none;
         background-color: transparent;
@@ -252,7 +246,7 @@ pre {
         color: inherit;
         word-break: normal;
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro1;
         color: $pro6;
     }
@@ -268,7 +262,7 @@ code {
     a > & {
         color: inherit;
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro1;
         color: $pro6;
     }

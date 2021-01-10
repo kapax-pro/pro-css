@@ -61,7 +61,7 @@
     background-clip: padding-box;
     border-radius: .25rem;
     outline: 0;
-    .dark-mode & {
+    .dark & {
         background-color: $pro1;
     }
 }
@@ -76,7 +76,7 @@
     background-color: $pro10;
     &.fade { opacity: 0; }
     &.show { opacity: .5; }
-    .dark-mode & {
+    .dark & {
         background-color: $pro0;
     }
 }
@@ -89,7 +89,7 @@
     background-color: $pro8;
     padding: .2rem 1rem;
     border-radius: .25rem .25rem 0 0;
-    .dark-mode & {
+    .dark & {
         background-color: $pro2;
     }
 }

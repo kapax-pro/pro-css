@@ -7871,8 +7871,6 @@
 
     _defineProperty(this, "scrollY", '0');
 
-    _defineProperty(this, "localStorageItems", []);
-
     if (toggleElement.getAttribute('data-pro-event')) {
       this.event = toggleElement.getAttribute('data-pro-event');
     }
@@ -7884,10 +7882,6 @@
     this.targetElements = document.querySelectorAll(toggleElement.getAttribute('data-pro-targets'));
     this.scrollY = toggleElement.getAttribute('data-pro-scrolly');
 
-    if (toggleElement.getAttribute('data-pro-local-storage')) {
-      this.localStorageItems = toggleElement.getAttribute('data-pro-local-storage').split(/, */);
-    }
-
     if (this.event == 'click') {
       toggleElement.addEventListener('click', function () {
         if (_this.targetElements) {
@@ -7895,16 +7889,6 @@
             _this.cssClasses.forEach(function (cssClass) {
               targetElement.classList.toggle(cssClass);
             });
-          });
-        }
-
-        if (_this.localStorageItems) {
-          _this.localStorageItems.forEach(function (storageItem) {
-            if (localStorage.getItem(storageItem) !== null) {
-              localStorage.removeItem(storageItem);
-            } else {
-              localStorage.setItem(storageItem, 'true');
-            }
           });
         }
       });
@@ -7922,6 +7906,29 @@
   var toggleElements = [].slice.call(document.querySelectorAll('[data-pro-toggle]'));
   var toggleList = toggleElements.map(function (toggleElement) {
     return new Toggle(toggleElement);
+  });
+
+  var ThemeToggle = function ThemeToggle(themeToggleElement) {
+    var _this = this;
+
+    _classCallCheck(this, ThemeToggle);
+
+    this.theme = themeToggleElement.getAttribute('data-toggle-theme');
+    themeToggleElement.addEventListener('click', function (event) {
+      event.preventDefault();
+      document.querySelector('html').classList.toggle(_this.theme);
+
+      if (localStorage.theme == _this.theme) {
+        localStorage.theme = '';
+      } else {
+        localStorage.theme = _this.theme;
+      }
+    });
+  };
+
+  var themeToggleElements = [].slice.call(document.querySelectorAll('[data-toggle-theme]'));
+  var themeToggleList = themeToggleElements.map(function (themeToggleElement) {
+    return new ThemeToggle(themeToggleElement);
   });
 
 }());

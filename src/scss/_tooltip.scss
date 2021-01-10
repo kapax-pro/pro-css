@@ -37,7 +37,7 @@
             border-top-color: $pro3;
         }
     }
-    .dark-mode & {
+    .dark & {
         .tooltip-arrow::before {
             border-top-color: $pro7;
         }
@@ -57,7 +57,7 @@
             border-right-color: $pro3;
         }
     }
-    .dark-mode & {
+    .dark & {
         .tooltip-arrow::before {
             border-right-color: $pro7;
         }
@@ -75,7 +75,7 @@
             border-bottom-color: $pro3;
         }
     }
-    .dark-mode & {
+    .dark & {
         .tooltip-arrow::before {
             border-bottom-color: $pro7;
         }
@@ -95,7 +95,7 @@
             border-left-color: $pro3;
         }
     }
-    .dark-mode & {
+    .dark & {
         .tooltip-arrow::before {
             border-left-color: $pro7;
         }
@@ -125,7 +125,7 @@
     text-align: center;
     padding: .25rem .5rem;
     border-radius: .25rem;
-    .dark-mode & {
+    .dark & {
         background-color: $pro7;
         color: $pro4;
     }

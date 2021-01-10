@@ -63,7 +63,7 @@
     &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
         background-color: darken($pro7, 5%);
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro2;
         &:focus {
             background-color: lighten($pro2, 1%);
@@ -79,16 +79,16 @@
             opacity: 1;
         }
     }
-    .dark-mode &::file-selector-button {
+    .dark &::file-selector-button {
         background-color: $pro3;
     }
-    .dark-mode &::-webkit-file-upload-button {
+    .dark &::-webkit-file-upload-button {
         background-color: $pro3;
     }
-    .dark-mode &:hover:not(:disabled):not([readonly])::file-selector-button {
+    .dark &:hover:not(:disabled):not([readonly])::file-selector-button {
         background-color: lighten($pro3, 5%);
     }
-    .dark-mode &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+    .dark &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
         background-color: lighten($pro3, 5%);
     }
 }
@@ -112,7 +112,7 @@ textarea.form-control {
     margin-top: .25rem;
     font-size: .875rem;
     color: $pro6;
-    .dark-mode & {
+    .dark & {
         color: $pro4;
     }
 }
@@ -167,7 +167,7 @@ textarea.form-control {
         text-shadow: 0 0 0 $pro5;
     }
 
-    .dark-mode & {
+    .dark & {
         background-color: $pro2;
         &:focus {
             outline: 0;
@@ -241,7 +241,7 @@ textarea.form-control {
         }
     }
 
-    .dark-mode & {
+    .dark & {
         background-color: $pro2;
         &:focus {
             background-color: lighten($pro2, 1%);
@@ -287,7 +287,7 @@ textarea.form-control {
             opacity: .5;
         }
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro2;
         background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$pro4}'/></svg>"));
         &:focus {
@@ -452,7 +452,7 @@ textarea.form-control {
         }
     }
 
-    .dark-mode & {
+    .dark & {
         &:focus {
             outline: none;
 
@@ -632,7 +632,7 @@ textarea.form-control {
     background-color: $pro7;
     border: 0;
     border-radius: .25rem;
-    .dark-mode & {
+    .dark & {
         background-color: $pro3;
     }
 }

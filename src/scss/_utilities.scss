@@ -473,77 +473,77 @@ $utilities: (
 
 .bg-1 {
     background-color: $pro10;
-    .dark-mode & {
+    .dark & {
         background-color: $pro0;
     }
 }
 
 .bg-2 {
     background-color: darken($pro10, 1%);
-    .dark-mode & {
+    .dark & {
         background-color: darken($pro0, .5%);
     }
 }
 
 .bg-3 {
     background-color: darken($pro10, 2%);
-    .dark-mode & {
+    .dark & {
         background-color: darken($pro0, 1%);
     }
 }
 
 .bg-4 {
     background-color: darken($pro10, 3%);
-    .dark-mode & {
+    .dark & {
         background-color: darken($pro0, 1.5%);
     }
 }
 
 .bg-5 {
     background-color: $pro9;
-    .dark-mode & {
+    .dark & {
         background-color: $pro1;
     }
 }
 
 .bg-6 {
     background-color: $pro8;
-    .dark-mode & {
+    .dark & {
         background-color: $pro2;
     }
 }
 
 .bg-transparent {
     background-color: transparent;
-    .dark-mode & {
+    .dark & {
         background-color: transparent;
     }
 }
 
 .fill-1 {
     fill: $pro5;
-    .dark-mode & {
+    .dark & {
         fill: $pro5;
     }
 }
 
 .fill-2 {
     fill: $pro4;
-    .dark-mode & {
+    .dark & {
         fill: $pro6;
     }
 }
 
 .fill-3 {
     fill: $pro3;
-    .dark-mode & {
+    .dark & {
         fill: $pro7;
     }
 }
 
 .fill-4 {
     fill: $pro2;
-    .dark-mode & {
+    .dark & {
         fill: $pro8;
     }
 }
@@ -597,14 +597,14 @@ $utilities: (
 .border-bottom,
 .border-left {
     border-color: $pro7 !important;
-    .dark-mode & {
+    .dark & {
         border-color: $pro3 !important;
     }
 }
 
 .text-muted {
     color: $pro6;
-    .dark-mode & {
+    .dark & {
         color: $pro4;
     }
 }

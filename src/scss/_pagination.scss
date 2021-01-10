@@ -16,7 +16,7 @@
         color: $pro4;
         text-decoration: none;
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro3;
         color: $pro7;
         &:hover {
@@ -29,7 +29,7 @@
     }
     &.active {
         background-color: $pro6;
-        .dark-mode & {
+        .dark & {
             background-color: $pro4;
         }
     }

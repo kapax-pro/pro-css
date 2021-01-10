@@ -32,7 +32,7 @@
             border-bottom-width: 2px;
         }
     }
-    .dark-mode & {
+    .dark & {
         --bs-table-hover-bg: #{$pro1};
         border-color: $pro3;
         > thead th {

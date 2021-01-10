@@ -12,7 +12,7 @@
         &.active {
             border-left: 2px solid $pro3;
         }
-        .dark-mode & {
+        .dark & {
             border-left: 2px solid $pro3;
             &.active {
                 border-left: 2px solid $pro7;
@@ -27,7 +27,7 @@
         &.active {
             border-bottom: 2px solid $pro3;
         }
-        .dark-mode & {
+        .dark & {
             border-bottom: 2px solid $pro3;
             &.active {
                 border-bottom: 2px solid $pro7;
@@ -89,7 +89,7 @@
     &.is-visible {
         transform: translate3d(0, 0 , 0);
     }
-    .dark-mode & {
+    .dark & {
         background-color: darken($pro0, .5%);
         .nav-link:hover {
             background-color: lighten($pro0, 1%);
@@ -130,7 +130,7 @@
         left: 0;
         opacity: .85;
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro0;
     }
 }
@@ -158,7 +158,7 @@
         pointer-events: none;
         cursor: default;
     }
-    .dark-mode & {
+    .dark & {
         &.active {
             color: $pro7;
         }

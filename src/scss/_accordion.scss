@@ -44,7 +44,7 @@
         z-index: 3;
         outline: 0;
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro2;
         &:hover {
             background-color: $pro3;
@@ -88,7 +88,7 @@
 .accordion-body {
     background-color: $pro8;
     padding: 1rem 1.25rem;
-    .dark-mode & {
+    .dark & {
         background-color: $pro1;
     }
 }

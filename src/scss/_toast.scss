@@ -24,7 +24,7 @@
     &.hide {
         display: none;
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro1;
     }
 }
@@ -38,7 +38,7 @@
     background-clip: padding-box;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
-    .dark-mode & {
+    .dark & {
         background-color: $pro2;
         color: $pro6;
     }

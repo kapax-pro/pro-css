@@ -34,7 +34,7 @@
     &[style] {
         right: auto !important;
     }
-    .dark-mode & {
+    .dark & {
         background-color: $pro0;
     }
 }
@@ -124,7 +124,7 @@
     margin: .5rem 0;
     overflow: hidden;
     border-top: 1px solid $pro7;
-    .dark-mode & {
+    .dark & {
         border-top: 1px solid $pro3;
     }
 }
@@ -178,7 +178,7 @@
         background-color: transparent;
     }
 
-    .dark-mode & {
+    .dark & {
         &:hover,
         &:focus {
             background-color: $pro1;
@@ -211,7 +211,7 @@
     font-size: .875rem;
     color: $pro4;
     white-space: nowrap; // as with > li > a
-    .dark-mode & {
+    .dark & {
         color: $pro6;
     }
 }
