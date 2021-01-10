@@ -4039,6 +4039,14 @@ fieldset:disabled .btn {
     color: #484848;
 }
 
+.nav-content > .nav-pane {
+    display: none;
+}
+
+.nav-content > .active {
+    display: block;
+}
+
 .navbar {
     position: relative;
     display: flex;

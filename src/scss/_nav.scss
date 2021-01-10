@@ -168,4 +168,11 @@
     }
 }
 
-
+.nav-content {
+    > .nav-pane {
+        display: none;
+    }
+    > .active {
+        display: block;
+    }
+}
