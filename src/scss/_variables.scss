@@ -35,9 +35,13 @@ $spacers: (
     7: 1.75rem,
     8: 2rem,
     9: 3rem,
-    10: 6rem,
-    11: 12rem,
-    12: 16rem
+    10: 4rem,
+    11: 5rem,
+    12: 6rem,
+    13: 8rem,
+    14: 10rem,
+    15: 12rem,
+    16: 16rem
 );
 
 $negative-spacers: negativify-map($spacers);
