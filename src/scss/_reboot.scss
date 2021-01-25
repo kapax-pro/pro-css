@@ -4,43 +4,124 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap');
+
 html {
-    font-family: sans-serif;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     scroll-behavior: smooth;
+
+    --primary-font-family: 'Roboto', sans-serif;
+    --secondary-font-family: 'Roboto', sans-serif;
+    --mono-font-family: 'Roboto Mono', monospace;
+
+    --primary-background-color: rgb(248, 248, 248); // body
+    --secondary-background-color: rgb(246, 246, 246);
+    --tertiary-background-color: rgb(244, 244, 244);
+
+    --primary-font-color: rgb(127, 127, 127); // body / paragraph text
+    --secondary-font-color: rgb(77, 77, 77); // headings
+
+    --pro7: rgb(220, 220, 220); // dividers / borders
+
+    --link-color: rgb(77, 77, 77);
+    --link-hover-color: rgb(30, 30, 30);
+
+    --hr-color: rgb(220, 220, 220);
+    --blockquote-color: rgb(77, 77, 77);
+    --blockquote-border-color: rgb(77, 77, 77);
+    --blockquote-footer-color: rgb(127, 127, 127);
+    --mark-background-color: rgb(238, 238, 238);
+    --pre-background-color: rgb(238, 238, 238);
+    --pre-color: rgb(72, 72, 72);
+    --code-background-color: rgb(238, 238, 238);
+    --code-color: rgb(72, 72, 72);
+    
+    --accordion-button-background-color: rgb(238, 238, 238);
+    --accordion-button-hover-background-color: rgb(235, 235, 235);
+    --accordion-button-color: var(--primary-font-color);
+    --accordion-button-icon-color: var(--primary-font-color);
+    --accordion-body-background-color: rgb(242, 242, 242);
+
+    --alert-primary-background-color: rgb(51, 51, 51);
+    --alert-primary-color: rgb(204, 204, 204);
+    --alert-primary-heading-color: rgb(204, 204, 204);
+    --alert-primary-link-color: rgb(230, 230, 230);
+    --alert-primary-close-background-color: rgb(230, 230, 230);
+    --alert-primary-close-hover-background-color: rgb(237, 237, 237);
+    
+    --card-background-color: rgb(238, 238, 238);
+    --card-highlight-color: rgb(44, 44, 44);
+    --card-highlight-title-color: rgb(179, 179, 179);
+    --card-badge-background-color: rgb(220, 220, 220);
+    --card-badge-color: rgb(77, 77, 77);
+    --card-header-background-color: rgb(229, 229, 229);
+    --card-footer-background-color: rgb(229, 229, 229);
+}
+
+html.dark {
+    --primary-background-color: rgb(30, 30, 30); // body
+    --secondary-background-color: rgb(31, 31, 31);
+    --tertiary-background-color: rgb(32, 32, 32);
+    
+    --secondary-font-color: rgb(179, 179, 179); // headings
+    
+    --link-color: rgb(179, 179, 179);
+    --link-hover-color: rgb(248, 248, 248);
+
+    --hr-color: rgb(50, 50, 50);
+    --blockquote-color: rgb(179, 179, 179);
+    --blockquote-border-color: rgb(179, 179, 179);
+    --blockquote-footer-color: rgb(127, 127, 127);
+    --mark-background-color: rgb(37, 37, 37);
+    --pre-background-color: rgb(37, 37, 37);
+    --pre-color: rgb(179, 179, 179);
+    --code-background-color: rgb(37, 37, 37);
+    --code-color: rgb(179, 179, 179);
+
+    --accordion-button-background-color: rgb(38, 38, 38);
+    --accordion-button-hover-background-color: rgb(40, 40, 40);
+    --accordion-button-color: var(--primary-font-color);
+    --accordion-button-icon-color: var(--primary-font-color);
+    --accordion-body-background-color: rgb(34, 34, 34);
+
+    --card-background-color: rgb(38, 38, 38);
+    --card-highlight-color: rgb(229, 229, 229);
+    --card-highlight-title-color: rgb(77, 77, 77);
+    --card-badge-background-color: rgb(50, 50, 50);
+    --card-badge-color: rgb(179, 179, 179);
+    --card-header-background-color: rgb(44, 44, 44);
+    --card-footer-background-color: rgb(44, 44, 44);
 }
 
 body {
     position: relative;
-    background-color: $pro10;
-    font-family: $font-family-base;
+    background-color: var(--primary-background-color);
+    font-family: var(--primary-font-family);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: $pro5;
+    color: var(--primary-font-color);
     text-align: left;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     margin: 0;
-    .dark & {
-        background-color: $pro0;
-    }
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
-  outline: 0 !important;
+    outline: 0 !important;
 }
 
 body,
-div,
+main,
 section,
+header,
 footer,
+div,
 p,
 ul,
 li,
 span,
-code,
 pre,
+code,
+button,
 mark,
 hr {
     transition: background-color 300ms, color 300ms, border-color 300ms, margin 300ms;
@@ -48,24 +129,19 @@ hr {
 
 hr {
     border: 0;
-    border-top: 1px solid $pro7;
+    border-top: 2px solid var(--hr-color);
     margin-top: 1rem;
     margin-bottom: 1rem;
-    .dark & {
-        border-top: 1px solid $pro3;
-    }
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: $pro4;
+    font-family: var(--secondary-font-family);
+    color: var(--secondary-font-color);
     font-weight: 500;
     line-height: 1.2;
     margin-top: 0;
     margin-bottom: .5rem;
     transition: color 300ms;
-    .dark & {
-        color: $pro6;
-    }
 }
 
 h1 {
@@ -103,8 +179,7 @@ article img {
     margin-bottom: 1rem;
 }
 
-abbr[title],
-abbr[data-bs-original-title] {
+abbr[title] {
     text-decoration: underline;
     text-decoration: underline dotted;
     cursor: help;
@@ -146,22 +221,18 @@ dd {
 }
 
 blockquote {
-    color: $pro4;
+    color: var(--blockquote-color);
     padding-left: 1.5rem;
-    border-left: .2rem solid $pro4;
+    border-left: .2rem solid var(--blockquote-border-color);
     margin: 0 0 1rem;
     margin-bottom: 1rem;
     footer {
         display: block;
         font-size: 80%;
-        color: $pro5;
+        color: var(--blockquote-footer-color);
         &::before {
             content: "\2014\00A0"; // em dash, nbsp
         }
-    }
-    .dark & {
-        color: $pro6;
-        border-left: .2rem solid $pro6;
     }
 }
 
@@ -175,11 +246,8 @@ small {
 }
 
 mark {
-    background-color: $pro9;
+    background-color: var(--mark-background-color);
     padding: .2rem;
-    .dark & {
-        background-color: $pro1;
-    }
 }
 
 sub,
@@ -194,22 +262,19 @@ sub { bottom: -.25em; }
 sup { top: -.5em; }
 
 a {
-    color: $pro5;
+    color: var(--link-color);
     text-decoration: none;
     transition: background-color 300ms, padding 300ms, color 300ms;
     &:hover {
-        color: $pro3;
+        color: var(--link-hover-color);
         text-decoration: none;
-    }
-    .dark & {
-        color: $pro5;
-        text-decoration: none;
-        background-color: transparent;
-        transition: background-color 300ms, padding 300ms, color 300ms;
-        &:hover {
-            color: $pro7;
-            text-decoration: none;
+        & > svg {
+            fill: var(--link-hover-color);
         }
+    }
+    & > svg {
+        fill: var(--link-color);
+        transition: fill 300ms;
     }
 }
 
@@ -225,7 +290,7 @@ pre,
 code,
 kbd,
 samp {
-    font-family: $font-family-mono;
+    font-family: var(--mono-font-family);
     font-size: 1em;
     direction: ltr;
     unicode-bidi: bidi-override;
@@ -233,10 +298,11 @@ samp {
 
 pre {
     display: block;
-    background-color: $pro9;
-    color: $pro4;
+    background-color: var(--pre-background-color);
+    color: var(--pre-color);
     font-size: .875em;
     padding: 1rem;
+    border-radius: .25rem;
     margin-top: 0;
     margin-bottom: 1rem;
     overflow: auto;
@@ -246,25 +312,17 @@ pre {
         color: inherit;
         word-break: normal;
     }
-    .dark & {
-        background-color: $pro1;
-        color: $pro6;
-    }
 }
 
 code {
-    background-color: $pro9;
+    background-color: var(--code-background-color);
     font-size: .875em;
-    color: $pro4;
+    color: var(--code-color);
     word-wrap: break-word;
     padding: 0 .25rem;
     // Streamline the style when inside anchors to avoid broken underline and more
     a > & {
         color: inherit;
-    }
-    .dark & {
-        background-color: $pro1;
-        color: $pro6;
     }
 }
 

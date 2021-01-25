@@ -1,20 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap');
+$pro0: hsl(0, 0%, 12%);
+$pro1: hsl(0, 0%, 15%);
+$pro2: hsl(0, 0%, 17%);
+$pro3: hsl(0, 0%, 20%); // Dividers, borders on dark background
+$pro4: hsl(0, 0%, 30%); // Headings on light background
+$pro5: hsl(0, 0%, 50%); // Text on all backgrounds
+$pro6: hsl(0, 0%, 70%); // Headings on dark background
+$pro7: hsl(0, 0%, 80%); // Dividers, borders on light background
+$pro8: hsl(0, 0%, 90%);
+$pro9: hsl(0, 0%, 93%);
+$pro10: hsl(0, 0%, 97%);
 
-$font-family-heading: 'Roboto', sans-serif;
-$font-family-base: 'Roboto', sans-serif;
-$font-family-mono: 'Roboto Mono', sans-serif;
-
-$pro0: #1f1f1f;
-$pro1: #252525;
-$pro2: #2c2c2c;
-$pro3: #323232; // Dividers, borders on dark background
-$pro4: #484848; // Headings on light background
-$pro5: #777777; // Text on all backgrounds
-$pro6: #b8b8b8; // Headings on dark background
-$pro7: #dcdcdc; // Dividers, borders on light background
-$pro8: #e5e5e5;
-$pro9: #eeeeee;
-$pro10: #f8f8f8;
+// $pro0: #1f1f1f;
+// $pro1: #252525;
+// $pro2: #2c2c2c;
+// $pro3: #323232; // Dividers, borders on dark background
+// $pro4: #484848; // Headings on light background
+// $pro5: #777777; // Text on all backgrounds
+// $pro6: #b8b8b8; // Headings on dark background
+// $pro7: #dcdcdc; // Dividers, borders on light background
+// $pro8: #e5e5e5;
+// $pro9: #eeeeee;
+// $pro10: #f8f8f8;
 
 $pro11: #7b95af;
 $pro12: #b56169;

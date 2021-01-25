@@ -15,12 +15,12 @@
     &:hover {
         text-decoration: underline;
     }
-    .dark & {
-        text-decoration: underline;
-        &:hover {
-            text-decoration: underline;
-        }
-    }
+    // .dark & {
+    //     text-decoration: underline;
+    //     &:hover {
+    //         text-decoration: underline;
+    //     }
+    // }
 }
 
 .alert-dismissible {
@@ -28,31 +28,18 @@
 }
 
 .alert-primary {
-    background-color: $pro3;
-    color: $pro7;
+    background-color: var(--alert-primary-background-color);
+    color: var(--alert-primary-color);
     .alert-link {
-        color: lighten($pro7, 10%);
+        color: var(--alert-primary-link-color);
     }
     .alert-heading {
-        color: $pro7;
+        color: var(--alert-primary-heading-color);
     }
     .btn-close {
-        background-color: lighten($pro7, 10%);
+        background-color: var(--alert-primary-close-background-color);
         &:hover {
-            background-color: lighten($pro7, 13%);
-        }
-    }
-    .dark & {
-        background-color: $pro7;
-        color: $pro3;
-        .alert-link {
-            color: darken($pro3, 10%);
-        }
-        .btn-close {
-            background-color: darken($pro3, 10%);
-            &:hover {
-                background-color: darken($pro3, 13%);
-            }
+            background-color: var(--alert-primary-close-hover-background-color);
         }
     }
 }

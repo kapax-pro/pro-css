@@ -475,47 +475,52 @@ $utilities: (
     )
 );
 
-.bg-0 {
-    background-color: $pro10;
-    .dark & {
-        background-color: $pro0;
-    }
-}
-
 .bg-1 {
-    background-color: darken($pro10, 1%);
-    .dark & {
-        background-color: darken($pro0, .5%);
-    }
+    // background-color: $pro10;
+    background-color: var(--primary-background-color);
+    // .dark & {
+    //     // background-color: $pro0;
+    //     background-color: hsl(0, 0%, 10%);
+    // }
 }
 
 .bg-2 {
-    background-color: darken($pro10, 2%);
-    .dark & {
-        background-color: darken($pro0, 0.75%);
-    }
+    // background-color: darken($pro10, 1%);
+    background-color: var(--secondary-background-color);
+    // .dark & {
+    //     background-color: darken($pro0, .5%);
+    // }
 }
 
 .bg-3 {
-    background-color: darken($pro10, 3%);
-    .dark & {
-        background-color: darken($pro0, 1%);
-    }
+    // background-color: darken($pro10, 2%);
+    background-color: var(--tertiary-background-color);
+    // .dark & {
+    //     background-color: darken($pro0, 0.75%);
+    // }
 }
 
-.bg-4 {
-    background-color: $pro9;
-    .dark & {
-        background-color: darken($pro0, 1.5%);
-    }
-}
+// .bg-3 {
+//     // background-color: darken($pro10, 3%);
+//     background-color: hsl(0, 0%, 94%);
+//     .dark & {
+//         background-color: darken($pro0, 1%);
+//     }
+// }
 
-.bg-5 {
-    background-color: $pro8;
-    .dark & {
-        background-color: darken($pro0, 1.85%);
-    }
-}
+// .bg-4 {
+//     background-color: $pro9;
+//     .dark & {
+//         background-color: darken($pro0, 1.5%);
+//     }
+// }
+
+// .bg-5 {
+//     background-color: $pro8;
+//     .dark & {
+//         background-color: darken($pro0, 1.85%);
+//     }
+// }
 
 .bg-transparent {
     background-color: transparent;
