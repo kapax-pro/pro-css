@@ -265,6 +265,7 @@ sup { top: -.5em; }
 a {
     color: var(--link-color);
     text-decoration: none;
+    word-break: break-all;
     transition: background-color 300ms, padding 300ms, color 300ms;
     &:hover {
         color: var(--link-hover-color);
