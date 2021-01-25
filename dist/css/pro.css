@@ -3367,6 +3367,7 @@ textarea.form-control {
     outline: 0;
     border: none;
     border-radius: 0;
+    transition: background-color 0ms;
 }
 
 .accordion-button.collapsed {
