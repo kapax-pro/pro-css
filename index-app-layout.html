@@ -10,10 +10,22 @@
         <title>Pro UI App Layout</title>
 
         <link rel="icon" href="https://storage.googleapis.com/kapax-prod/images/logos/kapax-icon.png">
-        <link href="dist/css/pro.css" rel="stylesheet">
+        <!-- AVOID FOUC -->
+        <style>.hidden {display: none;}</style>
+        <script>
+            document.querySelector('html').classList.add('hidden');
+            window.onload = function(event) {
+                document.querySelector('html').classList.remove('hidden');
+            };
+        </script>
+        <!-- END AVOID FOUC -->
 
-        <script src="dist/js/pro.sync.min.js"></script>
-        <script src="dist/js/pro.defer.min.js" defer></script>
+        <!-- DARK MODE -->
+        <script>if(localStorage.theme == 'dark'){document.querySelector('html').classList.add('dark');}</script>
+        <!-- END DARK MODE -->
+
+        <link href="dist/css/pro.min.css" rel="stylesheet">
+        <script src="dist/js/pro.min.js" defer></script>
     </head>
     <body>
         <!-- NAV OVERLAY -->
@@ -23,7 +35,7 @@
         <!-- NAV DASHBOARD -->
         <div class="nav nav-side nav-dashboard">
             <div class="d-flex justify-content-between align-items-center p-3">
-                <a href="#"><img class="img-fluid mh-5" src="https://storage.googleapis.com/kapax-prod/images/logos/kapax.webp"></a>
+                <a href="#"><img class="img-fluid mh-5" src="https://storage.googleapis.com/cosentio-prod/kapax/images/logos/kapax.webp"></a>
                 <button class="btn btn-close" data-pro-toggle data-pro-targets=".nav-side,.nav-side-overlay"></button>
             </div>
             <a class="nav-link" href="#">Link</a>
@@ -41,14 +53,14 @@
         </div>
         <!-- END NAV DASHBOARD -->
 
-        <div class="ml-lg-12">
+        <div class="ml-lg-16">
 
             <!-- NAVBAR -->
-            <nav id="navbarTop" class="navbar is-at-top" data-pro-toggle data-pro-classes="is-at-top" data-pro-event="scroll" data-pro-targets="#navbarTop">
+            <nav id="navbarTop" class="navbar">
                 <div class="container">
                     <div class="d-flex align-items-center">
                         <div class="navbar-brand mr-5">
-                            <a href="#"><img src="https://storage.googleapis.com/kapax-prod/images/logos/kapax.webp"></a>
+                            <a href="#"><img src="https://storage.googleapis.com/cosentio-prod/kapax/images/logos/kapax.webp"></a>
                         </div>
                         <div class="navbar-nav d-none d-lg-flex">
                             <a class="nav-link" href="#">Link</a>
