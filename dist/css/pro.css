@@ -262,14 +262,14 @@ html {
     --alert-primary-close-background-color: rgb(230, 230, 230);
     --alert-primary-close-hover-background-color: rgb(237, 237, 237);
     --card-solid-color: rgb(238, 238, 238);
+    --card-solid-header-color: rgb(229, 229, 229);
+    --card-solid-footer-color: rgb(229, 229, 229);
     --card-bordered-color: rgb(238, 238, 238);
     --card-hover-border: rgb(77, 77, 77);
     --card-highlight-color: rgb(44, 44, 44);
     --card-highlight-title-color: rgb(179, 179, 179);
     --card-badge-background-color: rgb(220, 220, 220);
     --card-badge-color: rgb(77, 77, 77);
-    --card-header-background-color: rgb(229, 229, 229);
-    --card-footer-background-color: rgb(229, 229, 229);
 }
 
 html.dark {
@@ -294,14 +294,14 @@ html.dark {
     --accordion-button-icon-color: var(--primary-font-color);
     --accordion-body-background-color: rgb(34, 34, 34);
     --card-solid-color: rgb(38, 38, 38);
+    --card-solid-header-color: rgb(44, 44, 44);
+    --card-solid-footer-color: rgb(44, 44, 44);
     --card-bordered-color: rgb(38, 38, 38);
     --card-hover-border: rgb(179, 179, 179);
     --card-highlight-color: rgb(229, 229, 229);
     --card-highlight-title-color: rgb(77, 77, 77);
     --card-badge-background-color: rgb(50, 50, 50);
     --card-badge-color: rgb(179, 179, 179);
-    --card-header-background-color: rgb(44, 44, 44);
-    --card-footer-background-color: rgb(44, 44, 44);
 }
 
 body {
@@ -4382,22 +4382,12 @@ fieldset:disabled .btn {
 }
 
 .card-header {
-    background-color: var(--card-header-background-color);
     padding: .5rem 1rem;
     margin-bottom: 0;
 }
 
 .card-header:first-child {
     border-radius: .25rem .25rem 0 0;
-}
-
-.card-footer {
-    background-color: var(--card-footer-background-color);
-    padding: .5rem 1rem;
-}
-
-.card-footer:last-child {
-    border-radius: 0 0 .25rem .25rem;
 }
 
 .card-img-overlay {
@@ -4432,8 +4422,29 @@ fieldset:disabled .btn {
     border: 2px solid var(--card-bordered-color);
 }
 
+.card-bordered .card-footer {
+    padding: .5rem 1rem;
+}
+
+.card-bordered .card-footer:last-child {
+    border-radius: 0 0 .25rem .25rem;
+}
+
 .card-solid {
     background-color: var(--card-solid-color);
+}
+
+.card-solid .card-header {
+    background-color: var(--card-solid-header-color);
+}
+
+.card-solid .card-footer {
+    background-color: var(--card-solid-footer-color);
+    padding: .5rem 1rem;
+}
+
+.card-solid .card-footer:last-child {
+    border-radius: 0 0 .25rem .25rem;
 }
 
 .card-highlight {
