@@ -261,7 +261,9 @@ html {
     --alert-primary-link-color: rgb(230, 230, 230);
     --alert-primary-close-background-color: rgb(230, 230, 230);
     --alert-primary-close-hover-background-color: rgb(237, 237, 237);
-    --card-background-color: rgb(238, 238, 238);
+    --card-solid-color: rgb(238, 238, 238);
+    --card-bordered-color: rgb(238, 238, 238);
+    --card-hover-border: rgb(77, 77, 77);
     --card-highlight-color: rgb(44, 44, 44);
     --card-highlight-title-color: rgb(179, 179, 179);
     --card-badge-background-color: rgb(220, 220, 220);
@@ -291,7 +293,9 @@ html.dark {
     --accordion-button-color: var(--primary-font-color);
     --accordion-button-icon-color: var(--primary-font-color);
     --accordion-body-background-color: rgb(34, 34, 34);
-    --card-background-color: rgb(38, 38, 38);
+    --card-solid-color: rgb(38, 38, 38);
+    --card-bordered-color: rgb(38, 38, 38);
+    --card-hover-border: rgb(179, 179, 179);
     --card-highlight-color: rgb(229, 229, 229);
     --card-highlight-title-color: rgb(77, 77, 77);
     --card-badge-background-color: rgb(50, 50, 50);
@@ -4324,36 +4328,11 @@ fieldset:disabled .btn {
     display: flex;
     flex-direction: column;
     min-width: 0;
-    background-color: var(--card-background-color);
     background-clip: border-box;
     border: none;
     border-radius: .25rem;
     word-wrap: break-word;
-}
-
-.card-hover {
-    transition: transform 300ms;
-    will-change: transform;
-}
-
-.card-hover:hover {
-    transform: translate3d(0, -3px, 0);
-}
-
-.card-highlight {
-    border: 2px solid var(--card-highlight-color);
-}
-
-.card-highlight > .card-header {
-    background-color: var(--card-highlight-color) !important;
-}
-
-.card-highlight > .card-header > .card-title {
-    color: var(--card-highlight-title-color) !important;
-}
-
-.card-highlight .card-header:first-child {
-    border-radius: 0;
+    transition: border 300ms, transform 300ms, box-shadow 300ms;
 }
 
 .card-badge {
@@ -4386,11 +4365,16 @@ fieldset:disabled .btn {
 
 .card-title {
     margin-bottom: .5rem;
+    will-change: transform;
 }
 
 .card-subtitle {
     margin-top: -.25rem;
     margin-bottom: 0;
+}
+
+.card-text {
+    will-change: transform;
 }
 
 .card-text:last-child {
@@ -4442,6 +4426,56 @@ fieldset:disabled .btn {
 .card-img-bottom {
     border-bottom-left-radius: .25rem;
     border-bottom-right-radius: .25rem;
+}
+
+.card-bordered {
+    border: 2px solid var(--card-bordered-color);
+}
+
+.card-solid {
+    background-color: var(--card-solid-color);
+}
+
+.card-highlight {
+    border: 2px solid var(--card-highlight-color);
+}
+
+.card-highlight > .card-header {
+    background-color: var(--card-highlight-color) !important;
+}
+
+.card-highlight > .card-header > .card-title {
+    color: var(--card-highlight-title-color) !important;
+}
+
+.card-highlight .card-header:first-child {
+    border-radius: 0;
+}
+
+.card-hover-scale {
+    will-change: transform, box-shadow;
+}
+
+.card-hover-scale:hover {
+    transform: scale3d(1.01, 1.01, 1.01);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+}
+
+.card-hover-translate {
+    will-change: transform, box-shadow;
+}
+
+.card-hover-translate:hover {
+    transform: translate3d(0, -3px, 0);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 3px;
+}
+
+.card-hover-border {
+    will-change: border;
+}
+
+.card-hover-border:hover {
+    border-color: var(--card-hover-border);
 }
 
 .breadcrumb {

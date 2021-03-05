@@ -49,13 +49,16 @@ html {
     --alert-primary-close-background-color: rgb(230, 230, 230);
     --alert-primary-close-hover-background-color: rgb(237, 237, 237);
     
-    --card-background-color: rgb(238, 238, 238);
+    --card-solid-color: rgb(238, 238, 238);
+    --card-solid-header-color: rgb(229, 229, 229);
+    --card-solid-footer-color: rgb(229, 229, 229);
+
+    --card-bordered-color: rgb(238, 238, 238);
+    --card-hover-border: rgb(77, 77, 77);
     --card-highlight-color: rgb(44, 44, 44);
     --card-highlight-title-color: rgb(179, 179, 179);
     --card-badge-background-color: rgb(220, 220, 220);
     --card-badge-color: rgb(77, 77, 77);
-    --card-header-background-color: rgb(229, 229, 229);
-    --card-footer-background-color: rgb(229, 229, 229);
 }
 
 html.dark {
@@ -84,13 +87,16 @@ html.dark {
     --accordion-button-icon-color: var(--primary-font-color);
     --accordion-body-background-color: rgb(34, 34, 34);
 
-    --card-background-color: rgb(38, 38, 38);
+    --card-solid-color: rgb(38, 38, 38);
+    --card-solid-header-color: rgb(44, 44, 44);
+    --card-solid-footer-color: rgb(44, 44, 44);
+
+    --card-bordered-color: rgb(38, 38, 38);
+    --card-hover-border: rgb(179, 179, 179);
     --card-highlight-color: rgb(229, 229, 229);
     --card-highlight-title-color: rgb(77, 77, 77);
     --card-badge-background-color: rgb(50, 50, 50);
     --card-badge-color: rgb(179, 179, 179);
-    --card-header-background-color: rgb(44, 44, 44);
-    --card-footer-background-color: rgb(44, 44, 44);
 }
 
 body {
