@@ -1,14 +1,97 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap");
-.bg-1 {
-    background-color: var(--primary-background-color);
+html {
+    --primary-font-family: 'Roboto', sans-serif;
+    --secondary-font-family: 'Roboto', sans-serif;
+    --mono-font-family: 'Roboto Mono', monospace;
+    --bg-color-0: rgb(248, 248, 248);
+    --bg-color-1: rgb(246, 246, 246);
+    --bg-color-2: rgb(244, 244, 244);
+    --primary-font-color: rgb(127, 127, 127);
+    --secondary-font-color: rgb(77, 77, 77);
+    --link-color: rgb(77, 77, 77);
+    --link-hover-color: rgb(30, 30, 30);
+    --hr-color: rgb(220, 220, 220);
+    --blockquote-color: rgb(77, 77, 77);
+    --blockquote-border-color: rgb(77, 77, 77);
+    --blockquote-footer-color: rgb(127, 127, 127);
+    --mark-background-color: rgb(238, 238, 238);
+    --pre-background-color: rgb(238, 238, 238);
+    --pre-color: rgb(72, 72, 72);
+    --code-background-color: rgb(238, 238, 238);
+    --code-color: rgb(72, 72, 72);
+    --accordion-button-background-color: rgb(238, 238, 238);
+    --accordion-button-hover-background-color: rgb(235, 235, 235);
+    --accordion-button-color: var(--primary-font-color);
+    --accordion-button-icon-color: var(--primary-font-color);
+    --accordion-body-background-color: rgb(242, 242, 242);
+    --alert-primary-background-color: rgb(51, 51, 51);
+    --alert-primary-color: rgb(204, 204, 204);
+    --alert-primary-heading-color: rgb(204, 204, 204);
+    --alert-primary-link-color: rgb(230, 230, 230);
+    --alert-primary-close-background-color: rgb(230, 230, 230);
+    --alert-primary-close-hover-background-color: rgb(237, 237, 237);
+    --btn-color: rgb(127, 127, 127);
+    --btn-hover-background: rgb(220, 220, 220);
+    --btn-hover-color: rgb(50, 50, 50);
+    --card-solid-color: rgb(238, 238, 238);
+    --card-solid-header-color: rgb(229, 229, 229);
+    --card-solid-footer-color: rgb(229, 229, 229);
+    --card-bordered-color: rgb(238, 238, 238);
+    --card-hover-border: rgb(77, 77, 77);
+    --card-highlight-color: rgb(44, 44, 44);
+    --card-highlight-title-color: rgb(179, 179, 179);
+    --card-badge-background-color: rgb(220, 220, 220);
+    --card-badge-color: rgb(77, 77, 77);
+    --form-control-bordered-color: rgb(220, 220, 220);
+    --form-control-bordered-focus-color: rgb(77, 77, 77);
+    --form-control-bordered-disabled-color: rgb(240, 240, 240);
 }
 
-.bg-2 {
-    background-color: var(--secondary-background-color);
+html.dark {
+    --bg-color-0: rgb(30, 30, 30);
+    --bg-color-1: rgb(31, 31, 31);
+    --bg-color-2: rgb(32, 32, 32);
+    --secondary-font-color: rgb(179, 179, 179);
+    --link-color: rgb(179, 179, 179);
+    --link-hover-color: rgb(248, 248, 248);
+    --hr-color: rgb(50, 50, 50);
+    --blockquote-color: rgb(179, 179, 179);
+    --blockquote-border-color: rgb(179, 179, 179);
+    --blockquote-footer-color: rgb(127, 127, 127);
+    --mark-background-color: rgb(37, 37, 37);
+    --pre-background-color: rgb(37, 37, 37);
+    --pre-color: rgb(179, 179, 179);
+    --code-background-color: rgb(37, 37, 37);
+    --code-color: rgb(179, 179, 179);
+    --accordion-button-background-color: rgb(38, 38, 38);
+    --accordion-button-hover-background-color: rgb(40, 40, 40);
+    --accordion-button-color: var(--primary-font-color);
+    --accordion-button-icon-color: var(--primary-font-color);
+    --accordion-body-background-color: rgb(34, 34, 34);
+    --btn-color: rgb(127, 127, 127);
+    --btn-hover-background: rgb(50, 50, 50);
+    --btn-hover-color: rgb(220, 220, 220);
+    --card-solid-color: rgb(38, 38, 38);
+    --card-solid-header-color: rgb(44, 44, 44);
+    --card-solid-footer-color: rgb(44, 44, 44);
+    --card-bordered-color: rgb(38, 38, 38);
+    --card-hover-border: rgb(179, 179, 179);
+    --card-highlight-color: rgb(229, 229, 229);
+    --card-highlight-title-color: rgb(77, 77, 77);
+    --card-badge-background-color: rgb(50, 50, 50);
+    --card-badge-color: rgb(179, 179, 179);
 }
 
-.bg-3 {
-    background-color: var(--tertiary-background-color);
+.bg-color-0 {
+    background-color: var(--bg-color-0);
+}
+
+.bg-color-1 {
+    background-color: var(--bg-color-1);
+}
+
+.bg-color-2 {
+    background-color: var(--bg-color-2);
 }
 
 .bg-transparent {
@@ -221,6 +304,346 @@
     --aspect-ratio: calc(9 / 21 * 100%);
 }
 
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+    line-height: 1.15;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+    margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+    display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1, .h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+    box-sizing: content-box;
+    /* 1 */
+    height: 0;
+    /* 1 */
+    overflow: visible;
+    /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+    background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+    border-bottom: none;
+    /* 1 */
+    text-decoration: underline;
+    /* 2 */
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+    /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    /* 1 */
+    font-size: 1em;
+    /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small, .small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+    border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    /* 1 */
+    font-size: 100%;
+    /* 1 */
+    line-height: 1.15;
+    /* 1 */
+    margin: 0;
+    /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+    /* 1 */
+    overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+    /* 1 */
+    text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+    padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+    box-sizing: border-box;
+    /* 1 */
+    color: inherit;
+    /* 2 */
+    display: table;
+    /* 1 */
+    max-width: 100%;
+    /* 1 */
+    padding: 0;
+    /* 3 */
+    white-space: normal;
+    /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+    vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+    overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    /* 1 */
+    padding: 0;
+    /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+    -webkit-appearance: textfield;
+    /* 1 */
+    outline-offset: -2px;
+    /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    /* 1 */
+    font: inherit;
+    /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+    display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+    display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+    display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+    display: none;
+}
+
 *,
 *::before,
 *::after {
@@ -230,83 +653,11 @@
 html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    --primary-font-family: 'Roboto', sans-serif;
-    --secondary-font-family: 'Roboto', sans-serif;
-    --mono-font-family: 'Roboto Mono', monospace;
-    --primary-background-color: rgb(248, 248, 248);
-    --secondary-background-color: rgb(246, 246, 246);
-    --tertiary-background-color: rgb(244, 244, 244);
-    --primary-font-color: rgb(127, 127, 127);
-    --secondary-font-color: rgb(77, 77, 77);
-    --pro7: rgb(220, 220, 220);
-    --link-color: rgb(77, 77, 77);
-    --link-hover-color: rgb(30, 30, 30);
-    --hr-color: rgb(220, 220, 220);
-    --blockquote-color: rgb(77, 77, 77);
-    --blockquote-border-color: rgb(77, 77, 77);
-    --blockquote-footer-color: rgb(127, 127, 127);
-    --mark-background-color: rgb(238, 238, 238);
-    --pre-background-color: rgb(238, 238, 238);
-    --pre-color: rgb(72, 72, 72);
-    --code-background-color: rgb(238, 238, 238);
-    --code-color: rgb(72, 72, 72);
-    --accordion-button-background-color: rgb(238, 238, 238);
-    --accordion-button-hover-background-color: rgb(235, 235, 235);
-    --accordion-button-color: var(--primary-font-color);
-    --accordion-button-icon-color: var(--primary-font-color);
-    --accordion-body-background-color: rgb(242, 242, 242);
-    --alert-primary-background-color: rgb(51, 51, 51);
-    --alert-primary-color: rgb(204, 204, 204);
-    --alert-primary-heading-color: rgb(204, 204, 204);
-    --alert-primary-link-color: rgb(230, 230, 230);
-    --alert-primary-close-background-color: rgb(230, 230, 230);
-    --alert-primary-close-hover-background-color: rgb(237, 237, 237);
-    --card-solid-color: rgb(238, 238, 238);
-    --card-solid-header-color: rgb(229, 229, 229);
-    --card-solid-footer-color: rgb(229, 229, 229);
-    --card-bordered-color: rgb(238, 238, 238);
-    --card-hover-border: rgb(77, 77, 77);
-    --card-highlight-color: rgb(44, 44, 44);
-    --card-highlight-title-color: rgb(179, 179, 179);
-    --card-badge-background-color: rgb(220, 220, 220);
-    --card-badge-color: rgb(77, 77, 77);
-}
-
-html.dark {
-    --primary-background-color: rgb(30, 30, 30);
-    --secondary-background-color: rgb(31, 31, 31);
-    --tertiary-background-color: rgb(32, 32, 32);
-    --secondary-font-color: rgb(179, 179, 179);
-    --link-color: rgb(179, 179, 179);
-    --link-hover-color: rgb(248, 248, 248);
-    --hr-color: rgb(50, 50, 50);
-    --blockquote-color: rgb(179, 179, 179);
-    --blockquote-border-color: rgb(179, 179, 179);
-    --blockquote-footer-color: rgb(127, 127, 127);
-    --mark-background-color: rgb(37, 37, 37);
-    --pre-background-color: rgb(37, 37, 37);
-    --pre-color: rgb(179, 179, 179);
-    --code-background-color: rgb(37, 37, 37);
-    --code-color: rgb(179, 179, 179);
-    --accordion-button-background-color: rgb(38, 38, 38);
-    --accordion-button-hover-background-color: rgb(40, 40, 40);
-    --accordion-button-color: var(--primary-font-color);
-    --accordion-button-icon-color: var(--primary-font-color);
-    --accordion-body-background-color: rgb(34, 34, 34);
-    --card-solid-color: rgb(38, 38, 38);
-    --card-solid-header-color: rgb(44, 44, 44);
-    --card-solid-footer-color: rgb(44, 44, 44);
-    --card-bordered-color: rgb(38, 38, 38);
-    --card-hover-border: rgb(179, 179, 179);
-    --card-highlight-color: rgb(229, 229, 229);
-    --card-highlight-title-color: rgb(77, 77, 77);
-    --card-badge-background-color: rgb(50, 50, 50);
-    --card-badge-color: rgb(179, 179, 179);
 }
 
 body {
     position: relative;
-    background-color: var(--primary-background-color);
+    background-color: var(--bg-color-0);
     font-family: var(--primary-font-family);
     font-size: 1rem;
     font-weight: 400;
@@ -314,7 +665,6 @@ body {
     color: var(--primary-font-color);
     text-align: left;
     -webkit-text-size-adjust: 100%;
-    margin: 0;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -338,13 +688,6 @@ mark,
 .mark,
 hr {
     transition: background-color 300ms, color 300ms, border-color 300ms, margin 300ms;
-}
-
-hr {
-    border: 0;
-    border-top: 2px solid var(--hr-color);
-    margin-top: 1rem;
-    margin-bottom: 1rem;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -379,6 +722,20 @@ h5, .h5 {
 
 h6, .h6 {
     font-size: 1rem;
+}
+
+
+mark,
+.mark {
+    background-color: var(--mark-background-color);
+    padding: .2rem;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid var(--hr-color);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 p {
@@ -460,13 +817,6 @@ strong {
 
 small, .small {
     font-size: .875em;
-}
-
-
-mark,
-.mark {
-    background-color: var(--mark-background-color);
-    padding: .2rem;
 }
 
 sub,
@@ -2532,7 +2882,6 @@ progress {
     min-height: 3rem;
     padding: .375rem .75rem;
     color: gray;
-    background-color: #e6e6e6;
     background-clip: padding-box;
     border: none;
     border-radius: .25rem;
@@ -2543,7 +2892,6 @@ progress {
 }
 
 .form-control:focus {
-    background-color: #e3e3e3;
     outline: 0;
 }
 
@@ -2563,7 +2911,6 @@ progress {
 }
 
 .form-control:disabled, .form-control[readonly] {
-    background-color: #f0f0f0;
     opacity: 1;
 }
 
@@ -2641,7 +2988,7 @@ progress {
 }
 
 .dark .form-control:disabled, .dark .form-control[readonly] {
-    background-color: #242424;
+    background-color: #232323;
     opacity: 1;
 }
 
@@ -2659,6 +3006,61 @@ progress {
 
 .dark .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
     background-color: #404040;
+}
+
+.form-control-bordered {
+    background: transparent;
+    border: 1px solid var(--form-control-bordered-color);
+}
+
+.form-control-bordered:focus {
+    border-color: var(--form-control-bordered-focus-color);
+}
+
+.form-control-bordered:disabled, .form-control-bordered[readonly] {
+    border-color: var(--form-control-bordered-disabled-color);
+}
+
+.form-control-bordered:disabled::-moz-placeholder, .form-control-bordered[readonly]::-moz-placeholder {
+    color: var(--form-control-bordered-disabled-color);
+}
+
+.form-control-bordered:disabled:-ms-input-placeholder, .form-control-bordered[readonly]:-ms-input-placeholder {
+    color: var(--form-control-bordered-disabled-color);
+}
+
+.form-control-bordered:disabled::placeholder, .form-control-bordered[readonly]::placeholder {
+    color: var(--form-control-bordered-disabled-color);
+}
+
+.form-control-bordered::file-selector-button {
+    color: gray;
+    background-color: var(--form-control-bordered-color);
+}
+
+.form-control-bordered:hover:not(:disabled):not([readonly])::file-selector-button {
+    background-color: #bfbfbf;
+}
+
+.form-control-bordered::-webkit-file-upload-button {
+    color: gray;
+    background-color: #cccccc;
+}
+
+.form-control-bordered:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+    background-color: #bfbfbf;
+}
+
+.form-control-solid {
+    background-color: #e6e6e6;
+}
+
+.form-control-solid:focus {
+    background-color: #e3e3e3;
+}
+
+.form-control-solid:disabled, .form-control-solid[readonly] {
+    background-color: #f0f0f0;
 }
 
 textarea.form-control {
@@ -2802,12 +3204,12 @@ textarea.form-control {
 }
 
 .form-check-input:focus, .form-radio-input:focus, .form-switch-input:focus {
-    background-color: #e0e0e0;
+    background-color: #e1e1e1;
     outline: 0;
 }
 
 .form-check-input:checked, .form-radio-input:checked, .form-switch-input:checked {
-    background-color: #cccccc;
+    background-color: #cdcdcd;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'  viewBox='0 0 24 24'%3e%3cpath fill='gray' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /%3e%3c/svg%3e");
     background-size: 16px;
 }
@@ -2840,7 +3242,7 @@ textarea.form-control {
 }
 
 .form-radio-input:checked {
-    background-color: #cccccc;
+    background-color: #cdcdcd;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='gray'/%3e%3c/svg%3e");
 }
 
@@ -2857,7 +3259,7 @@ textarea.form-control {
 }
 
 .form-switch-input:checked {
-    background-color: #cccccc;
+    background-color: #cdcdcd;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='gray'/%3e%3c/svg%3e");
     background-size: contain;
     background-position: right center;
@@ -2932,7 +3334,7 @@ textarea.form-control {
 }
 
 .form-range::-webkit-slider-thumb:active {
-    background-color: #a8a8a8;
+    background-color: darkgray;
 }
 
 .form-range::-webkit-slider-runnable-track {
@@ -2959,7 +3361,7 @@ textarea.form-control {
 }
 
 .form-range::-moz-range-thumb:active {
-    background-color: #a8a8a8;
+    background-color: darkgray;
 }
 
 .form-range::-moz-range-track {
@@ -2988,7 +3390,7 @@ textarea.form-control {
 }
 
 .form-range::-ms-thumb:active {
-    background-color: #a8a8a8;
+    background-color: darkgray;
 }
 
 .form-range::-ms-track {
@@ -3437,7 +3839,7 @@ textarea.form-control {
 .btn {
     display: inline-block;
     background-color: transparent;
-    color: gray;
+    color: var(--btn-color);
     font-weight: 500;
     text-align: center;
     text-decoration: none;
@@ -3454,14 +3856,8 @@ textarea.form-control {
 }
 
 .btn:hover {
-    background-color: #cccccc;
-    color: #333333;
-    text-decoration: none;
-}
-
-.dark .btn:hover {
-    background-color: #333333;
-    color: #cccccc;
+    background-color: var(--btn-hover-background);
+    color: var(--btn-hover-color);
     text-decoration: none;
 }
 
@@ -4158,11 +4554,11 @@ fieldset:disabled .btn {
 }
 
 .dark .nav-side {
-    background-color: #1d1d1d;
+    background-color: #1e1e1e;
 }
 
 .dark .nav-side .nav-link:hover {
-    background-color: #212121;
+    background-color: #222222;
 }
 
 .nav-dashboard.is-visible {
@@ -4244,7 +4640,7 @@ fieldset:disabled .btn {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--primary-background-color);
+    background-color: var(--bg-color-0);
     padding-top: .5rem;
     padding-bottom: .5rem;
     transition: background-color 300ms, padding-top 300ms, padding-bottom 300ms, box-shadow 300ms;

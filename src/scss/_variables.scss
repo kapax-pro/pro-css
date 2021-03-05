@@ -1,14 +1,115 @@
-$pro0: hsl(0, 0%, 12%);
-$pro1: hsl(0, 0%, 15%);
-$pro2: hsl(0, 0%, 17%);
-$pro3: hsl(0, 0%, 20%); // Dividers, borders on dark background
-$pro4: hsl(0, 0%, 30%); // Headings on light background
-$pro5: hsl(0, 0%, 50%); // Text on all backgrounds
-$pro6: hsl(0, 0%, 70%); // Headings on dark background
-$pro7: hsl(0, 0%, 80%); // Dividers, borders on light background
-$pro8: hsl(0, 0%, 90%);
-$pro9: hsl(0, 0%, 93%);
-$pro10: hsl(0, 0%, 97%);
+html {
+    --primary-font-family: 'Roboto', sans-serif;
+    --secondary-font-family: 'Roboto', sans-serif;
+    --mono-font-family: 'Roboto Mono', monospace;
+
+    --bg-color-0: rgb(248, 248, 248); // body
+    --bg-color-1: rgb(246, 246, 246);
+    --bg-color-2: rgb(244, 244, 244);
+
+    --primary-font-color: rgb(127, 127, 127); // body / paragraph text
+    --secondary-font-color: rgb(77, 77, 77); // headings
+
+    --link-color: rgb(77, 77, 77);
+    --link-hover-color: rgb(30, 30, 30);
+
+    --hr-color: rgb(220, 220, 220);
+    --blockquote-color: rgb(77, 77, 77);
+    --blockquote-border-color: rgb(77, 77, 77);
+    --blockquote-footer-color: rgb(127, 127, 127);
+    --mark-background-color: rgb(238, 238, 238);
+    --pre-background-color: rgb(238, 238, 238);
+    --pre-color: rgb(72, 72, 72);
+    --code-background-color: rgb(238, 238, 238);
+    --code-color: rgb(72, 72, 72);
+    
+    --accordion-button-background-color: rgb(238, 238, 238);
+    --accordion-button-hover-background-color: rgb(235, 235, 235);
+    --accordion-button-color: var(--primary-font-color);
+    --accordion-button-icon-color: var(--primary-font-color);
+    --accordion-body-background-color: rgb(242, 242, 242);
+
+    --alert-primary-background-color: rgb(51, 51, 51);
+    --alert-primary-color: rgb(204, 204, 204);
+    --alert-primary-heading-color: rgb(204, 204, 204);
+    --alert-primary-link-color: rgb(230, 230, 230);
+    --alert-primary-close-background-color: rgb(230, 230, 230);
+    --alert-primary-close-hover-background-color: rgb(237, 237, 237);
+
+    --btn-color: rgb(127, 127, 127);
+    --btn-hover-background: rgb(220, 220, 220);
+    --btn-hover-color: rgb(50, 50, 50);
+    
+    --card-solid-color: rgb(238, 238, 238);
+    --card-solid-header-color: rgb(229, 229, 229);
+    --card-solid-footer-color: rgb(229, 229, 229);
+
+    --card-bordered-color: rgb(238, 238, 238);
+    --card-hover-border: rgb(77, 77, 77);
+    --card-highlight-color: rgb(44, 44, 44);
+    --card-highlight-title-color: rgb(179, 179, 179);
+    --card-badge-background-color: rgb(220, 220, 220);
+    --card-badge-color: rgb(77, 77, 77);
+
+    --form-control-bordered-color: rgb(220, 220, 220);
+    --form-control-bordered-focus-color: rgb(77, 77, 77);
+    --form-control-bordered-disabled-color: rgb(240, 240, 240);
+}
+
+html.dark {
+    --bg-color-0: rgb(30, 30, 30); // body
+    --bg-color-1: rgb(31, 31, 31);
+    --bg-color-2: rgb(32, 32, 32);
+    
+    --secondary-font-color: rgb(179, 179, 179); // headings
+    
+    --link-color: rgb(179, 179, 179);
+    --link-hover-color: rgb(248, 248, 248);
+
+    --hr-color: rgb(50, 50, 50);
+    --blockquote-color: rgb(179, 179, 179);
+    --blockquote-border-color: rgb(179, 179, 179);
+    --blockquote-footer-color: rgb(127, 127, 127);
+    --mark-background-color: rgb(37, 37, 37);
+    --pre-background-color: rgb(37, 37, 37);
+    --pre-color: rgb(179, 179, 179);
+    --code-background-color: rgb(37, 37, 37);
+    --code-color: rgb(179, 179, 179);
+
+    --accordion-button-background-color: rgb(38, 38, 38);
+    --accordion-button-hover-background-color: rgb(40, 40, 40);
+    --accordion-button-color: var(--primary-font-color);
+    --accordion-button-icon-color: var(--primary-font-color);
+    --accordion-body-background-color: rgb(34, 34, 34);
+
+    --btn-color: rgb(127, 127, 127);
+    --btn-hover-background: rgb(50, 50, 50);
+    --btn-hover-color: rgb(220, 220, 220);
+
+    --card-solid-color: rgb(38, 38, 38);
+    --card-solid-header-color: rgb(44, 44, 44);
+    --card-solid-footer-color: rgb(44, 44, 44);
+
+    --card-bordered-color: rgb(38, 38, 38);
+    --card-hover-border: rgb(179, 179, 179);
+    --card-highlight-color: rgb(229, 229, 229);
+    --card-highlight-title-color: rgb(77, 77, 77);
+    --card-badge-background-color: rgb(50, 50, 50);
+    --card-badge-color: rgb(179, 179, 179);
+}
+
+
+$pro0: rgb(31, 31, 31);
+$pro1: rgb(38, 38, 38);
+$pro2: rgb(43, 43, 43);
+$pro3: rgb(51, 51, 51); // Dividers, borders on dark background
+$pro4: rgb(77, 77, 77); // Headings on light background
+$pro5: rgb(128, 128, 128); // Text on all backgrounds
+$pro6: rgb(179, 179, 179); // Headings on dark background
+$pro7: rgb(204, 204, 204); // Dividers, borders on light background
+$pro8: rgb(230, 230, 230);
+$pro9: rgb(237, 237, 237);
+$pro10: rgb(247, 247, 247);
 
 // $pro0: #1f1f1f;
 // $pro1: #252525;
