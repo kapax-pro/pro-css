@@ -30,31 +30,54 @@
     </head>
     <body>
 
+        <!-- NAVBAR -->
+        <nav class="navbar fixed-top shadow-sm">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <div class="navbar-brand mr-5">
+                        <a href="#"><img src="https://storage.googleapis.com/cosentio-prod/kapax/images/logos/kapax.webp"></a>
+                    </div>
+                    <div class="navbar-nav d-none d-lg-flex">
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-theme-toggle mr-1" data-toggle-theme="dark"></button>
+                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></button>
+                    <a class="btn btn-primary d-none d-lg-inline-block" href="#">Log in</a>
+                </div>
+            </div>
+        </nav>
+        <!-- END NAVBAR -->
+
         <section class="py-14">
             <div class="container">
                 <div class="row">
 
                     <div class="col-12">
-                        <h2>Bordered Form Elements</h2>
+                        <h2>Form Elements</h2>
                     </div>
 
                     <div class="col">
                         <div class="mb-3">
                             <label for="exampleFormControlInput2" class="form-label">.form-label</label>
-                            <input id="exampleFormControlInput2" class="form-control form-control-bordered" type="email" placeholder="input.form-control.form-control-bordered">
+                            <input id="exampleFormControlInput2" class="form-control" type="email" placeholder="input.form-control">
                             <div class="form-text">.form-text</div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput4" class="form-label">.form-label</label>
-                            <input id="exampleFormControlInput4" class="form-control form-control-bordered" type="email" placeholder="input.form-control.form-control-bordered[readonly]" readonly>
+                            <input id="exampleFormControlInput4" class="form-control" type="email" placeholder="input.form-control[readonly]" readonly>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">textarea</label>
-                            <textarea id="exampleFormControlTextarea1" class="form-control form-control-bordered" placeholder="textarea.form-control.form-control-bordered" rows="3"></textarea>
+                            <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="textarea.form-control" rows="3"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">textarea [disabled]</label>
-                            <textarea id="exampleFormControlTextarea1" class="form-control form-control-bordered" placeholder="textarea.form-control.form-control-bordered[disabled]" rows="3" disabled></textarea>
+                            <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="textarea.form-control[disabled]" rows="3" disabled></textarea>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">select</label>
@@ -76,11 +99,103 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">.form-label</label>
-                            <input class="form-control form-control-bordered" type="file">
+                            <input class="form-control" type="file">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">.form-label</label>
-                            <input class="form-control form-control-bordered" type="file" disabled>
+                            <input class="form-control" type="file" disabled>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="mb-3">
+                            <label class="form-label">checkboxes</label>
+                            <div class="form-check">
+                                <input id="flexCheckDefault" class="form-check-input" type="checkbox" value="">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    checkbox
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="flexCheckDefault2" class="form-check-input" type="checkbox" value="" checked>
+                                <label class="form-check-label" for="flexCheckDefault2">
+                                    checkbox [checked]
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="flexCheckDisabled" class="form-check-input" type="checkbox" value="" disabled>
+                                <label class="form-check-label" for="flexCheckDisabled">
+                                    checkbox [disabled]
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input id="flexCheckCheckedDisabled" class="form-check-input" type="checkbox" value="" checked disabled>
+                                <label class="form-check-label" for="flexCheckCheckedDisabled">
+                                    checkbox [disabled] [checked]
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">switch checkboxes</label>
+                            <div class="form-switch">
+                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckDefault">
+                                <label class="form-switch-label" for="flexSwitchCheckDefault">switch checkbox</label>
+                            </div>
+                            <div class="form-switch">
+                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                <label class="form-switch-label" for="flexSwitchCheckChecked">switch checkbox [checked]</label>
+                            </div>
+                            <div class="form-switch">
+                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckDisabled" disabled>
+                                <label class="form-switch-label" for="flexSwitchCheckDisabled">switch checkbox [disabled]</label>
+                            </div>
+                            <div class="form-switch">
+                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked disabled>
+                                <label class="form-switch-label" for="flexSwitchCheckCheckedDisabled">switch checkbox [disabled] [checked]</label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">radios</label>
+                            <div class="form-radio">
+                                <input class="form-radio-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <label class="form-radio-label" for="flexRadioDefault1">
+                                    radio
+                                </label>
+                            </div>
+                            <div class="form-radio">
+                                <input class="form-radio-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label class="form-radio-label" for="flexRadioDefault2">
+                                    radio [checked]
+                                </label>
+                            </div>
+                            <div class="form-radio">
+                                <input class="form-radio-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
+                                <label class="form-radio-label" for="flexRadioDisabled">
+                                    radio [disabled]
+                                </label>
+                            </div>
+                            <div class="form-radio">
+                                <input class="form-radio-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
+                                <label class="form-radio-label" for="flexRadioCheckedDisabled">
+                                    radio [disabled] [checked]
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="customRange1" class="form-label">range</label>
+                            <input type="range" class="form-range" id="customRange1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="customRange2" class="form-label">range [disabled]</label>
+                            <input type="range" class="form-range" id="customRange2" disabled>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput4" class="form-label">color picker</label>
+                            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
                         </div>
                     </div>
 

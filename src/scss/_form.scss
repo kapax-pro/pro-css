@@ -2,23 +2,29 @@
     display: block;
     width: 100%;
     min-height: 3rem;
-    padding: .375rem .75rem;
-    color: $pro5;
+    background: transparent;
     background-clip: padding-box;
-    border: none;
+    color: var(--form-control-color);
+    padding: .375rem .75rem;
+    border: 1px solid var(--form-control-border-color);
     border-radius: .25rem;
     appearance: none;
     transition: background-color 300ms, color 300ms;
     &:focus {
         outline: 0;
+        border-color: var(--form-control-focus-border-color);
     }
     &::placeholder {
-        color: $pro6;
+        color: var(--form-control-placeholder-color);
         opacity: 1;
     }
     &:disabled,
     &[readonly] {
         opacity: 1;
+        border-color: var(--form-control-disabled-border-color);
+        &::placeholder {
+            color: var(--form-control-disabled-border-color);
+        }
     }
     &[type="file"] {
         overflow: hidden;
@@ -28,145 +34,49 @@
     }
     &::file-selector-button {
         height: 3rem;
+        background-color: var(--form-control-file-button-background-color);
+        color: var(--form-control-file-button-color);
         padding: .375rem .75rem;
-        margin: (-.375rem) (-.75rem);
-        margin-inline-end: .75rem;
-        color: $pro5;
-        background-color: $pro7;
-        pointer-events: none;
-        border-color: inherit;
         border-style: solid;
+        border-color: inherit;
         border-width: 0;
         border-radius: 0;
+        margin: (-.375rem) (-.75rem);
+        margin-inline-end: .75rem;
+        pointer-events: none;
         transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
     }
     &:hover:not(:disabled):not([readonly])::file-selector-button {
-        background-color: darken($pro7, 5%);
+        background-color: var(--form-control-hover-file-button-background-color);
     }
     &::-webkit-file-upload-button {
         height: 3rem;
+        background-color: var(--form-control-file-button-background-color);
+        color: var(--form-control-file-button-color);
         padding: .375rem .75rem;
-        margin: (-.375rem) (-.75rem);
-        margin-inline-end: .75rem;
-        color: $pro5;
-        background-color: $pro7;
-        pointer-events: none;
-        border-color: inherit;
         border-style: solid;
+        border-color: inherit;
         border-width: 0;
         border-radius: 0;
+        margin: (-.375rem) (-.75rem);
+        margin-inline-end: .75rem;
+        pointer-events: none;
         transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
     }
     &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-        background-color: darken($pro7, 5%);
-    }
-    .dark & {
-        background-color: $pro2;
-        &:focus {
-            background-color: lighten($pro2, 1%);
-            outline: 0;
-        }
-        &::placeholder {
-            color: $pro4;
-            opacity: 1;
-        }
-        &:disabled,
-        &[readonly] {
-            background-color: darken($pro2, 3%);
-            opacity: 1;
-        }
-    }
-    .dark &::file-selector-button {
-        background-color: $pro3;
-    }
-    .dark &::-webkit-file-upload-button {
-        background-color: $pro3;
-    }
-    .dark &:hover:not(:disabled):not([readonly])::file-selector-button {
-        background-color: lighten($pro3, 5%);
-    }
-    .dark &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-        background-color: lighten($pro3, 5%);
-    }
-}
-
-.form-control-bordered {
-    background: transparent;
-    border: 1px solid var(--form-control-bordered-color);
-    &:focus {
-        border-color: var(--form-control-bordered-focus-color);
-    }
-    &:disabled,
-    &[readonly] {
-        border-color: var(--form-control-bordered-disabled-color);
-        &::placeholder {
-            color: var(--form-control-bordered-disabled-color);
-        }
-    }
-    &::file-selector-button {
-        color: $pro5;
-        background-color: var(--form-control-bordered-color);
-    }
-    &:hover:not(:disabled):not([readonly])::file-selector-button {
-        background-color: darken($pro7, 5%);
-    }
-    &::-webkit-file-upload-button {
-        color: $pro5;
-        background-color: $pro7;
-    }
-    &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-        background-color: darken($pro7, 5%);
+        background-color: var(--form-control-hover-file-button-background-color);
     }
 }
 
 .form-control-solid {
-    background-color: $pro8;
+    background-color: var(--form-control-solid-background-color);
     &:focus {
-        background-color: darken($pro8, 1%);
+        background-color: var(--form-control-solid-focus-background-color);
     }
     &:disabled,
     &[readonly] {
-        background-color: lighten($pro8, 4%);
+        background-color: var(--form-control-solid-disabled-background-color);
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-textarea.form-control {
-    min-height: 3rem;
 }
 
 .form-control-color {
@@ -180,13 +90,14 @@ textarea.form-control {
     }
 }
 
+textarea.form-control {
+    min-height: 3rem;
+}
+
 .form-text {
     margin-top: .25rem;
     font-size: .875rem;
-    color: $pro6;
-    .dark & {
-        color: $pro4;
-    }
+    color: var(--form-text-color);
 }
 
 .form-label {
@@ -204,53 +115,43 @@ textarea.form-control {
     display: block;
     width: 100%;
     height: 48px;
-    padding: .5rem 1.75rem .5rem 1rem;
-    color: $pro5;
-    background-color: $pro8;
     background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path fill='#{$pro5}' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>"));
+    background-color: transparent;
     background-repeat: no-repeat;
     background-position: right .75rem center;
     background-size: 26px;
-    border: none;
+    color: $pro5;
+    padding: .5rem 1.75rem .5rem 1rem;
+    border: 1px solid var(--form-control-border-color);
     border-radius: .25rem;
     appearance: none;
-
     &:focus {
         outline: 0;
-        &::-ms-value {
-            color: $pro5;
-            background-color: $pro8;
-        }
+        border-color: var(--form-control-focus-border-color);
     }
-
     &[multiple],
     &[size]:not([size="1"]) {
         height: auto;
         padding-right: .75rem;
         background-image: none;
     }
-
     &:disabled {
-        background-color: lighten($pro8, 4%);
-    }
-
-    &:-moz-focusring {
-        color: transparent;
-        text-shadow: 0 0 0 $pro5;
-    }
-
-    .dark & {
-        background-color: $pro2;
-        &:focus {
-            outline: 0;
-            &::-ms-value {
-                color: $pro5;
-                background-color: $pro2;
-            }
+        opacity: 1;
+        border-color: var(--form-control-disabled-border-color);
+        &::placeholder {
+            color: var(--form-control-disabled-border-color);
         }
-        &:disabled {
-            background-color: darken($pro2, 2%);
-        }
+    }
+}
+
+.form-select-solid {
+    background-color: var(--form-control-solid-background-color);
+    &:focus {
+        background-color: var(--form-control-solid-focus-background-color);
+    }
+    &:disabled,
+    &[readonly] {
+        background-color: var(--form-control-solid-disabled-background-color);
     }
 }
 
@@ -266,22 +167,16 @@ textarea.form-control {
     padding-left: 2.5em;
 }
 
-.form-check-label,
-.form-radio-label,
-.form-switch-label {
-    color: $pro5;
-    cursor: null;
-}
-
 .form-check-input {
     float: left;
     width: 1.25em;
     height: 1.25em;
     vertical-align: top;
-    background-color: $pro8;
+    background-color: transparent;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    border: 1px solid var(--form-control-border-color);
     border-radius: .25rem;
     margin-left: -1.75em;
     margin-top: .125em;
@@ -292,11 +187,10 @@ textarea.form-control {
         filter: brightness(90%);
     }
     &:focus {
-        background-color: darken($pro8, 2%);
+        border-color: var(--form-control-focus-border-color);
         outline: 0;
     }
     &:checked {
-        background-color: darken($pro8, 10%);
         background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'  viewBox='0 0 24 24'><path fill='#{$pro5}' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /></svg>"));
         background-size: 16px;
     }
@@ -305,14 +199,22 @@ textarea.form-control {
         filter: none;
         opacity: .5;
     }
-
     &[disabled],
     &:disabled {
         ~ .form-check-label {
             opacity: .5;
         }
     }
+}
 
+.form-check-input-solid {
+    background-color: --form-control-solid-background-color;
+    &:focus {
+        background-color: darken($pro8, 2%);
+    }
+    &:checked {
+        background-color: darken($pro8, 10%);
+    }
     .dark & {
         background-color: $pro2;
         &:focus {
@@ -324,6 +226,37 @@ textarea.form-control {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .form-radio-input {
     @extend .form-check-input;

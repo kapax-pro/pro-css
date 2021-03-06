@@ -166,8 +166,6 @@ small {
     font-size: .875em;
 }
 
-
-
 sub,
 sup {
     position: relative;
@@ -292,24 +290,18 @@ button {
 }
 
 button:focus {
-    outline: dotted 1px;
-    outline: -webkit-focus-ring-color auto 5px;
+    outline: none;
 }
 
-input,
 button,
-select,
+input,
 optgroup,
+select,
 textarea {
-    margin: 0;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-}
-
-button,
-select {
-    text-transform: none;
+    margin: 0;
 }
 
 [role="button"] {
@@ -328,15 +320,9 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-    -webkit-appearance: button;
     &:not(:disabled) {
         cursor: pointer;
     }
-}
-
-::-moz-focus-inner {
-    padding: 0;
-    border-style: none;
 }
 
 textarea {
@@ -353,12 +339,10 @@ fieldset {
 legend {
     float: left;
     width: 100%;
-    padding: 0;
     margin-bottom: .5rem;
     font-size: 1.5rem;
     font-weight: null;
     line-height: inherit;
-
     + * {
         clear: left;
     }
@@ -374,19 +358,6 @@ legend {
     padding: 0;
 }
 
-::-webkit-inner-spin-button {
-    height: auto;
-}
-
-[type="search"] {
-    outline-offset: -2px;
-    -webkit-appearance: textfield;
-}
-
-::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
 ::-webkit-color-swatch-wrapper {
     padding: 0;
 }
@@ -395,28 +366,10 @@ legend {
     font: inherit;
 }
 
-::-webkit-file-upload-button {
-    font: inherit;
-    -webkit-appearance: button;
-}
-
 output {
     display: inline-block;
 }
 
 iframe {
     border: 0;
-}
-
-summary {
-    display: list-item;
-    cursor: pointer;
-}
-
-progress {
-    vertical-align: baseline;
-}
-
-[hidden] {
-    display: none !important;
 }

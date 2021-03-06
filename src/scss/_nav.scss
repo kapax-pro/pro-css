@@ -57,7 +57,7 @@
     width: 256px;
     height: 100%;
     flex-direction: column;
-    background-color: darken($pro10, 2%);
+    // background-color: darken($pro10, 2%);
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 1040;
@@ -91,7 +91,7 @@
         transform: translate3d(0, 0 , 0);
     }
     .dark & {
-        background-color: darken($pro0, .5%);
+        // background-color: darken($pro0, .5%);
         .nav-link:hover {
             background-color: lighten($pro0, 1%);
         }

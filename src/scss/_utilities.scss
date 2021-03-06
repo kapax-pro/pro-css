@@ -1,4 +1,25 @@
 $utilities: (
+    "bg-color": (
+        property: background-color,
+        class: bg-color,
+        values: (
+            0: var(--bg-color-0),
+            1: var(--bg-color-1),
+            2: var(--bg-color-2),
+            transparent: transparent
+        )
+    ),
+    "fill": (
+        property: fill,
+        class: fill,
+        values: (
+            0: var(--fill-0),
+            1: var(--fill-1),
+            2: var(--fill-2),
+            3: var(--fill-3),
+            none: none
+        )
+    ),
     "align": (
         property: vertical-align,
         class: align,
@@ -37,36 +58,41 @@ $utilities: (
     "border": (
         property: border,
         values: (
-            null: 2px solid $pro7,
+            null: 1px solid var(--border-color),
             0: 0,
+            2: 2px solid var(--border-color)
         )
     ),
     "border-top": (
         property: border-top,
         values: (
-            null: 2px solid $pro7,
+            null: 1px solid var(--border-color),
             0: 0,
+            2: 2px solid var(--border-color)
         )
     ),
     "border-right": (
         property: border-right,
         values: (
-            null: 2px solid $pro7,
+            null: 1px solid var(--border-color),
             0: 0,
+            2: 2px solid var(--border-color)
         )
     ),
     "border-bottom": (
         property: border-bottom,
         values: (
-            null: 2px solid $pro7,
+            null: 1px solid var(--border-color),
             0: 0,
+            2: 2px solid var(--border-color)
         )
     ),
     "border-left": (
         property: border-left,
         values: (
-            null: 2px solid $pro7,
+            null: 1px solid var(--border-color),
             0: 0,
+            2: 2px solid var(--border-color)
         )
     ),
     // Sizing utilities
@@ -376,6 +402,15 @@ $utilities: (
             12: 4rem
         )
     ),
+    "text-color": (
+        property: color,
+        class: text,
+        values: (
+            muted: var(--text-muted-color),
+            light-bg: var(--text-light-bg-color),
+            dark-bg: var(--text-dark-bg-color)
+        )
+    ),
     "text-transform": (
         property: text-transform,
         class: text,
@@ -475,75 +510,6 @@ $utilities: (
     )
 );
 
-.bg-color-0 {
-    background-color: var(--bg-color-0);
-}
-
-.bg-color-1 {
-    background-color: var(--bg-color-1);
-}
-
-.bg-color-2 {
-    background-color: var(--bg-color-2);
-}
-
-// .bg-color-2 {
-//     // background-color: darken($pro10, 3%);
-//     background-color: hsl(0, 0%, 94%);
-//     .dark & {
-//         background-color: darken($pro0, 1%);
-//     }
-// }
-
-// .bg-4 {
-//     background-color: $pro9;
-//     .dark & {
-//         background-color: darken($pro0, 1.5%);
-//     }
-// }
-
-// .bg-5 {
-//     background-color: $pro8;
-//     .dark & {
-//         background-color: darken($pro0, 1.85%);
-//     }
-// }
-
-.bg-transparent {
-    background-color: transparent;
-    .dark & {
-        background-color: transparent;
-    }
-}
-
-.fill-1 {
-    fill: $pro5;
-    .dark & {
-        fill: $pro5;
-    }
-}
-
-.fill-2 {
-    fill: $pro4;
-    .dark & {
-        fill: $pro6;
-    }
-}
-
-.fill-3 {
-    fill: $pro3;
-    .dark & {
-        fill: $pro7;
-    }
-}
-
-.fill-4 {
-    fill: $pro2;
-    .dark & {
-        fill: $pro8;
-    }
-}
-
 .clearfix {
     @include clearfix();
 }
@@ -579,32 +545,6 @@ $utilities: (
 .sr-only,
 .sr-only-focusable:not(:focus) {
     @include sr-only();
-}
-
-.border,
-.border-top,
-.border-right,
-.border-bottom,
-.border-left {
-    border-color: $pro7 !important;
-    .dark & {
-        border-color: $pro3 !important;
-    }
-}
-
-.text-muted {
-    color: $pro6;
-    .dark & {
-        color: $pro4;
-    }
-}
-
-.text-light-bg {
-    color: $pro4 !important;
-}
-
-.text-dark-bg {
-    color: $pro6 !important;
 }
 
 .text-truncate {
