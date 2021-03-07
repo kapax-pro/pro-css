@@ -9,7 +9,7 @@
 
         <title>Pro UI</title>
         
-        <link rel="icon" href="https://storage.googleapis.com/kapax-prod/images/logos/kapax-icon.png">
+        <link rel="icon" href="https://storage.googleapis.com/cosentio-prod/kapax/images/logos/kapax-icon.png">
         
         <!-- AVOID FOUC -->
         <style>.hidden {display: none;}</style>
@@ -139,58 +139,49 @@
                         <div class="mb-3">
                             <label class="form-label">switch checkboxes</label>
                             <div class="form-switch">
-                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckDefault">
-                                <label class="form-switch-label" for="flexSwitchCheckDefault">switch checkbox</label>
+                                <input class="form-switch-input" type="checkbox" id="switch1">
+                                <label class="form-switch-label" for="switch1">switch checkbox</label>
                             </div>
                             <div class="form-switch">
-                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                <label class="form-switch-label" for="flexSwitchCheckChecked">switch checkbox [checked]</label>
+                                <input class="form-switch-input" type="checkbox" id="switch2" checked>
+                                <label class="form-switch-label" for="switch2">switch checkbox [checked]</label>
                             </div>
                             <div class="form-switch">
-                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckDisabled" disabled>
-                                <label class="form-switch-label" for="flexSwitchCheckDisabled">switch checkbox [disabled]</label>
+                                <input class="form-switch-input" type="checkbox" id="switch3" disabled>
+                                <label class="form-switch-label" for="switch3">switch checkbox [disabled]</label>
                             </div>
                             <div class="form-switch">
-                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked disabled>
-                                <label class="form-switch-label" for="flexSwitchCheckCheckedDisabled">switch checkbox [disabled] [checked]</label>
+                                <input class="form-switch-input" type="checkbox" id="switch4" checked disabled>
+                                <label class="form-switch-label" for="switch4">switch checkbox [disabled] [checked]</label>
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">radios</label>
                             <div class="form-radio">
-                                <input class="form-radio-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-radio-label" for="flexRadioDefault1">
+                                <input class="form-radio-input" type="radio" name="radioExample1" id="radioExample1">
+                                <label class="form-radio-label" for="radioExample1">
                                     radio
                                 </label>
                             </div>
                             <div class="form-radio">
-                                <input class="form-radio-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-radio-label" for="flexRadioDefault2">
+                                <input class="form-radio-input" type="radio" name="radioExample1" id="radioChecked" checked>
+                                <label class="form-radio-label" for="radioChecked">
                                     radio [checked]
                                 </label>
                             </div>
                             <div class="form-radio">
-                                <input class="form-radio-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
-                                <label class="form-radio-label" for="flexRadioDisabled">
+                                <input class="form-radio-input" type="radio" name="radioDisabled" id="radioDisabled" disabled>
+                                <label class="form-radio-label" for="radioDisabled">
                                     radio [disabled]
                                 </label>
                             </div>
                             <div class="form-radio">
-                                <input class="form-radio-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
-                                <label class="form-radio-label" for="flexRadioCheckedDisabled">
+                                <input class="form-radio-input" type="radio" name="radioDisabled" id="radioCheckedDisabled" checked disabled>
+                                <label class="form-radio-label" for="radioCheckedDisabled">
                                     radio [disabled] [checked]
                                 </label>
                             </div>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="customRange1" class="form-label">range</label>
-                            <input type="range" class="form-range" id="customRange1">
-                        </div>
-                        <div class="mb-3">
-                            <label for="customRange2" class="form-label">range [disabled]</label>
-                            <input type="range" class="form-range" id="customRange2" disabled>
                         </div>
 
                         <div class="mb-3">
@@ -202,47 +193,36 @@
                 </div>
             </div>
         </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- FORMS -->
-        <div class="py-14">
+        
+        <section class="py-14">
             <div class="container">
-                <h2>Forms</h2>
-
-                <h3>Form inputs</h3>
                 <div class="row">
+
+                    <div class="col-12">
+                        <h2>Solid Form Elements</h2>
+                    </div>
+
                     <div class="col">
                         <div class="mb-3">
-                            <label for="exampleFormControlInput2" class="form-label">input</label>
-                            <input id="exampleFormControlInput2" class="form-control" type="email" placeholder="Email address">
-                            <div class="form-text">Instructional text</div>
+                            <label for="formConrol20" class="form-label">.form-label</label>
+                            <input id="formConrol20" class="form-control form-control-solid" type="email" placeholder="input.form-control.form-control-solid">
+                            <div class="form-text">.form-text</div>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlInput4" class="form-label">input [readonly] [disabled]</label>
-                            <input id="exampleFormControlInput4" class="form-control" type="email" placeholder="example@example.com" readonly>
+                            <label for="formControl21" class="form-label">.form-label</label>
+                            <input id="formControl21" class="form-control form-control-solid" type="email" placeholder="input.form-control[readonly]" readonly>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">textarea</label>
-                            <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="Write your message" rows="3"></textarea>
+                            <label for="textArea20" class="form-label">textarea</label>
+                            <textarea id="textArea20" class="form-control form-control-solid" placeholder="textarea.form-control.form-control-solid" rows="3"></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">textarea [disabled]</label>
-                            <textarea id="exampleFormControlTextarea1" class="form-control" placeholder="Write your message" rows="3" disabled></textarea>
+                            <label for="textArea21" class="form-label">textarea [disabled]</label>
+                            <textarea id="textArea21" class="form-control form-control-solid" placeholder="textarea.form-control.form-control-solid[disabled]" rows="3" disabled></textarea>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">select</label>
-                            <select class="form-select">
+                            <select class="form-select form-select-solid">
                                 <option selected>default</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -251,7 +231,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">select [disabled]</label>
-                            <select class="form-select" disabled>
+                            <select class="form-select form-select-solid" disabled>
                                 <option selected>default</option>
                                 <option value="1">One</option>
                                 <option value="2">Two</option>
@@ -259,38 +239,39 @@
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">file input</label>
-                            <input class="form-control" type="file">
+                            <label class="form-label">.form-label</label>
+                            <input class="form-control form-control-solid" type="file">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">file input [disabled]</label>
-                            <input class="form-control" type="file" disabled>
+                            <label class="form-label">.form-label</label>
+                            <input class="form-control form-control-solid" type="file" disabled>
                         </div>
                     </div>
+
                     <div class="col">
                         <div class="mb-3">
                             <label class="form-label">checkboxes</label>
                             <div class="form-check">
-                                <input id="flexCheckDefault" class="form-check-input" type="checkbox" value="">
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <input id="check20" class="form-check-input form-check-input-solid" type="checkbox" value="">
+                                <label class="form-check-label" for="check20">
                                     checkbox
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input id="flexCheckDefault2" class="form-check-input" type="checkbox" value="" checked>
-                                <label class="form-check-label" for="flexCheckDefault2">
+                                <input id="check21" class="form-check-input form-check-input-solid" type="checkbox" value="" checked>
+                                <label class="form-check-label" for="check21">
                                     checkbox [checked]
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input id="flexCheckDisabled" class="form-check-input" type="checkbox" value="" disabled>
-                                <label class="form-check-label" for="flexCheckDisabled">
+                                <input id="check22" class="form-check-input form-check-input-solid" type="checkbox" value="" disabled>
+                                <label class="form-check-label" for="check22">
                                     checkbox [disabled]
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input id="flexCheckCheckedDisabled" class="form-check-input" type="checkbox" value="" checked disabled>
-                                <label class="form-check-label" for="flexCheckCheckedDisabled">
+                                <input id="check23" class="form-check-input form-check-input-solid" type="checkbox" value="" checked disabled>
+                                <label class="form-check-label" for="check23">
                                     checkbox [disabled] [checked]
                                 </label>
                             </div>
@@ -299,87 +280,85 @@
                         <div class="mb-3">
                             <label class="form-label">switch checkboxes</label>
                             <div class="form-switch">
-                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckDefault">
-                                <label class="form-switch-label" for="flexSwitchCheckDefault">switch checkbox</label>
+                                <input class="form-switch-input form-switch-input-solid" type="checkbox" id="switch20">
+                                <label class="form-switch-label" for="switch20">switch checkbox</label>
                             </div>
                             <div class="form-switch">
-                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckChecked" checked>
-                                <label class="form-switch-label" for="flexSwitchCheckChecked">switch checkbox [checked]</label>
+                                <input class="form-switch-input form-switch-input-solid" type="checkbox" id="switch21" checked>
+                                <label class="form-switch-label" for="switch21">switch checkbox [checked]</label>
                             </div>
                             <div class="form-switch">
-                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckDisabled" disabled>
-                                <label class="form-switch-label" for="flexSwitchCheckDisabled">switch checkbox [disabled]</label>
+                                <input class="form-switch-input form-switch-input-solid" type="checkbox" id="switch23" disabled>
+                                <label class="form-switch-label" for="switch23">switch checkbox [disabled]</label>
                             </div>
                             <div class="form-switch">
-                                <input class="form-switch-input" type="checkbox" id="flexSwitchCheckCheckedDisabled" checked disabled>
-                                <label class="form-switch-label" for="flexSwitchCheckCheckedDisabled">switch checkbox [disabled] [checked]</label>
+                                <input class="form-switch-input form-switch-input-solid" type="checkbox" id="switch24" checked disabled>
+                                <label class="form-switch-label" for="switch24">switch checkbox [disabled] [checked]</label>
                             </div>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label">radios</label>
                             <div class="form-radio">
-                                <input class="form-radio-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                <label class="form-radio-label" for="flexRadioDefault1">
+                                <input class="form-radio-input form-radio-input-solid" type="radio" name="radioExample2" id="radio20">
+                                <label class="form-radio-label" for="radio20">
                                     radio
                                 </label>
                             </div>
                             <div class="form-radio">
-                                <input class="form-radio-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                                <label class="form-radio-label" for="flexRadioDefault2">
+                                <input class="form-radio-input form-radio-input-solid" type="radio" name="radioExample2" id="radio21" checked>
+                                <label class="form-radio-label" for="radio21">
                                     radio [checked]
                                 </label>
                             </div>
                             <div class="form-radio">
-                                <input class="form-radio-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" disabled>
-                                <label class="form-radio-label" for="flexRadioDisabled">
+                                <input class="form-radio-input form-radio-input-solid" type="radio" name="radioDisabled2" id="radio22" disabled>
+                                <label class="form-radio-label" for="radio22">
                                     radio [disabled]
                                 </label>
                             </div>
                             <div class="form-radio">
-                                <input class="form-radio-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled" checked disabled>
-                                <label class="form-radio-label" for="flexRadioCheckedDisabled">
+                                <input class="form-radio-input form-radio-input-solid" type="radio" name="radioDisabled2" id="radio23" checked disabled>
+                                <label class="form-radio-label" for="radio23">
                                     radio [disabled] [checked]
                                 </label>
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <label for="customRange1" class="form-label">range</label>
-                            <input type="range" class="form-range" id="customRange1">
-                        </div>
-                        <div class="mb-3">
-                            <label for="customRange2" class="form-label">range [disabled]</label>
-                            <input type="range" class="form-range" id="customRange2" disabled>
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput4" class="form-label">color picker</label>
-                            <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+                            <label for="colorInput2" class="form-label">color picker</label>
+                            <input type="color" class="form-control form-control-solid form-control-color" id="colorInput2" value="#563d7c" title="Choose your color">
                         </div>
                     </div>
-                </div>
 
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="py-14">
+            <div class="container">
                 <h3>Form input groups</h3>
                 <div class="row">
                     <div class="col-md">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">@</span>
-                            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control form-control-solid" placeholder="Username">
                         </div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control" placeholder="Recipient's username">
                             <span class="input-group-text" id="basic-addon2">@example.com</span>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                            <input type="text" class="form-control form-control-solid" id="basic-url">
                         </div>
                     </div>
                     <div class="col-md">
                         <div class="input-group mb-3">
                             <span class="input-group-text">$</span>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" class="form-control form-control-solid">
                             <span class="input-group-text">.00</span>
                         </div>
                         <div class="input-group mb-3">
@@ -398,11 +377,11 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="floatingInput" type="email" placeholder="Email address">
+                            <input class="form-control form-control-solid" id="floatingInput" type="email" placeholder="Email address">
                             <label for="floatingInput">Email address</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="floatingInput2" type="text" placeholder="text" value="Aaron">
+                            <input class="form-control form-control-solid" id="floatingInput2" type="text" placeholder="text" value="Aaron">
                             <label for="floatingInput2">Name</label>
                         </div>
                         <div class="form-floating mb-3">
@@ -426,7 +405,7 @@
                     <div class="col-md-6">
                         <div>
                             <label for="exampleFormValidation1" class="form-label">Email address</label>
-                            <input id="exampleFormValidation1" class="form-control is-invalid" type="email" placeholder="Email address">
+                            <input id="exampleFormValidation1" class="form-control form-control-solid is-invalid" type="email" placeholder="Email address">
                             <div class="invalid-feedback">
                                 Something is wrong with your input
                             </div>

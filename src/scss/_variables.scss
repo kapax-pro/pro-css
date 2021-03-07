@@ -97,7 +97,6 @@ html {
     --btn-close-hover-bg: rgb(50, 50, 50);
     --btn-close-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z' /></svg>");
 
-    
     --card-solid-color: rgb(238, 238, 238);
     --card-solid-header-color: rgb(229, 229, 229);
     --card-solid-footer-color: rgb(229, 229, 229);
@@ -114,15 +113,28 @@ html {
     --form-control-border-color: rgb(220, 220, 220);
     --form-control-focus-border-color: rgb(180, 180, 180);
     --form-control-disabled-border-color: rgb(240, 240, 240);
-    --form-text-color: rgb(180, 180, 180);
-    --form-control-file-button-background-color: rgb(204, 204, 204);
-    --form-control-hover-file-button-background-color: rgb(190, 190, 190);
+    --form-control-disabled-placeholder-color: rgb(200, 200, 200);
+    --form-control-file-button-bg: rgb(230, 230, 230);
+    --form-control-hover-file-button-bg: rgb(220, 220, 220);
     --form-control-file-button-color: rgb(128, 128, 128);
 
+    --form-control-solid-bg: rgb(240, 240, 240);
+    --form-control-solid-focus-bg: rgb(234, 234, 234);
+    --form-control-solid-disabled-bg: rgb(245, 245, 245);
 
-    --form-control-solid-background-color: rgb(230, 230, 230);
-    --form-control-solid-focus-background-color: rgb(220, 220, 220);
-    --form-control-solid-disabled-background-color: rgb(242, 242, 242);
+    --form-select-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path fill='rgb(128, 128, 128)' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>");
+    --form-check-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'  viewBox='0 0 24 24'><path fill='rgb(128, 128, 128)' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /></svg>");
+
+    --form-radio-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='rgb(128, 128, 128)'/></svg>");
+    --form-radio-solid-bg: rgb(230, 230, 230);
+
+    --form-switch-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgb(180, 180, 180)'/></svg>");
+    --form-switch-checked-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgb(128, 128, 128)'/></svg>");
+
+    --form-input-group-bg: rgb(230, 230, 230);
+
+    --form-invalid-bg: rgb(181, 97, 105);
+    --form-invalid-color: rgb(206, 171, 174);
 }
 
 html.dark {
@@ -192,12 +204,22 @@ html.dark {
     --card-badge-background-color: rgb(50, 50, 50);
     --card-badge-color: rgb(180, 180, 180);
 
-    --form-text-color: rgb(80, 80, 80);
-    --form-control-file-button-background-color: rgb(51, 51, 51);
-    --form-control-hover-file-button-background-color: rgb(75, 75, 75);
-    --form-control-file-button-color: rgb(128, 128, 128);
+    
+    --form-control-placeholder-color: rgb(60, 60, 60);
+    --form-control-disabled-placeholder-color: rgb(40, 40, 40);
+    --form-control-border-color: rgb(50, 50, 50);
+    --form-control-focus-border-color: rgb(70, 70, 70);
+    --form-control-disabled-border-color: rgb(35, 35, 35);
+    --form-control-file-button-bg: rgb(45, 45, 45);
+    --form-control-hover-file-button-bg: rgb(55, 55, 55);
 
-    --form-control-solid-background-color: rgb(43, 43, 43);
+    --form-switch-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgb(80, 80, 80)'/></svg>");
+
+    --form-control-solid-bg: rgb(37, 37, 37);
+    --form-control-solid-focus-bg: rgb(39, 39, 39);
+    --form-control-solid-disabled-bg: rgb(33, 33, 33);
+
+    --form-input-group-bg: rgb(45, 45, 45);
 }
 
 

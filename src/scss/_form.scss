@@ -23,7 +23,7 @@
         opacity: 1;
         border-color: var(--form-control-disabled-border-color);
         &::placeholder {
-            color: var(--form-control-disabled-border-color);
+            color: var(--form-control-disabled-placeholder-color);
         }
     }
     &[type="file"] {
@@ -34,7 +34,7 @@
     }
     &::file-selector-button {
         height: 3rem;
-        background-color: var(--form-control-file-button-background-color);
+        background-color: var(--form-control-file-button-bg);
         color: var(--form-control-file-button-color);
         padding: .375rem .75rem;
         border-style: solid;
@@ -47,11 +47,11 @@
         transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
     }
     &:hover:not(:disabled):not([readonly])::file-selector-button {
-        background-color: var(--form-control-hover-file-button-background-color);
+        background-color: var(--form-control-hover-file-button-bg);
     }
     &::-webkit-file-upload-button {
         height: 3rem;
-        background-color: var(--form-control-file-button-background-color);
+        background-color: var(--form-control-file-button-bg);
         color: var(--form-control-file-button-color);
         padding: .375rem .75rem;
         border-style: solid;
@@ -64,18 +64,19 @@
         transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
     }
     &:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-        background-color: var(--form-control-hover-file-button-background-color);
+        background-color: var(--form-control-hover-file-button-bg);
     }
 }
 
 .form-control-solid {
-    background-color: var(--form-control-solid-background-color);
+    background-color: var(--form-control-solid-bg);
+    border: none;
     &:focus {
-        background-color: var(--form-control-solid-focus-background-color);
+        background-color: var(--form-control-solid-focus-bg);
     }
     &:disabled,
     &[readonly] {
-        background-color: var(--form-control-solid-disabled-background-color);
+        background-color: var(--form-control-solid-disabled-bg);
     }
 }
 
@@ -97,7 +98,7 @@ textarea.form-control {
 .form-text {
     margin-top: .25rem;
     font-size: .875rem;
-    color: var(--form-text-color);
+    color: var(--text-muted-color);
 }
 
 .form-label {
@@ -115,12 +116,12 @@ textarea.form-control {
     display: block;
     width: 100%;
     height: 48px;
-    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path fill='#{$pro5}' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>"));
+    background-image: var(--form-select-icon);
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: right .75rem center;
     background-size: 26px;
-    color: $pro5;
+    color: var(--form-control-color);
     padding: .5rem 1.75rem .5rem 1rem;
     border: 1px solid var(--form-control-border-color);
     border-radius: .25rem;
@@ -145,13 +146,14 @@ textarea.form-control {
 }
 
 .form-select-solid {
-    background-color: var(--form-control-solid-background-color);
+    background-color: var(--form-control-solid-bg);
+    border: none;
     &:focus {
-        background-color: var(--form-control-solid-focus-background-color);
+        background-color: var(--form-control-solid-focus-bg);
     }
     &:disabled,
     &[readonly] {
-        background-color: var(--form-control-solid-disabled-background-color);
+        background-color: var(--form-control-solid-disabled-bg);
     }
 }
 
@@ -190,7 +192,7 @@ textarea.form-control {
         outline: 0;
     }
     &:checked {
-        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'  viewBox='0 0 24 24'><path fill='#{$pro5}' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /></svg>"));
+        background-image: var(--form-check-icon);
         background-size: 16px;
     }
     &:disabled {
@@ -207,62 +209,21 @@ textarea.form-control {
 }
 
 .form-check-input-solid {
-    background-color: --form-control-solid-background-color;
+    background-color: var(--form-control-solid-bg);
+    border: none;
     &:focus {
-        background-color: darken($pro8, 2%);
+        background-color: var(--form-control-solid-focus-bg);
     }
     &:checked {
-        background-color: darken($pro8, 10%);
-    }
-    .dark & {
-        background-color: $pro2;
-        &:focus {
-            background-color: lighten($pro2, 1%);
-            outline: 0;
-        }
-        &:checked {
-            background-color: lighten($pro2, 1%);
-        }
+        background-color: var(--form-control-solid-focus-bg);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .form-radio-input {
     @extend .form-check-input;
     border-radius: 50%;
     &:checked {
-        background-color: darken($pro8, 10%);
-        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$pro5}'/></svg>"));
+        background-image: var(--form-radio-icon);
     }
     &[disabled],
     &:disabled {
@@ -272,16 +233,26 @@ textarea.form-control {
     }
 }
 
+.form-radio-input-solid {
+    background-color: var(--form-control-solid-bg);
+    border: none;
+    &:focus {
+        background-color: var(--form-control-solid-focus-bg);
+    }
+    &:checked {
+        background-color: var(--form-control-solid-focus-bg);
+    }
+}
+
 .form-switch-input {
     @extend .form-check-input;
     width: 2em;
     margin-left: -2.5em;
-    background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$pro6}'/></svg>"));
+    background-image: var(--form-switch-icon);
     background-position: left center;
     border-radius: 2em;
     &:checked {
-        background-color: darken($pro8, 10%);
-        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$pro5}'/></svg>"));
+        background-image: var(--form-switch-checked-icon);
         background-size: contain;
         background-position: right center;
     }
@@ -291,18 +262,11 @@ textarea.form-control {
             opacity: .5;
         }
     }
-    .dark & {
-        background-color: $pro2;
-        background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$pro4}'/></svg>"));
-        &:focus {
-            background-color: lighten($pro2, 1%);
-            outline: 0;
-        }
-        &:checked {
-            background-color: $pro4;
-            background-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$pro5}'/></svg>"));
-        }
-    }
+}
+
+.form-switch-input-solid {
+    background-color: var(--form-control-solid-bg);
+    border: none;
 }
 
 .form-check-inline,
@@ -311,291 +275,6 @@ textarea.form-control {
     margin-right: 1rem;
 }
 
-.form-range {
-    width: 100%;
-    height: 1.4rem;
-    padding: 0;
-    background-color: transparent;
-    appearance: none;
-
-    &:focus {
-        outline: none;
-
-        // Pseudo-elements must be split across multiple rulesets to have an effect.
-        // No box-shadow() mixin for focus accessibility.
-        &::-webkit-slider-thumb { box-shadow: 0 0 0 0 $pro10; }
-        &::-moz-range-thumb     { box-shadow: 0 0 0 0 $pro10; }
-        &::-ms-thumb            { box-shadow: 0 0 0 0 $pro10; }
-    }
-
-    &::-moz-focus-outer {
-        border: 0;
-    }
-
-    &::-webkit-slider-thumb {
-        width: 1rem;
-        height: 1rem;
-        margin-top: -.25rem; // Webkit specific
-        background-color: $pro6;
-        // border: $form-range-thumb-border;
-        border-radius: 1rem;
-        box-shadow: 0 0 0 1px $pro10;
-        transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-        appearance: none;
-
-        &:active {
-            background-color: darken($pro6, 4%);
-        }
-    }
-
-    &::-webkit-slider-runnable-track {
-        width: 100%;
-        height: .5rem;
-        color: transparent; // Why?
-        cursor: pointer;
-        background-color: $pro8;
-        border-color: transparent;
-        border-radius: 1rem;
-        box-shadow: 0 0 0 0 $pro10;
-    }
-
-    &::-moz-range-thumb {
-        width: 1rem;
-        height: 1rem;
-        background-color: $pro6;
-        // border: $form-range-thumb-border;
-        border-radius: 1rem;
-        box-shadow: 0 0 0 1px $pro10;
-        transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-        appearance: none;
-
-        &:active {
-            background-color: darken($pro6, 4%);
-        }
-    }
-
-    &::-moz-range-track {
-        width: 100%;
-        height: .5rem;
-        color: transparent; // Why?
-        cursor: pointer;
-        background-color: $pro8;
-        border-color: transparent;
-        border-radius: 1rem;
-        box-shadow: 0 0 0 0 $pro10;
-    }
-
-    &::-ms-thumb {
-        width: 1rem;
-        height: 1rem;
-        margin-top: 0; // Edge specific
-        margin-right: .2rem; // Workaround that overflowed box-shadow is hidden.
-        margin-left: .2rem;  // Workaround that overflowed box-shadow is hidden.
-        background-color: $pro6;
-        // border: $form-range-thumb-border;
-        border-radius: 1rem;
-        box-shadow: 0 0 0 1px $pro10;
-        transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-        appearance: none;
-
-        &:active {
-            background-color: darken($pro6, 4%);
-        }
-    }
-
-    &::-ms-track {
-        width: 100%;
-        height: .5rem;
-        color: transparent; // Why?
-        cursor: pointer;
-        background-color: $pro8;
-        border-color: transparent;
-        border-radius: 1rem;
-        box-shadow: 0 0 0 0 $pro10;
-    }
-
-    &::-ms-fill-lower {
-        background-color: $pro8;
-        border-radius: 1rem;
-    }
-
-    &::-ms-fill-upper {
-        margin-right: 15px; // arbitrary?
-        background-color: $pro8;
-        border-radius: 1rem;
-    }
-
-    &:disabled {
-        pointer-events: none;
-
-        &::-webkit-slider-thumb {
-            background-color: lighten($pro8, 4%);
-        }
-        &::-webkit-slider-runnable-track {
-            background-color: lighten($pro8, 4%);
-        }
-
-        &::-moz-range-thumb {
-            background-color: lighten($pro8, 4%);
-        }
-        &::-moz-range-track {
-            background-color: lighten($pro8, 4%);
-        }
-
-        &::-ms-thumb {
-            background-color: lighten($pro8, 4%);
-        }
-        &::-ms-track {
-            background-color: lighten($pro8, 4%);
-        }
-        &::-ms-fill-lower {
-            background-color: lighten($pro8, 4%);
-        }
-        &::-ms-fill-upper {
-            background-color: lighten($pro8, 4%);
-        }
-    }
-
-    .dark & {
-        &:focus {
-            outline: none;
-
-            // Pseudo-elements must be split across multiple rulesets to have an effect.
-            // No box-shadow() mixin for focus accessibility.
-            &::-webkit-slider-thumb { box-shadow: 0 0 0 0 $pro0; }
-            &::-moz-range-thumb     { box-shadow: 0 0 0 0 $pro0; }
-            &::-ms-thumb            { box-shadow: 0 0 0 0 $pro0; }
-        }
-
-        &::-moz-focus-outer {
-            border: 0;
-        }
-
-        &::-webkit-slider-thumb {
-            width: 1rem;
-            height: 1rem;
-            margin-top: -.25rem; // Webkit specific
-            background-color: $pro4;
-            // border: $form-range-thumb-border;
-            border-radius: 1rem;
-            box-shadow: 0 0 0 1px $pro0;
-            transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-            appearance: none;
-
-            &:active {
-                background-color: lighten($pro4, 4%);
-            }
-        }
-
-        &::-webkit-slider-runnable-track {
-            width: 100%;
-            height: .5rem;
-            color: transparent; // Why?
-            cursor: pointer;
-            background-color: $pro2;
-            border-color: transparent;
-            border-radius: 1rem;
-            box-shadow: 0 0 0 0 $pro0;
-        }
-
-        &::-moz-range-thumb {
-            width: 1rem;
-            height: 1rem;
-            background-color: $pro4;
-            // border: $form-range-thumb-border;
-            border-radius: 1rem;
-            box-shadow: 0 0 0 1px $pro0;
-            transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-            appearance: none;
-
-            &:active {
-                background-color: lighten($pro4, 4%);
-            }
-        }
-
-        &::-moz-range-track {
-            width: 100%;
-            height: .5rem;
-            color: transparent; // Why?
-            cursor: pointer;
-            background-color: $pro2;
-            border-color: transparent;
-            border-radius: 1rem;
-            box-shadow: 0 0 0 0 $pro0;
-        }
-
-        &::-ms-thumb {
-            width: 1rem;
-            height: 1rem;
-            margin-top: 0; // Edge specific
-            margin-right: .2rem; // Workaround that overflowed box-shadow is hidden.
-            margin-left: .2rem;  // Workaround that overflowed box-shadow is hidden.
-            background-color: $pro4;
-            // border: $form-range-thumb-border;
-            border-radius: 1rem;
-            box-shadow: 0 0 0 1px $pro0;
-            transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-            appearance: none;
-
-            &:active {
-                background-color: lighten($pro4, 4%);
-            }
-        }
-
-        &::-ms-track {
-            width: 100%;
-            height: .5rem;
-            color: transparent; // Why?
-            cursor: pointer;
-            background-color: $pro2;
-            border-color: transparent;
-            border-radius: 1rem;
-            box-shadow: 0 0 0 0 $pro0;
-        }
-
-        &::-ms-fill-lower {
-            background-color: $pro2;
-            border-radius: 1rem;
-        }
-
-        &::-ms-fill-upper {
-            margin-right: 15px; // arbitrary?
-            background-color: $pro2;
-            border-radius: 1rem;
-        }
-
-        &:disabled {
-            pointer-events: none;
-
-            &::-webkit-slider-thumb {
-                background-color: darken($pro2, 4%);
-            }
-            &::-webkit-slider-runnable-track {
-                background-color: darken($pro2, 4%);
-            }
-
-            &::-moz-range-thumb {
-                background-color: darken($pro2, 4%);
-            }
-            &::-moz-range-track {
-                background-color: darken($pro2, 4%);
-            }
-
-            &::-ms-thumb {
-                background-color: darken($pro2, 4%);
-            }
-            &::-ms-track {
-                background-color: darken($pro2, 4%);
-            }
-            &::-ms-fill-lower {
-                background-color: darken($pro2, 4%);
-            }
-            &::-ms-fill-upper {
-                background-color: darken($pro2, 4%);
-            }
-        }
-    }
-}
 
 .input-group {
     position: relative;
@@ -630,15 +309,12 @@ textarea.form-control {
     align-items: center;
     padding: .5rem 1rem;
     font-size: 1rem;
-    color: $pro5;
+    color: var(--form-control-color);
     text-align: center;
     white-space: nowrap;
-    background-color: $pro7;
+    background-color: var(--form-input-group-bg);
     border: 0;
     border-radius: .25rem;
-    .dark & {
-        background-color: $pro3;
-    }
 }
 
 .input-group {
@@ -679,14 +355,10 @@ textarea.form-control {
         }
         &:focus,
         &:not(:placeholder-shown) {
-            // padding-top: 1.625rem;
-            // padding-bottom: .625rem;
             padding-top: 1.25rem;
             padding-bottom: .25rem;
         }
         &:-webkit-autofill {
-            // padding-top: 1.625rem;
-            // padding-bottom: .625rem;
             padding-top: 1.25rem;
             padding-bottom: .25rem;
         }
@@ -714,7 +386,7 @@ textarea.form-control {
 }
 
 .form-control.is-invalid {
-    border: solid 2px $pro12;
+    border: solid 2px var(--form-invalid-bg);
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
@@ -722,7 +394,7 @@ textarea.form-control {
 .invalid-feedback {
     margin: 0;
     font-size: 14px !important;
-    color: lighten($pro12, 30%) !important;
+    color: var(--form-invalid-color) !important;
     display: block;
     background: $pro12;
     padding: 7px 14px;
