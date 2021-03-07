@@ -1,33 +1,35 @@
 html {
-    --primary-font-family: 'Roboto', sans-serif;
-    --secondary-font-family: 'Roboto', sans-serif;
-    --mono-font-family: 'Roboto Mono', monospace;
+    --font-family-0: 'Roboto', sans-serif;
+    --font-family-1: 'Roboto', sans-serif;
+    --font-family-mono: 'Roboto Mono', monospace;
 
-    --heading-color: rgb(77, 77, 77);
+    --heading-color: rgb(80, 80, 80);
     --text-color: rgb(128, 128, 128);
-    --text-muted-color: rgb(179, 179, 179);
-    --text-light-bg-color: rgb(77, 77, 77);
-    --text-dark-bg-color: rgb(179, 179, 179);
+    --text-muted-color: rgb(180, 180, 180);
+    --text-light-bg-color: rgb(80, 80, 80);
+    --text-dark-bg-color: rgb(180, 180, 180);
 
     --bg-color-0: rgb(248, 248, 248); // body
     --bg-color-1: rgb(246, 246, 246);
     --bg-color-2: rgb(244, 244, 244);
+    --bg-color-3: rgb(242, 242, 242);
+    --bg-color-4: rgb(240, 240, 240);
 
     --fill-0: rgb(128, 128, 128); // Middle gray
-    --fill-1: rgb(77, 77, 77);
+    --fill-1: rgb(80, 80, 80);
     --fill-2: rgb(51, 51, 51);
     --fill-3: rgb(43, 43, 43);
     
     --primary-font-color: rgb(127, 127, 127); // body / paragraph text
-    --secondary-font-color: rgb(77, 77, 77); // headings
+    --secondary-font-color: rgb(80, 80, 80); // headings
 
-    --link-color: rgb(77, 77, 77);
+    --link-color: rgb(80, 80, 80);
     --link-hover-color: rgb(30, 30, 30);
 
     --border-color: rgb(220, 220, 220);
     --hr-color: rgb(220, 220, 220);
-    --blockquote-color: rgb(77, 77, 77);
-    --blockquote-border-color: rgb(77, 77, 77);
+    --blockquote-color: rgb(80, 80, 80);
+    --blockquote-border-color: rgb(80, 80, 80);
     --blockquote-footer-color: rgb(127, 127, 127);
     --mark-background-color: rgb(238, 238, 238);
     --pre-background-color: rgb(238, 238, 238);
@@ -51,24 +53,68 @@ html {
     --btn-color: rgb(127, 127, 127);
     --btn-hover-background: rgb(220, 220, 220);
     --btn-hover-color: rgb(50, 50, 50);
+
+    --btn-primary-bg: rgb(60, 60, 60);
+    --btn-primary-hover-bg: rgb(30, 30, 30);
+    --btn-primary-color: rgb(200, 200, 200);
+    --btn-primary-hover-color: rgb(200, 200, 200);
+    --btn-primary-light-bg-bg: rgb(50, 50, 50);
+    --btn-primary-light-bg-hover-bg: rgb(30, 30, 30);
+    --btn-primary-light-bg-color: rgb(200, 200, 200);
+    --btn-primary-light-bg-hover-color: rgb(200, 200, 200);
+    --btn-primary-dark-bg-bg: rgb(200, 200, 200);
+    --btn-primary-dark-bg-hover-bg: rgb(250, 250, 250);
+    --btn-primary-dark-bg-color: rgb(50, 50, 50);
+    --btn-primary-dark-bg-hover-color: rgb(50, 50, 50);
+    
+    --btn-secondary-bg: rgb(200, 200, 200);
+    --btn-secondary-hover-bg: rgb(180, 180, 180);
+    --btn-secondary-color: rgb(128, 128, 128);
+    --btn-secondary-hover-color: rgb(80, 80, 80);
+    --btn-secondary-light-bg-bg: rgb(200, 200, 200);
+    --btn-secondary-light-bg-hover-bg: rgb(180, 180, 180);
+    --btn-secondary-light-bg-color: rgb(128, 128, 128);
+    --btn-secondary-light-bg-hover-color: rgb(80, 80, 80);
+    --btn-secondary-dark-bg-bg: rgb(50, 50, 50);
+    --btn-secondary-dark-bg-hover-bg: rgb(80, 80, 80);
+    --btn-secondary-dark-bg-color: rgb(200, 200, 200);
+    --btn-secondary-dark-bg-hover-color: rgb(230, 230, 230);
+
+    --btn-danger-bg: rgb(181, 97, 105);
+    --btn-danger-hover-bg: rgb(172, 81, 89);
+    --btn-danger-color: rgb(200, 200, 200);
+    --btn-danger-hover-color: rgb(200, 200, 200);
+
+    --btn-theme-toggle-icon-bg: rgb(128, 128, 128);
+    --btn-theme-toggle-hover-icon-bg: rgb(50, 50, 50);
+    --btn-theme-toggle-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M2 12A10 10 0 0 0 15 21.54A10 10 0 0 1 15 2.46A10 10 0 0 0 2 12Z' /></svg>");
+
+    --btn-menu-toggle-icon-bg: rgb(128, 128, 128);
+    --btn-menu-toggle-hover-icon-bg: rgb(50, 50, 50);
+    --btn-menu-toggle-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z' /></svg>");
+
+    --btn-close-bg: rgb(128, 128, 128);
+    --btn-close-hover-bg: rgb(50, 50, 50);
+    --btn-close-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z' /></svg>");
+
     
     --card-solid-color: rgb(238, 238, 238);
     --card-solid-header-color: rgb(229, 229, 229);
     --card-solid-footer-color: rgb(229, 229, 229);
 
     --card-bordered-color: rgb(238, 238, 238);
-    --card-hover-border: rgb(77, 77, 77);
+    --card-hover-border: rgb(80, 80, 80);
     --card-highlight-color: rgb(44, 44, 44);
-    --card-highlight-title-color: rgb(179, 179, 179);
+    --card-highlight-title-color: rgb(180, 180, 180);
     --card-badge-background-color: rgb(220, 220, 220);
-    --card-badge-color: rgb(77, 77, 77);
+    --card-badge-color: rgb(80, 80, 80);
 
     --form-control-color: rgb(128, 128, 128);
-    --form-control-placeholder-color: rgb(179, 179, 179);
+    --form-control-placeholder-color: rgb(180, 180, 180);
     --form-control-border-color: rgb(220, 220, 220);
     --form-control-focus-border-color: rgb(180, 180, 180);
     --form-control-disabled-border-color: rgb(240, 240, 240);
-    --form-text-color: rgb(179, 179, 179);
+    --form-text-color: rgb(180, 180, 180);
     --form-control-file-button-background-color: rgb(204, 204, 204);
     --form-control-hover-file-button-background-color: rgb(190, 190, 190);
     --form-control-file-button-color: rgb(128, 128, 128);
@@ -80,33 +126,33 @@ html {
 }
 
 html.dark {
-    --heading-color: rgb(179, 179, 179);
+    --heading-color: rgb(180, 180, 180);
     --text-color: rgb(128, 128, 128);
-    --text-muted-color: rgb(77, 77, 77);
+    --text-muted-color: rgb(80, 80, 80);
 
     --bg-color-0: rgb(30, 30, 30); // body
     --bg-color-1: rgb(31, 31, 31);
     --bg-color-2: rgb(32, 32, 32);
 
-    --fill-1: rgb(179, 179, 179);
+    --fill-1: rgb(180, 180, 180);
     --fill-2: rgb(204, 204, 204);
     --fill-3: rgb(230, 230, 230);
     
-    --secondary-font-color: rgb(179, 179, 179); // headings
+    --secondary-font-color: rgb(180, 180, 180); // headings
     
-    --link-color: rgb(179, 179, 179);
+    --link-color: rgb(180, 180, 180);
     --link-hover-color: rgb(248, 248, 248);
 
     --border-color: rgb(35, 35, 35);
     --hr-color: rgb(50, 50, 50);
-    --blockquote-color: rgb(179, 179, 179);
-    --blockquote-border-color: rgb(179, 179, 179);
+    --blockquote-color: rgb(180, 180, 180);
+    --blockquote-border-color: rgb(180, 180, 180);
     --blockquote-footer-color: rgb(127, 127, 127);
     --mark-background-color: rgb(37, 37, 37);
     --pre-background-color: rgb(37, 37, 37);
-    --pre-color: rgb(179, 179, 179);
+    --pre-color: rgb(180, 180, 180);
     --code-background-color: rgb(37, 37, 37);
-    --code-color: rgb(179, 179, 179);
+    --code-color: rgb(180, 180, 180);
 
     --accordion-button-background-color: rgb(38, 38, 38);
     --accordion-button-hover-background-color: rgb(40, 40, 40);
@@ -118,18 +164,35 @@ html.dark {
     --btn-hover-background: rgb(50, 50, 50);
     --btn-hover-color: rgb(220, 220, 220);
 
+    --btn-primary-bg: rgb(200, 200, 200);
+    --btn-primary-hover-bg: rgb(250, 250, 250);
+    --btn-primary-color: rgb(50, 50, 50);
+    --btn-primary-hover-color: rgb(50, 50, 50);
+
+    --btn-secondary-bg: rgb(50, 50, 50);
+    --btn-secondary-hover-bg: rgb(80, 80, 80);
+    --btn-secondary-color: rgb(200, 200, 200);
+    --btn-secondary-hover-color: rgb(230, 230, 230);
+
+    --btn-theme-toggle-hover-icon-bg: rgb(200, 200, 200);
+    --btn-theme-toggle-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M3.55,18.54L4.96,19.95L6.76,18.16L5.34,16.74M11,22.45C11.32,22.45 13,22.45 13,22.45V19.5H11M12,5.5A6,6 0 0,0 6,11.5A6,6 0 0,0 12,17.5A6,6 0 0,0 18,11.5C18,8.18 15.31,5.5 12,5.5M20,12.5H23V10.5H20M17.24,18.16L19.04,19.95L20.45,18.54L18.66,16.74M20.45,4.46L19.04,3.05L17.24,4.84L18.66,6.26M13,0.55H11V3.5H13M4,10.5H1V12.5H4M6.76,4.84L4.96,3.05L3.55,4.46L5.34,6.26L6.76,4.84Z' /></svg>");
+
+    --btn-menu-toggle-hover-icon-bg: rgb(200, 200, 200);
+    --btn-close-hover-bg: rgb(200, 200, 200);
+
+
     --card-solid-color: rgb(38, 38, 38);
     --card-solid-header-color: rgb(44, 44, 44);
     --card-solid-footer-color: rgb(44, 44, 44);
 
     --card-bordered-color: rgb(38, 38, 38);
-    --card-hover-border: rgb(179, 179, 179);
+    --card-hover-border: rgb(180, 180, 180);
     --card-highlight-color: rgb(229, 229, 229);
-    --card-highlight-title-color: rgb(77, 77, 77);
+    --card-highlight-title-color: rgb(80, 80, 80);
     --card-badge-background-color: rgb(50, 50, 50);
-    --card-badge-color: rgb(179, 179, 179);
+    --card-badge-color: rgb(180, 180, 180);
 
-    --form-text-color: rgb(77, 77, 77);
+    --form-text-color: rgb(80, 80, 80);
     --form-control-file-button-background-color: rgb(51, 51, 51);
     --form-control-hover-file-button-background-color: rgb(75, 75, 75);
     --form-control-file-button-color: rgb(128, 128, 128);
@@ -142,9 +205,9 @@ $pro0: rgb(31, 31, 31);
 $pro1: rgb(38, 38, 38);
 $pro2: rgb(43, 43, 43);
 $pro3: rgb(51, 51, 51); // Dividers, borders on dark background
-$pro4: rgb(77, 77, 77); // Headings on light background
+$pro4: rgb(80, 80, 80); // Headings on light background
 $pro5: rgb(128, 128, 128); // Text on all backgrounds
-$pro6: rgb(179, 179, 179); // Headings on dark background
+$pro6: rgb(180, 180, 180); // Headings on dark background
 $pro7: rgb(204, 204, 204); // Dividers, borders on light background
 $pro8: rgb(230, 230, 230);
 $pro9: rgb(237, 237, 237);

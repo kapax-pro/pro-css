@@ -5,13 +5,13 @@
     font-weight: 500;
     text-align: center;
     text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
     padding: .625rem 1.5rem;
     border: 2px solid transparent;
     border-radius: .25rem;
+    vertical-align: middle;
+    user-select: none;
     transition: background-color 300ms, border-color 300ms, color 300ms;
+    cursor: pointer;
     &:hover {
         background-color: var(--btn-hover-background);
         color: var(--btn-hover-color);
@@ -25,131 +25,116 @@
     &.disabled,
     fieldset:disabled & {
         pointer-events: none;
-        opacity: .65;
+        opacity: .5;
+    }
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    + .btn-block {
+        margin-top: .5rem;
     }
 }
 
 .btn-primary {
-    background-color: $pro3;
-    color: $pro7;
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-color);
     &:hover {
-        background-color: $pro0;
-        color: $pro7;
-    }
-    .dark & {
-        background-color: $pro7;
-        color: $pro3;
-        &:hover {
-            background-color: $pro10;
-            color: $pro3;
-        }
+        background-color: var(--btn-primary-hover-bg);
+        color: var(--btn-primary-hover-color);
     }
     &.btn-light-bg {
-        background-color: $pro3 !important;
-        color: $pro7 !important;
+        background-color: var(--btn-primary-light-bg-bg);
+        color: var(--btn-primary-light-bg-color);
         &:hover {
-            background-color: $pro0 !important;
-            color: $pro7 !important;
+            background-color: var(--btn-primary-light-bg-hover-bg);
+            color: var(--btn-primary-light-bg-hover-color);
         }
     }
     &.btn-dark-bg {
-        background-color: $pro7 !important;
-        color: $pro3 !important;
+        background-color: var(--btn-primary-dark-bg-bg);
+        color: var(--btn-primary-dark-bg-color);
         &:hover {
-            background-color: $pro10 !important;
-            color: $pro3 !important;
+            background-color: var(--btn-primary-dark-bg-hover-bg);
+            color: var(--btn-primary-dark-bg-hover-color);
         }
     }
 }
 
 .btn-primary-outline {
     background-color: transparent;
-    color: $pro3;
-    border-color: $pro3;
+    color: var(--btn-primary-bg);
+    border-color: var(--btn-primary-bg);
     &:hover {
         background-color: transparent;
-        border-color: $pro0;
-        color: $pro0;
-    }
-    .dark & {
-        background-color: transparent;
-        color: $pro7;
-        border-color: $pro7;
-        &:hover {
-            background-color: transparent;
-            color: $pro10;
-            border-color: $pro10;
-        }
+        border-color: var(--btn-primary-hover-bg);
+        color: var(--btn-primary-hover-bg);
     }
     &.btn-light-bg {
-        background-color: transparent !important;
-        color: $pro3 !important;
-        border-color: $pro3 !important;
+        background-color: transparent;
+        color: var(--btn-primary-light-bg-bg);
+        border-color: var(--btn-primary-light-bg-bg);
         &:hover {
-            background-color: transparent !important;
-            border-color: $pro0 !important;
-            color: $pro0 !important;
+            background-color: transparent;
+            border-color: var(--btn-primary-light-bg-hover-bg);
+            color: var(--btn-primary-light-bg-hover-bg);
         }
     }
     &.btn-dark-bg {
-        background-color: transparent !important;
-        color: $pro7 !important;
-        border-color: $pro7 !important;
+        background-color: transparent;
+        color: var(--btn-primary-dark-bg-bg);
+        border-color: var(--btn-primary-dark-bg-bg);
         &:hover {
-            background-color: transparent !important;
-            color: $pro10 !important;
-            border-color: $pro10 !important;
+            background-color: transparent;
+            color: var(--btn-primary-dark-bg-hover-bg);
+            border-color: var(--btn-primary-dark-bg-hover-bg);
         }
     }
 }
 
 .btn-secondary {
-    background-color: $pro7;
-    color: $pro5;
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-secondary-color);
     &:hover {
-        background-color: $pro6;
-        color: $pro4;
-    }
-    .dark & {
-        background-color: $pro3;
-        color: $pro7;
-        &:hover {
-            background-color: $pro4;
-            color: $pro8;
-        }
+        background-color: var(--btn-secondary-hover-bg);
+        color: var(--btn-secondary-hover-color);
     }
     &.btn-light-bg {
-        background-color: $pro7 !important;
-        color: $pro5 !important;
+        background-color: var(--btn-secondary-light-bg-bg);
+        color: var(--btn-secondary-light-bg-color);
         &:hover {
-            background-color: $pro6 !important;
-            color: $pro4 !important;
+            background-color: var(--btn-secondary-light-bg-hover-bg);
+            color: var(--btn-secondary-light-bg-hover-color);
         }
     }
     &.btn-dark-bg {
-        background-color: $pro3 !important;
-        color: $pro7 !important;
+        background-color: var(--btn-secondary-dark-bg-bg);
+        color: var(--btn-secondary-dark-bg-color);
         &:hover {
-            background-color: $pro4 !important;
-            color: $pro8 !important;
+            background-color: var(--btn-secondary-dark-bg-hover-bg);
+            color: var(--btn-secondary-dark-bg-hover-color);
         }
     }
 }
 
 .btn-danger {
-    background-color: $pro12;
-    color: $pro7;
+    background-color: var(--btn-danger-bg);
+    color: var(--btn-danger-color);
     &:hover {
-        background-color: darken($pro12, 5%);
-        color: $pro7;
+        background-color: var(--btn-danger-hover-bg);
+        color: var(--btn-danger-hover-color);
     }
-    .dark & {
-        background-color: $pro12;
-        color: $pro7;
-        &:hover {
-            background-color: darken($pro12, 5%);
-            color: $pro7;
-        }
+}
+
+.btn-danger-outline {
+    background-color: transparent;
+    color: var(--btn-danger-bg);
+    border-color: var(--btn-danger-bg);
+    &:hover {
+        background-color: transparent;
+        color: var(--btn-danger-hover-bg);
+        border-color: var(--btn-danger-hover-bg);
     }
 }
 
@@ -166,25 +151,16 @@
         left: 0;
         width: 48px;
         height: 48px;
-        background-color: $pro5;
-        mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M2 12A10 10 0 0 0 15 21.54A10 10 0 0 1 15 2.46A10 10 0 0 0 2 12Z' /></svg>"));
+        background-color: var(--btn-theme-toggle-icon-bg);
+        mask-image: var(--btn-theme-toggle-icon);
         mask-repeat: no-repeat;
         mask-size: 20px;
         mask-position: center;
         transition: background-color 300ms;
     }
     &:hover {
-        background-color: $pro7;
         &::before {
-            background-color: $pro3;
-        }
-    }
-    .dark & {
-        &::before {
-            mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M3.55,18.54L4.96,19.95L6.76,18.16L5.34,16.74M11,22.45C11.32,22.45 13,22.45 13,22.45V19.5H11M12,5.5A6,6 0 0,0 6,11.5A6,6 0 0,0 12,17.5A6,6 0 0,0 18,11.5C18,8.18 15.31,5.5 12,5.5M20,12.5H23V10.5H20M17.24,18.16L19.04,19.95L20.45,18.54L18.66,16.74M20.45,4.46L19.04,3.05L17.24,4.84L18.66,6.26M13,0.55H11V3.5H13M4,10.5H1V12.5H4M6.76,4.84L4.96,3.05L3.55,4.46L5.34,6.26L6.76,4.84Z' /></svg>"));
-        }
-        &:hover::before {
-            background-color: $pro7;
+            background-color: var(--btn-theme-toggle-hover-icon-bg);
         }
     }
 }
@@ -202,22 +178,16 @@
         left: 0;
         width: 48px;
         height: 48px;
-        background-color: $pro5;
-        mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z' /></svg>"));
+        background-color: var(--btn-menu-toggle-icon-bg);
+        mask-image: var(--btn-menu-toggle-icon);
         mask-repeat: no-repeat;
         mask-size: 28px;
         mask-position: center;
         transition: background-color 300ms;
     }
     &:hover {
-        background-color: $pro7;
         &::before {
-            background-color: $pro3;
-        }
-    }
-    .dark & {
-        &:hover::before {
-            background-color: $pro7;
+            background-color: var(--btn-menu-toggle-hover-icon-bg);
         }
     }
 }
@@ -225,33 +195,15 @@
 .btn-close {
     height: 48px;
     width: 48px;
-    background-color: $pro5;
-    border-radius: .25rem;
-    transition: background-color 300ms;
-    mask-image: escape-svg(url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'  viewBox='0 0 24 24'><path d='M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z' /></svg>"));
+    background-color: var(--btn-close-bg);
+    mask-image: var(--btn-close-icon);
     mask-repeat: no-repeat;
     mask-size: 20px;
     mask-position: center;
     padding: 0;
+    border-radius: .25rem;
+    transition: background-color 300ms;
     &:hover {
-        background-color: $pro3;
-        text-decoration: none;
-    }
-    &:focus {
-        text-decoration: none;
-        outline: 0;
-    }
-    .dark & {
-        &:hover {
-            background-color: $pro7;
-        }
-    }
-}
-
-.btn-block {
-    display: block;
-    width: 100%;
-    + .btn-block {
-        margin-top: .5rem;
+        background-color: var(--btn-close-hover-bg);
     }
 }

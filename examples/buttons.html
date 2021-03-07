@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#171717">
+        <meta name="msapplication-navbutton-color" content="#171717">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#171717">
+
+        <title>Pro UI</title>
+        
+        <link rel="icon" href="https://storage.googleapis.com/kapax-prod/images/logos/kapax-icon.png">
+        
+        <!-- AVOID FOUC -->
+        <style>.hidden {display: none;}</style>
+        <script>
+            document.querySelector('html').classList.add('hidden');
+            window.onload = function(event) {
+                document.querySelector('html').classList.remove('hidden');
+            };
+        </script>
+        <!-- END AVOID FOUC -->
+        
+        <!-- DARK MODE -->
+        <script>if(localStorage.theme == 'dark'){document.querySelector('html').classList.add('dark');}</script>
+        <!-- END DARK MODE -->
+
+        <link href="../dist/css/pro.min.css" rel="stylesheet">
+        <script src="../dist/js/pro.min.js" defer></script>
+    </head>
+    <body>
+
+        <!-- NAVBAR -->
+        <nav class="navbar fixed-top shadow-sm">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <div class="navbar-brand mr-5">
+                        <a href="#"><img src="https://storage.googleapis.com/cosentio-prod/kapax/images/logos/kapax.webp"></a>
+                    </div>
+                    <div class="navbar-nav d-none d-lg-flex">
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-theme-toggle mr-1" data-toggle-theme="dark"></button>
+                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></button>
+                    <a class="btn btn-primary d-none d-lg-inline-block" href="#">Log in</a>
+                </div>
+            </div>
+        </nav>
+        <!-- END NAVBAR -->
+
+        <!-- BUTTONS -->
+        <div class="py-14">
+            <div class="container">
+                <div class="row gy-8">
+                    <div class="col-12">
+                        <h2>Buttons</h2>
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn mb-4">.btn</button>
+                        <button class="btn btn-block mb-4">.btn</button>
+                        <button class="btn" disabled>.btn[disabled]</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-primary mb-4">.btn-primary</button>
+                        <button class="btn btn-primary btn-block mb-4">.btn-primary</button>
+                        <button class="btn btn-primary" disabled>.btn-primary[disabled]</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-primary-outline mb-4">.btn-primary-outline</button>
+                        <button class="btn btn-primary-outline btn-block mb-4">.btn-primary-outline</button>
+                        <button class="btn btn-primary-outline" disabled>.btn-primary-outline[disabled]</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-secondary mb-4">.btn-secondary</button>
+                        <button class="btn btn-secondary btn-block mb-4">.btn-secondary</button>
+                        <button class="btn btn-secondary" disabled>.btn-secondary[disabled]</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-danger mb-4">.btn-danger</button>
+                        <button class="btn btn-danger btn-block mb-4">.btn-danger</button>
+                        <button class="btn btn-danger" disabled>.btn-danger[disabled]</button>
+                    </div>
+                    <div class="col-lg-4">
+                        <button class="btn btn-danger-outline mb-4">.btn-danger-outline</button>
+                        <button class="btn btn-danger-outline btn-block mb-4">.btn-danger-outline.btn-block</button>
+                        <button class="btn btn-danger-outline" disabled>.btn-danger-outline[disabled]</button>
+                    </div>
+
+                    <div class="col-12">
+                        <h2>Constant state buttons</h2>
+                    </div>
+                    <div class="col-12 py-8" style="background-color: #f7f7f7;">
+                        <button class="btn btn-primary btn-light-bg">.btn.btn-primary.btn-light-bg</button>
+                        <button class="btn btn-primary-outline btn-light-bg">.btn.btn-primary-outline.btn-light-bg</button>
+                        <button class="btn btn-secondary btn-light-bg">.btn.btn-secondary.btn-light-bg</button>
+                    </div>
+                    <div class="col-12 py-8" style="background-color: #1e1e1e;">
+                        <button class="btn btn-primary btn-dark-bg">.btn.btn-primary.btn-dark-bg</button>
+                        <button class="btn btn-primary-outline btn-dark-bg">.btn.btn-primary-outline.btn-dark-bg</button>
+                        <button class="btn btn-secondary btn-dark-bg">.btn.btn-secondary.btn-dark-bg</button>
+                    </div>
+                    
+                    <div class="col-12">
+                        <h2>Specialty Buttons</h2>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-theme-toggle"></button>
+                        <button class="btn btn-menu-toggle"></button>
+                        <button class="btn btn-close"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END BUTTONS -->
+
+    </body>
+</html>
