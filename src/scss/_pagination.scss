@@ -5,33 +5,22 @@
 .page-item {
     position: relative;
     display: block;
-    background-color: $pro7;
-    color: $pro5;
+    background-color: var(--pagination-item-bg);
+    color: var(--pagination-item-color);
     text-decoration: none;
     padding: .75rem 1.25rem;
     border-radius: .25rem;
     transition: background-color 300ms, color 300ms;
     &:hover {
-        background-color: $pro6;
-        color: $pro4;
+        background-color: var(--pagination-item-hover-bg);
+        color: var(--pagination-item-hover-color);
         text-decoration: none;
-    }
-    .dark & {
-        background-color: $pro3;
-        color: $pro7;
-        &:hover {
-            background-color: $pro4;
-            color: $pro8;
-        }
     }
     &:not(:last-child) {
         margin-right: 8px;
     }
     &.active {
-        background-color: $pro6;
-        .dark & {
-            background-color: $pro4;
-        }
+        background-color: var(--pagination-item-active-bg);
     }
     &.disabled {
         opacity: 0.5;

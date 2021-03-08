@@ -1,10 +1,10 @@
 .badge {
     display: inline-block;
-    background-color: $pro6;
+    background-color: var(--badge-bg);
+    color: var(--badge-color);
     font-size: .75em;
     font-weight: 500;
-    line-height: 1;
-    color: $pro4;
+    // line-height: 1;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
@@ -12,10 +12,6 @@
     border-radius: .25rem;
     &:empty {
         display: none;
-    }
-    .dark & {
-        background-color: $pro4;
-        color: $pro6;
     }
 }
 

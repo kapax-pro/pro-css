@@ -1,13 +1,16 @@
 $utilities: (
-    "bg-color": (
+    "background-color": (
         property: background-color,
-        class: bg-color,
+        class: bg,
         values: (
-            0: var(--bg-color-0),
-            1: var(--bg-color-1),
-            2: var(--bg-color-2),
-            3: var(--bg-color-3),
-            4: var(--bg-color-4),
+            1: var(--bg-1),
+            2: var(--bg-2),
+            3: var(--bg-3),
+            4: var(--bg-4),
+            5: var(--bg-5),
+            6: var(--bg-6),
+            7: var(--bg-7),
+            8: var(--bg-8),
             transparent: transparent
         )
     ),
@@ -15,10 +18,10 @@ $utilities: (
         property: fill,
         class: fill,
         values: (
-            0: var(--fill-0),
             1: var(--fill-1),
             2: var(--fill-2),
             3: var(--fill-3),
+            4: var(--fill-4),
             none: none
         )
     ),

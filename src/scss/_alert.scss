@@ -15,12 +15,6 @@
     &:hover {
         text-decoration: underline;
     }
-    // .dark & {
-    //     text-decoration: underline;
-    //     &:hover {
-    //         text-decoration: underline;
-    //     }
-    // }
 }
 
 .alert-dismissible {
@@ -28,7 +22,7 @@
 }
 
 .alert-primary {
-    background-color: var(--alert-primary-background-color);
+    background-color: var(--alert-primary-bg);
     color: var(--alert-primary-color);
     .alert-link {
         color: var(--alert-primary-link-color);
@@ -37,57 +31,43 @@
         color: var(--alert-primary-heading-color);
     }
     .btn-close {
-        background-color: var(--alert-primary-close-background-color);
+        background-color: var(--alert-primary-close-bg);
         &:hover {
-            background-color: var(--alert-primary-close-hover-background-color);
+            background-color: var(--alert-primary-close-hover-bg);
         }
     }
 }
 
 .alert-success {
-    background-color: lighten($pro15, 20%);
-    color: darken($pro15, 15%);
+    background-color: var(--alert-success-bg);
+    color: var(--alert-success-color);
     .alert-link {
-        color: darken($pro15, 20%);
+        color: var(--alert-success-link-color);
     }
     .alert-heading {
-        color: darken($pro15, 15%);
+        color: var(--alert-success-heading-color);
     }
     .btn-close {
-        background-color: darken($pro15, 20%);
+        background-color: var(--alert-success-close-bg);
         &:hover {
-            background-color: darken($pro15, 23%);
-        }
-    }
-    .dark & {
-        background-color: lighten($pro15, 20%);
-        color: darken($pro15, 15%);
-        .alert-link {
-            color: darken($pro15, 20%);
+            background-color: var(--alert-success-close-hover-bg);
         }
     }
 }
 
 .alert-error {
-    background-color: lighten($pro12, 20%);
-    color: darken($pro12, 15%);
+    background-color: var(--alert-error-bg);
+    color: var(--alert-error-color);
     .alert-link {
-        color: darken($pro12, 20%);
+        color: var(--alert-error-link-color);
     }
     .alert-heading {
-        color: darken($pro12, 15%);
+        color: var(--alert-error-heading-color);
     }
     .btn-close {
-        background-color: darken($pro12, 20%);
+        background-color: var(--alert-error-close-bg);
         &:hover {
-            background-color: darken($pro12, 23%);
-        }
-    }
-    .dark & {
-        background-color: lighten($pro12, 20%);
-        color: darken($pro12, 15%);
-        .alert-link {
-            color: darken($pro12, 20%);
+            background-color: var(--alert-error-close-hover-bg);
         }
     }
 }

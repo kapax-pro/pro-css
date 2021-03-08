@@ -11,7 +11,7 @@ html {
 
 body {
     position: relative;
-    background-color: var(--bg-color-0);
+    background-color: var(--bg-1);
     font-family: var(--font-family-0);
     font-size: 1rem;
     font-weight: 400;
@@ -78,7 +78,7 @@ h6 {
 }
 
 mark {
-    background-color: var(--mark-background-color);
+    background-color: var(--mark-bg);
     padding: .2rem;
 }
 
@@ -214,7 +214,7 @@ samp {
 
 pre {
     display: block;
-    background-color: var(--pre-background-color);
+    background-color: var(--pre-bg);
     color: var(--pre-color);
     font-size: .875em;
     padding: 1rem;
@@ -231,7 +231,7 @@ pre {
 }
 
 code {
-    background-color: var(--code-background-color);
+    background-color: var(--code-bg);
     font-size: .875em;
     color: var(--code-color);
     word-wrap: break-word;
@@ -259,7 +259,6 @@ table {
 caption {
     padding-top: .5rem;
     padding-bottom: .5rem;
-    color: $pro5;
     text-align: left;
     caption-side: bottom;
 }

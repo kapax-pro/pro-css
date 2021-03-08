@@ -7,7 +7,7 @@
 .toast {
     max-width: 350px;
     font-size: .875rem;
-    background-color: $pro9;
+    background-color: var(--toast-bg);
     background-clip: padding-box;
     opacity: 0;
     border-radius: .25rem;
@@ -24,24 +24,17 @@
     &.hide {
         display: none;
     }
-    .dark & {
-        background-color: $pro1;
-    }
 }
   
 .toast-header {
     display: flex;
     align-items: center;
-    padding: 0 .75rem;
-    color: $pro4;
-    background-color: $pro8;
+    background-color: var(--toast-header-bg);
     background-clip: padding-box;
+    color: var(--toast-header-color);
+    padding: 0 .75rem;
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
-    .dark & {
-        background-color: $pro2;
-        color: $pro6;
-    }
 }
   
 .toast-body {

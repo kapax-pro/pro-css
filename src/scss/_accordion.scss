@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     width: 100%;
-    background-color: var(--accordion-button-background-color);
+    background-color: var(--accordion-button-bg);
     align-items: center;
     font-size: 1.125rem;
     font-weight: 500;
@@ -36,7 +36,7 @@
         transition: transform 200ms ease-in-out;
     }
     &:hover {
-        background-color: var(--accordion-button-hover-background-color);
+        background-color: var(--accordion-button-hover-bg);
         z-index: 2;
         transition: background-color 0ms;
     }
@@ -72,7 +72,7 @@
 }
 
 .accordion-body {
-    background-color: var(--accordion-body-background-color);
+    background-color: var(--accordion-body-bg);
     padding: 1rem 1.25rem;
 }
   

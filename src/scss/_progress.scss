@@ -1,26 +1,19 @@
 .progress {
     display: flex;
     height: 1rem;
-    background-color: $pro7;
+    background-color: var(--progress-bg);
     font-size: .75rem;
     overflow: hidden;
     border-radius: .25rem;
-    .dark & {
-        background-color: $pro3;
-    }
 }
 
 .progress-bar {
     display: flex;
     flex-direction: column;
-    background-color: $pro3;
+    background-color: var(--progress-bar-bg);
     justify-content: center;
     overflow: hidden;
-    color: $pro6;
+    color: var(--progress-bar-color);
     text-align: center;
     white-space: nowrap;
-    .dark & {
-        background-color: $pro7;
-        color: $pro4;
-    }
 }

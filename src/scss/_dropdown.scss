@@ -23,19 +23,16 @@
     padding: .5rem 0;
     margin: .125rem 0 0; // override default ul
     font-size: 1rem;
-    color: $pro5;
+    color: var(--dropdown-menu-color);
     text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
     list-style: none;
-    background-color: $pro10;
+    background-color: var(--dropdown-menu-bg);
     background-clip: padding-box;
     border: none;
     border-radius: .25rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
     &[style] {
         right: auto !important;
-    }
-    .dark & {
-        background-color: $pro0;
     }
 }
 
@@ -123,10 +120,7 @@
     height: 0;
     margin: .5rem 0;
     overflow: hidden;
-    border-top: 1px solid $pro7;
-    .dark & {
-        border-top: 1px solid $pro3;
-    }
+    border-top: 1px solid var(--border-color);
 }
 
 // Links, buttons, and more within the dropdown menu
@@ -138,7 +132,6 @@
     padding: .25rem 1rem;
     clear: both;
     font-weight: 400;
-    color: $pro4;
     text-align: inherit; // For `<button>`s
     text-decoration: none;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
@@ -160,42 +153,20 @@
 
     &:hover,
     &:focus {
-        background-color: $pro9;
-        color: $pro4;
-        text-decoration: none;
+        background-color: var(--dropdown-item-hover-bg);
+        outline: none;
     }
-
+    
     &.active,
     &:active {
-        color: $pro6;
-        text-decoration: none;
+        background-color: var(--dropdown-item-hover-bg);
     }
 
     &.disabled,
     &:disabled {
-        color: $pro6;
+        color: var(--dropdown-item-disabled-color);
         pointer-events: none;
         background-color: transparent;
-    }
-
-    .dark & {
-        &:hover,
-        &:focus {
-            background-color: $pro1;
-            color: $pro6;
-            text-decoration: none;
-        }
-        &.active,
-        &:active {
-            color: $pro4;
-            text-decoration: none;
-        }
-        &.disabled,
-        &:disabled {
-            color: $pro4;
-            pointer-events: none;
-            background-color: transparent;
-        }
     }
 }
 
@@ -209,16 +180,12 @@
     padding: .5rem 1rem;
     margin-bottom: 0; // for use with heading elements
     font-size: .875rem;
-    color: $pro4;
+    color: var(--dropdown-header-color);
     white-space: nowrap; // as with > li > a
-    .dark & {
-        color: $pro6;
-    }
 }
 
 // Dropdown text
 .dropdown-item-text {
     display: block;
     padding: .5rem 1rem;
-    color: $pro5;
 }

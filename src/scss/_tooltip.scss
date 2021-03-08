@@ -34,12 +34,7 @@
         &::before {
             top: 0;
             border-width: .4rem .4rem 0;
-            border-top-color: $pro3;
-        }
-    }
-    .dark & {
-        .tooltip-arrow::before {
-            border-top-color: $pro7;
+            border-top-color: var(--tooltip-arrow-color);
         }
     }
 }
@@ -54,12 +49,7 @@
         &::before {
             right: 0;
             border-width: .4rem .4rem .4rem 0;
-            border-right-color: $pro3;
-        }
-    }
-    .dark & {
-        .tooltip-arrow::before {
-            border-right-color: $pro7;
+            border-right-color: var(--tooltip-arrow-color);
         }
     }
 }
@@ -72,12 +62,7 @@
         &::before {
             bottom: 0;
             border-width: 0 (.8rem / 2) .4rem;
-            border-bottom-color: $pro3;
-        }
-    }
-    .dark & {
-        .tooltip-arrow::before {
-            border-bottom-color: $pro7;
+            border-bottom-color: var(--tooltip-arrow-color);
         }
     }
 }
@@ -92,12 +77,7 @@
         &::before {
             left: 0;
             border-width: (.8rem / 2) 0 (.8rem / 2) .4rem;
-            border-left-color: $pro3;
-        }
-    }
-    .dark & {
-        .tooltip-arrow::before {
-            border-left-color: $pro7;
+            border-left-color: var(--tooltip-arrow-color);
         }
     }
 }
@@ -120,14 +100,10 @@
   // Wrapper for the tooltip content
 .tooltip-inner {
     max-width: 200px;
-    background-color: $pro3;
-    color: $pro6;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-color);
     text-align: center;
     padding: .25rem .5rem;
     border-radius: .25rem;
-    .dark & {
-        background-color: $pro7;
-        color: $pro4;
-    }
 }
   

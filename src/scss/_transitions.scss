@@ -16,3 +16,26 @@
     overflow: hidden;
     transition: height 350ms ease;
 }
+
+.hover-scale {
+    will-change: transform, box-shadow;
+    &:hover {
+        transform: scale3d(1.01, 1.01, 1.01);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+    }
+}
+
+.hover-translate {
+    will-change: transform, box-shadow;
+    &:hover {
+        transform: translate3d(0, -3px, 0);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 3px;
+    }
+}
+
+.hover-border {
+    will-change: border;
+    &:hover {
+        border-color: var(--transition-hover-border-color) !important;
+    }
+}

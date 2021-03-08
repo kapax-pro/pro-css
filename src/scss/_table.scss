@@ -1,14 +1,9 @@
 .table {
-    --bs-table-bg: transparent;
-    --bs-table-accent-bg: transparent;
-    --bs-table-hover-color: #{$pro5};
-    --bs-table-hover-bg: #{$pro9};
-
     width: 100%;
     margin-bottom: 1rem;
-    color: $pro5;
+    color: var(--table-color);
     vertical-align: top;
-    border-color: $pro7;
+    border-color: var(--table-border-color);
 
     // Target th & td
     // We need the child combinator to prevent styles leaking to nested tables which doesn't have a `.table` class.
@@ -16,8 +11,7 @@
     // Another advantage is that this generates less code and makes the selector less specific making it easier to override.
     > :not(caption) > * > * {
         padding: .5rem .5rem;
-        background-color: var(--bs-table-bg);
-        background-image: linear-gradient(var(--bs-table-accent-bg), var(--bs-table-accent-bg));
+        background-color: var(--table-bg);
         border-bottom-width: 1px;
     }
 
@@ -28,23 +22,15 @@
     > thead {
         vertical-align: bottom;
         th {
-            color: $pro4;
+            color: var(--table-head-th-color);
             border-bottom-width: 2px;
-        }
-    }
-    .dark & {
-        --bs-table-hover-bg: #{$pro1};
-        border-color: $pro3;
-        > thead th {
-            color: $pro6;
         }
     }
 }
 
 .table-hover {
     > tbody > tr:hover {
-        --bs-table-accent-bg: var(--bs-table-hover-bg);
-        color: var(--bs-table-hover-color);
+        --table-bg: var(--table-hover-bg);
     }
 }
 

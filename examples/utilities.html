@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#171717">
+        <meta name="msapplication-navbutton-color" content="#171717">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#171717">
+
+        <title>Pro UI</title>
+        
+        <link rel="icon" href="https://storage.googleapis.com/cosentio-prod/kapax/images/logos/kapax-icon.png">
+        
+        <!-- AVOID FOUC -->
+        <style>.hidden {display: none;}</style>
+        <script>
+            document.querySelector('html').classList.add('hidden');
+            window.onload = function(event) {
+                document.querySelector('html').classList.remove('hidden');
+            };
+        </script>
+        <!-- END AVOID FOUC -->
+        
+        <!-- DARK MODE -->
+        <script>if(localStorage.theme == 'dark'){document.querySelector('html').classList.add('dark');}</script>
+        <!-- END DARK MODE -->
+
+        <link href="../dist/css/pro.min.css" rel="stylesheet">
+        <script src="../dist/js/pro.min.js" defer></script>
+    </head>
+    <body>
+
+        <!-- NAVBAR -->
+        <nav class="navbar fixed-top shadow-sm">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <div class="navbar-brand mr-5">
+                        <a href="#"><img src="https://storage.googleapis.com/cosentio-prod/kapax/images/logos/kapax.webp"></a>
+                    </div>
+                    <div class="navbar-nav d-none d-lg-flex">
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-theme-toggle mr-1" data-toggle-theme="dark"></button>
+                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></button>
+                    <a class="btn btn-primary d-none d-lg-inline-block" href="#">Log in</a>
+                </div>
+            </div>
+        </nav>
+        <!-- END NAVBAR -->
+        
+        <!-- UTILITIES -->
+        <section class="py-14">
+            <div class="container">
+                <h2>Utilities</h2>
+                <p>Utility classes help you build layouts quickly and avoid having to write custom CSS for basic stuff. All utility classes use a <code>-</code> to separate the values from the property name and the breakpoint infix e.g. <code>float-md-right</code></p>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th>Class</th>
+                            <th>Values</th>
+                            <th>Responsive</th>
+                            <th>Print</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>vertical-align</td>
+                            <td>align</td>
+                            <td>baseline, top, middle, bottom, text-bottom, text-top</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>float</td>
+                            <td>float</td>
+                            <td>left, right, none</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>overflow</td>
+                            <td>overflow</td>
+                            <td>auto, hidden</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>display</td>
+                            <td>d</td>
+                            <td>none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex</td>
+                            <td>yes</td>
+                            <td>yes</td>
+                        </tr>
+                        <tr>
+                            <td>box-shadow</td>
+                            <td>shadow</td>
+                            <td>null, sm, lg, none</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>position</td>
+                            <td>position</td>
+                            <td>static, relative, absolute, fixed, sticky</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>border</td>
+                            <td>border</td>
+                            <td>null, 0</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>border-top</td>
+                            <td>border-top</td>
+                            <td>null, 0</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>border-right</td>
+                            <td>border-right</td>
+                            <td>null, 0</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom</td>
+                            <td>border-bottom</td>
+                            <td>null, 0</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>border-left</td>
+                            <td>border-left</td>
+                            <td>null, 0</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>width</td>
+                            <td>w<br>vw</td>
+                            <td>1-16, 25, 50, 75, 100, auto<br>100(100vw)</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>max-width</td>
+                            <td>mw</td>
+                            <td>1-16, 100</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>min-width</td>
+                            <td>min-w</td>
+                            <td>1-16, 100</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>min-width</td>
+                            <td>min-vw</td>
+                            <td>100(100vw)</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>height</td>
+                            <td>h<br>vh</td>
+                            <td>1-16, 25, 50, 75, 100, auto<br>100(100vh)</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>max-height</td>
+                            <td>mh</td>
+                            <td>1-16, 100</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>min-height</td>
+                            <td>min-h</td>
+                            <td>1-16, 100</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>min-height</td>
+                            <td>min-vh</td>
+                            <td>100(100vh)</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>flex</td>
+                            <td>flex</td>
+                            <td>fill(1 1 auto)</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>flex-direction</td>
+                            <td>flex</td>
+                            <td>row, column, row-reverse, column-reverse</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>flex-grow</td>
+                            <td>flex</td>
+                            <td>grow-0, grow-1</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>flex-shrink</td>
+                            <td>flex</td>
+                            <td>shrink-0, shrink-1</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>flex-wrap</td>
+                            <td>flex</td>
+                            <td>wrap, nowrap, wrap-reverse</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>justify-content</td>
+                            <td>justify-content</td>
+                            <td>start, end, center, between, around, evenly</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>align-items</td>
+                            <td>align-items</td>
+                            <td>start, end, center, baseline, stretch</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>align-content</td>
+                            <td>align-content</td>
+                            <td>start, end, center, between, around, stretch</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>align-self</td>
+                            <td>align-self</td>
+                            <td>auto, start, end, center, baseline, stretch</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>order</td>
+                            <td>order</td>
+                            <td>first, 0, 1, 2, 3, 4, 5, last</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>margin</td>
+                            <td>m</td>
+                            <td>0-16, auto<br>(negative) n0-n16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>margin-right margin-left</td>
+                            <td>mx</td>
+                            <td>0-16, auto<br>(negative) n0-n16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>margin-top margin-bottom</td>
+                            <td>my</td>
+                            <td>0-16, auto<br>(negative) n0-n16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>margin-top</td>
+                            <td>mt</td>
+                            <td>0-16, auto<br>(negative) n0-n16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>margin-right</td>
+                            <td>mr</td>
+                            <td>0-16, auto<br>(negative) n0-n16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>margin-bottom</td>
+                            <td>mb</td>
+                            <td>0-16, auto<br>(negative) n0-n16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>margin-left</td>
+                            <td>ml</td>
+                            <td>0-16, auto<br>(negative) n0-n16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>padding</td>
+                            <td>p</td>
+                            <td>0-16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>padding-right padding-left</td>
+                            <td>px</td>
+                            <td>0-16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>padding-top padding-bottom</td>
+                            <td>py</td>
+                            <td>0-16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>padding-top</td>
+                            <td>pt</td>
+                            <td>0-16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>padding-right</td>
+                            <td>pr</td>
+                            <td>0-16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>padding-bottom</td>
+                            <td>pb</td>
+                            <td>0-16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>padding-left</td>
+                            <td>pl</td>
+                            <td>0-16</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>font-weight</td>
+                            <td>font-weight</td>
+                            <td>thin, light, regular, medium, bold, black</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>font-size</td>
+                            <td>font-size</td>
+                            <td>1-12</td>
+                            <td>yes</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>text-transform</td>
+                            <td>text</td>
+                            <td>lowercase, uppercase, capitalize</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>text-align</td>
+                            <td>text</td>
+                            <td>left, right, center</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>line-height</td>
+                            <td>lh</td>
+                            <td>1(1), small(1.25), base(1.5), large(2)</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>white-space</td>
+                            <td>text</td>
+                            <td>wrap, nowrap</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>text-decoration</td>
+                            <td>text-decoration</td>
+                            <td>none, underline, line-through</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>font-style</td>
+                            <td>font</td>
+                            <td>italic, normal</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>word-wrap word-break</td>
+                            <td>text</td>
+                            <td>break(break-word)</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>font-family</td>
+                            <td>font</td>
+                            <td>monospace</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>user-select</td>
+                            <td>user-select</td>
+                            <td>all, auto, none</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>pointer-events</td>
+                            <td>pe</td>
+                            <td>none, auto</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>border-radius</td>
+                            <td>rounded</td>
+                            <td>null, small, large, circle, pill, 0</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-left-radius border-top-right-radius</td>
+                            <td>rounded-top</td>
+                            <td>null</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>border-top-right-radius border-bottom-right-radius</td>
+                            <td>rounded-right</td>
+                            <td>null</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-right-radius border-bottom-left-radius</td>
+                            <td>rounded-bottom</td>
+                            <td>null</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>border-bottom-left-radius border-top-left-radius</td>
+                            <td>rounded-left</td>
+                            <td>null</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>visibility</td>
+                            <td>visible<br>invisible</td>
+                            <td>null<br>null</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                        <tr>
+                            <td>fill</td>
+                            <td>fill</td>
+                            <td>1, 2, 3, 4</td>
+                            <td>no</td>
+                            <td>no</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Backgrounds</h3>
+                <div class="bg-1 p-10 text-center">.bg-1</div>
+                <div class="bg-2 p-10 text-center">.bg-2</div>
+                <div class="bg-3 p-10 text-center">.bg-3</div>
+                <div class="bg-4 p-10 text-center">.bg-4</div>
+                <div class="bg-5 p-10 text-center">.bg-5</div>
+                <div class="bg-6 p-10 text-center">.bg-6</div>
+                <div class="bg-7 p-10 text-center">.bg-7</div>
+                <div class="bg-8 p-10 text-center">.bg-8</div>
+
+            </div>
+        </section>
+        <!-- END UTILITIES -->
+
+    </body>
+</html>
