@@ -30,14 +30,14 @@
     </head>
     <body>
         <!-- NAV OVERLAY -->
-        <div class="nav-side-overlay" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></div>
+        <div class="nav-mobile-overlay" data-toggle-class="is-visible" data-target=".nav-mobile,.nav-mobile-overlay"></div>
         <!-- END NAV OVERLAY -->
 
-        <!-- NAV SIDE -->
-        <div class="nav nav-side bg-1">
+        <!-- NAV MOBILE -->
+        <div class="nav nav-mobile">
             <div class="d-flex justify-content-between align-items-center p-3">
                 <a href="#"><img class="img-fluid mh-5" src="https://storage.googleapis.com/cosentio-prod/kapax/images/logos/kapax.webp"></a>
-                <button class="btn btn-close" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></button>
+                <button class="btn btn-close" data-toggle-class="is-visible" data-target=".nav-mobile,.nav-mobile-overlay"></button>
             </div>
             <a class="nav-link" href="#">Link</a>
             <a class="nav-link" href="#">Link</a>
@@ -52,7 +52,7 @@
             <hr>
             <a class="btn btn-primary" href="#">Login</a>
         </div>
-        <!-- END NAV SIDE -->
+        <!-- END NAV MOBILE -->
         
         <!-- NAVBAR -->
         <nav class="navbar fixed-top shadow-sm">
@@ -70,7 +70,7 @@
                 </div>
                 <div>
                     <button class="btn btn-theme-toggle mr-1" data-toggle-theme="dark"></button>
-                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></button>
+                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-toggle-class="is-visible" data-target=".nav-mobile,.nav-mobile-overlay"></button>
                     <a class="btn btn-primary d-none d-lg-inline-block" href="#">Log in</a>
                 </div>
             </div>
@@ -271,7 +271,7 @@
             <div class="container p-5 bg-2">
                 .container
             </div>
-            <div class="container-fluid p-5 bg-1">
+            <div class="container-fluid p-5">
                 .container-fluid
             </div>
             <div class="container-lg p-5 bg-2">
@@ -596,44 +596,20 @@
                 <div class="row">
                     <div class="col">
                         <nav>
-                            <ol class="breadcrumb breadcrumb-alt">
+                            <ol class="breadcrumb bg-3">
                                 <li class="breadcrumb-item active">Home</li>
                             </ol>
                         </nav>
 
                         <nav>
-                            <ol class="breadcrumb breadcrumb-alt">
+                            <ol class="breadcrumb bg-3">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item active">Library</li>
                             </ol>
                         </nav>
 
                         <nav>
-                            <ol class="breadcrumb breadcrumb-alt">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Library</a></li>
-                                <li class="breadcrumb-item active">Data</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <nav>
-                            <ol class="breadcrumb breadcrumb-bg">
-                                <li class="breadcrumb-item active">Home</li>
-                            </ol>
-                        </nav>
-
-                        <nav>
-                            <ol class="breadcrumb breadcrumb-bg">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active">Library</li>
-                            </ol>
-                        </nav>
-
-                        <nav>
-                            <ol class="breadcrumb breadcrumb-bg">
+                            <ol class="breadcrumb bg-3">
                                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                                 <li class="breadcrumb-item"><a href="#">Library</a></li>
                                 <li class="breadcrumb-item active">Data</li>
@@ -924,7 +900,7 @@
                                 </div>
                                 <div>
                                     <button class="btn btn-theme-toggle mr-1" data-toggle-theme="dark"></button>
-                                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-toggle-class="is-visible" data-target=".nav-side,.nav-side-overlay"></button>
+                                    <button class="btn btn-menu-toggle d-inline-block d-lg-none" data-toggle-class="is-visible" data-target=".nav-mobile,.nav-mobile-overlay"></button>
                                     <a class="btn btn-primary d-none d-lg-inline-block" href="#">Log in</a>
                                 </div>
                             </div>
@@ -998,12 +974,12 @@
                 <h2>Scrollspy & Sticky</h2>
                 <div class="row">
                     <div class="col-md-3">
-                        <nav class="nav nav-bordered-left flex-column sticky" data-scrollspy>
-                            <a class="nav-link" href="#one">Section 1</a>
-                            <a class="nav-link" href="#two">Section 2</a>
-                            <a class="nav-link" href="#three">Section 3</a>
-                            <a class="nav-link" href="#four">Section 4</a>
-                            <a class="nav-link" href="#five">Section 5</a>
+                        <nav class="nav flex-column sticky" data-scrollspy>
+                            <a class="nav-link border-left-2" href="#one">Section 1</a>
+                            <a class="nav-link border-left-2" href="#two">Section 2</a>
+                            <a class="nav-link border-left-2" href="#three">Section 3</a>
+                            <a class="nav-link border-left-2" href="#four">Section 4</a>
+                            <a class="nav-link border-left-2" href="#five">Section 5</a>
                         </nav>
                     </div>
                     <div class="col-md-9">

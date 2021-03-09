@@ -12,11 +12,11 @@ html {
 body {
     position: relative;
     background-color: var(--bg-1);
-    font-family: var(--font-family-0);
+    font-family: var(--text-font);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: var(--primary-font-color);
+    color: var(--text-color);
     text-align: left;
     -webkit-text-size-adjust: 100%;
 }
@@ -44,8 +44,8 @@ hr {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-family-1);
-    color: var(--secondary-font-color);
+    font-family: var(--heading-font);
+    color: var(--heading-color);
     font-weight: 500;
     line-height: 1.2;
     margin-top: 0;
@@ -206,7 +206,7 @@ pre,
 code,
 kbd,
 samp {
-    font-family: var(--font-family-mono);
+    font-family: var(--code-font);
     font-size: 1em;
     direction: ltr;
     unicode-bidi: bidi-override;

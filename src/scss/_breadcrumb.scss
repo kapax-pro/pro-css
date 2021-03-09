@@ -7,11 +7,6 @@
     border-radius: .25rem;
 }
 
-.breadcrumb-bg {
-    background-color: var(--breadcrumb-bg);
-    transition: background 300ms;
-}
-
 .breadcrumb-item {
     display: flex;
     font-weight: 500;
@@ -28,15 +23,5 @@
     }
     &.active {
         color: var(--breadcrumb-icon-color);
-    }
-}
-
-.breadcrumb-alt {
-    .breadcrumb-item {
-        + .breadcrumb-item {
-            &::before {
-                mask-image: var(--breadcrumb-icon-alt);
-            }
-        }
     }
 }

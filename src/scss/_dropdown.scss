@@ -23,7 +23,7 @@
     padding: .5rem 0;
     margin: .125rem 0 0; // override default ul
     font-size: 1rem;
-    color: var(--dropdown-menu-color);
+    // color: var(--dropdown-menu-color);
     text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
     list-style: none;
     background-color: var(--dropdown-menu-bg);
@@ -164,7 +164,8 @@
 
     &.disabled,
     &:disabled {
-        color: var(--dropdown-item-disabled-color);
+        // color: var(--dropdown-item-disabled-color);
+        color: var(--text-muted-color);
         pointer-events: none;
         background-color: transparent;
     }
@@ -180,7 +181,6 @@
     padding: .5rem 1rem;
     margin-bottom: 0; // for use with heading elements
     font-size: .875rem;
-    color: var(--dropdown-header-color);
     white-space: nowrap; // as with > li > a
 }
 

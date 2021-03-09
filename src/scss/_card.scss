@@ -73,6 +73,16 @@
     border-bottom-right-radius: .25rem;
 }
 
+.card-solid {
+    background-color: var(--card-solid-bg);
+    .card-header {
+        background-color: var(--card-solid-header-bg);
+    }
+    .card-footer {
+        background-color: var(--card-solid-footer-bg);
+    }
+}
+
 .card-highlight {
     border: 2px solid var(--card-highlight-color);
     > .card-header {

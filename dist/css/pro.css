@@ -1,47 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap");
 html {
-    --font-family-0: 'Roboto', sans-serif;
-    --font-family-1: 'Roboto', sans-serif;
-    --font-family-mono: 'Roboto Mono', monospace;
+    --bg-1: rgb(242, 244, 248);
+    --bg-2: rgb(238, 240, 244);
+    --bg-3: rgb(234, 236, 240);
+    --bg-4: rgb(228, 230, 234);
+    --heading-font: 'Roboto', sans-serif;
     --heading-color: rgb(80, 80, 80);
-    --text-color: rgb(128, 128, 128);
+    --text-font: 'Roboto', sans-serif;
+    --text-color: rgb(127, 127, 127);
     --text-muted-color: rgb(180, 180, 180);
     --text-light-bg-color: rgb(80, 80, 80);
     --text-dark-bg-color: rgb(180, 180, 180);
-    --bg-1: rgb(248, 248, 248);
-    --bg-2: rgb(246, 246, 246);
-    --bg-3: rgb(244, 244, 244);
-    --bg-4: rgb(242, 242, 242);
-    --bg-5: rgb(240, 240, 240);
-    --bg-6: rgb(238, 238, 238);
-    --bg-7: rgb(236, 236, 236);
-    --bg-8: rgb(234, 234, 234);
-    --fill-1: rgb(128, 128, 128);
-    --fill-2: rgb(80, 80, 80);
-    --fill-3: rgb(51, 51, 51);
-    --fill-4: rgb(43, 43, 43);
-    --primary-font-color: rgb(127, 127, 127);
-    --secondary-font-color: rgb(80, 80, 80);
     --link-color: rgb(80, 80, 80);
     --link-hover-color: rgb(30, 30, 30);
-    --border-color: rgb(230, 230, 230);
-    --hr-color: rgb(230, 230, 230);
-    --blockquote-color: rgb(80, 80, 80);
-    --blockquote-border-color: rgb(80, 80, 80);
-    --blockquote-footer-color: rgb(127, 127, 127);
-    --mark-bg: rgb(238, 238, 238);
-    --pre-bg: rgb(238, 238, 238);
-    --pre-color: rgb(72, 72, 72);
-    --code-bg: rgb(238, 238, 238);
+    --code-font: 'Roboto Mono', monospace;
     --code-color: rgb(72, 72, 72);
-    --accordion-button-bg: rgb(238, 238, 238);
-    --accordion-button-hover-bg: rgb(235, 235, 235);
-    --accordion-button-color: var(--primary-font-color);
-    --accordion-button-icon-color: var(--primary-font-color);
-    --accordion-body-bg: rgb(242, 242, 242);
-    --alert-primary-bg: rgb(50, 50, 50);
-    --alert-primary-color: rgb(200, 200, 200);
-    --alert-primary-heading-color: rgb(200, 200, 200);
+    --code-bg: var(--bg-3);
+    --pre-color: rgb(72, 72, 72);
+    --pre-bg: var(--bg-3);
+    --mark-bg: var(--bg-3);
+    --blockquote-color: var(--heading-color);
+    --blockquote-border-color: var(--heading-color);
+    --blockquote-footer-color: var(--text-color);
+    --border-color: rgb(224, 226, 230);
+    --hr-color: rgb(224, 226, 230);
+    --fill-1: var(--heading-color);
+    --fill-2: var(--text-color);
+    --fill-3: var(--text-muted-color);
+    --accordion-button-bg: rgb(232, 234, 238);
+    --accordion-button-hover-bg: rgb(228, 230, 234);
+    --accordion-button-color: var(--text-color);
+    --accordion-button-icon-color: var(--text-color);
+    --accordion-body-bg: rgb(236, 238, 242);
+    --alert-primary-bg: rgb(60, 60, 60);
+    --alert-primary-color: rgb(210, 210, 210);
+    --alert-primary-heading-color: rgb(210, 210, 210);
     --alert-primary-link-color: rgb(230, 230, 230);
     --alert-primary-close-bg: rgb(230, 230, 230);
     --alert-primary-close-hover-bg: rgb(237, 237, 237);
@@ -57,43 +50,41 @@ html {
     --alert-error-link-color: rgb(120, 56, 62);
     --alert-error-close-bg: rgb(120, 56, 62);
     --alert-error-close-hover-bg: rgb(109, 51, 57);
-    --badge-bg: rgb(220, 220, 220);
-    --badge-color: rgb(80, 80, 80);
-    --breadcrumb-bg: rgb(200, 200, 200);
-    --breadcrumb-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' width='24' height='24' viewBox='0 0 24 24'><path d='M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z' /></svg>");
-    --breadcrumb-icon-alt: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M7 21L14.9 3H17L9.1 21H7Z' /></svg>");
+    --badge-bg: rgb(214, 216, 220);
+    --badge-color: var(--heading-color);
+    --breadcrumb-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M7 21L14.9 3H17L9.1 21H7Z' /></svg>");
     --breadcrumb-icon-color: rgb(128, 128, 128);
-    --btn-color: rgb(127, 127, 127);
-    --btn-hover-bg: rgb(220, 220, 220);
-    --btn-hover-color: rgb(50, 50, 50);
-    --btn-primary-bg: rgb(60, 60, 60);
-    --btn-primary-hover-bg: rgb(30, 30, 30);
-    --btn-primary-color: rgb(200, 200, 200);
-    --btn-primary-hover-color: rgb(200, 200, 200);
-    --btn-primary-light-bg-bg: rgb(50, 50, 50);
-    --btn-primary-light-bg-hover-bg: rgb(30, 30, 30);
-    --btn-primary-light-bg-color: rgb(200, 200, 200);
-    --btn-primary-light-bg-hover-color: rgb(200, 200, 200);
+    --btn-color: rgb(103, 103, 103);
+    --btn-hover-bg: rgb(228, 230, 234);
+    --btn-hover-color: rgb(103, 103, 103);
+    --btn-primary-bg: rgb(70, 70, 70);
+    --btn-primary-hover-bg: rgb(60, 60, 60);
+    --btn-primary-color: rgb(210, 210, 210);
+    --btn-primary-hover-color: rgb(210, 210, 210);
+    --btn-primary-light-bg-bg: rgb(70, 70, 70);
+    --btn-primary-light-bg-hover-bg: rgb(60, 60, 60);
+    --btn-primary-light-bg-color: rgb(210, 210, 210);
+    --btn-primary-light-bg-hover-color: rgb(210, 210, 210);
     --btn-primary-dark-bg-bg: rgb(200, 200, 200);
     --btn-primary-dark-bg-hover-bg: rgb(250, 250, 250);
     --btn-primary-dark-bg-color: rgb(50, 50, 50);
     --btn-primary-dark-bg-hover-color: rgb(50, 50, 50);
-    --btn-secondary-bg: rgb(200, 200, 200);
-    --btn-secondary-hover-bg: rgb(180, 180, 180);
-    --btn-secondary-color: rgb(128, 128, 128);
-    --btn-secondary-hover-color: rgb(80, 80, 80);
-    --btn-secondary-light-bg-bg: rgb(200, 200, 200);
-    --btn-secondary-light-bg-hover-bg: rgb(180, 180, 180);
-    --btn-secondary-light-bg-color: rgb(128, 128, 128);
-    --btn-secondary-light-bg-hover-color: rgb(80, 80, 80);
+    --btn-secondary-bg: rgb(228, 230, 234);
+    --btn-secondary-hover-bg: rgb(222, 224, 228);
+    --btn-secondary-color: rgb(103, 103, 103);
+    --btn-secondary-hover-color: rgb(103, 103, 103);
+    --btn-secondary-light-bg-bg: rgb(228, 230, 234);
+    --btn-secondary-light-bg-hover-bg: rgb(222, 224, 228);
+    --btn-secondary-light-bg-color: rgb(103, 103, 103);
+    --btn-secondary-light-bg-hover-color: rgb(103, 103, 103);
     --btn-secondary-dark-bg-bg: rgb(50, 50, 50);
     --btn-secondary-dark-bg-hover-bg: rgb(80, 80, 80);
     --btn-secondary-dark-bg-color: rgb(200, 200, 200);
     --btn-secondary-dark-bg-hover-color: rgb(230, 230, 230);
     --btn-danger-bg: rgb(181, 97, 105);
     --btn-danger-hover-bg: rgb(172, 81, 89);
-    --btn-danger-color: rgb(200, 200, 200);
-    --btn-danger-hover-color: rgb(200, 200, 200);
+    --btn-danger-color: rgb(210, 210, 210);
+    --btn-danger-hover-color: rgb(210, 210, 210);
     --btn-theme-toggle-icon-bg: rgb(128, 128, 128);
     --btn-theme-toggle-hover-icon-bg: rgb(50, 50, 50);
     --btn-theme-toggle-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M2 12A10 10 0 0 0 15 21.54A10 10 0 0 1 15 2.46A10 10 0 0 0 2 12Z' /></svg>");
@@ -103,13 +94,13 @@ html {
     --btn-close-bg: rgb(128, 128, 128);
     --btn-close-hover-bg: rgb(50, 50, 50);
     --btn-close-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z' /></svg>");
+    --card-solid-bg: rgb(234, 236, 240);
+    --card-solid-header-bg: rgb(228, 230, 234);
+    --card-solid-footer-bg: rgb(228, 230, 234);
     --card-highlight-color: rgb(44, 44, 44);
     --card-highlight-title-color: rgb(180, 180, 180);
-    --dropdown-menu-bg: rgb(247, 247, 247);
-    --dropdown-menu-color: rgb(128, 128, 128);
-    --dropdown-item-hover-bg: rgb(240, 240, 240);
-    --dropdown-item-disabled-color: rgb(180, 180, 180);
-    --dropdown-header-color: rgb(80, 80, 80);
+    --dropdown-menu-bg: var(--bg-1);
+    --dropdown-item-hover-bg: var(--bg-3);
     --form-control-color: rgb(128, 128, 128);
     --form-control-placeholder-color: rgb(180, 180, 180);
     --form-control-border-color: rgb(220, 220, 220);
@@ -131,55 +122,51 @@ html {
     --form-input-group-bg: rgb(230, 230, 230);
     --form-invalid-bg: rgb(181, 97, 105);
     --form-invalid-color: rgb(206, 171, 174);
-    --modal-content-bg: rgb(237, 237, 237);
-    --modal-backdrop-bg: rgb(247, 247, 247);
-    --modal-header-bg: rgb(230, 230, 230);
-    --nav-item-active-border-color: rgb(50, 50, 50);
-    --nav-side-nav-item-hover-bg: rgb(237, 237, 237);
-    --nav-side-dropdown-icon-color: rgb(128, 128, 128);
-    --nav-side-dropdown-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>");
-    --nav-side-overlay-bg: rgb(247, 247, 247);
-    --nav-item-disabled-color: rgb(180, 180, 180);
-    --nav-item-active-color: rgb(50, 50, 50);
-    --nav-item-color: rgb(128, 128, 128);
-    --pagination-item-bg: rgb(200, 200, 200);
-    --pagination-item-color: rgb(128, 128, 128);
-    --pagination-item-hover-bg: rgb(180, 180, 180);
-    --pagination-item-hover-color: rgb(80, 80, 80);
-    --pagination-item-active-bg: rgb(180, 180, 180);
-    --progress-bg: rgb(200, 200, 200);
-    --progress-bar-bg: rgb(50, 50, 50);
-    --progress-bar-color: rgb(180, 180, 180);
-    --table-color: rgb(128, 128, 128);
-    --table-border-color: rgb(200, 200, 200);
-    --table-head-th-color: rgb(80, 80, 80);
+    --modal-content-bg: var(--bg-3);
+    --modal-backdrop-bg: var(--bg-1);
+    --modal-header-bg: var(--bg-4);
+    --nav-item-color: var(--text-color);
+    --nav-item-hover-color: var(--heading-color);
+    --nav-item-active-border-color: var(--heading-color);
+    --nav-item-disabled-color: var(--text-muted-color);
+    --nav-item-active-color: var(--heading-color);
+    --nav-mobile-bg: var(--bg-2);
+    --nav-mobile-overlay-bg: var(--bg-1);
+    --nav-mobile-nav-item-hover-bg: rgb(232, 234, 238);
+    --nav-mobile-dropdown-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>");
+    --nav-mobile-dropdown-icon-color: rgb(128, 128, 128);
+    --navbar-bg: var(--bg-2);
+    --pagination-item-bg: rgb(194, 196, 200);
+    --pagination-item-hover-bg: rgb(174, 176, 180);
+    --pagination-item-active-bg: rgb(174, 176, 180);
+    --pagination-item-color: var(--text-color);
+    --pagination-item-hover-color: var(--heading-color);
+    --progress-bg: var(--bg-4);
+    --progress-bar-bg: rgb(60, 60, 60);
+    --progress-bar-color: var(--text-muted-color);
+    --table-color: var(--text-color);
+    --table-border-color: var(--border-color);
+    --table-head-th-color: var(--heading-color);
     --table-bg: transparent;
-    --table-hover-bg: rgb(237, 237, 237);
-    --toast-bg: rgb(237, 237, 237);
-    --toast-header-bg: rgb(230, 230, 230);
-    --toast-header-color: rgb(80, 80, 80);
-    --tooltip-arrow-color: rgb(50, 50, 50);
-    --tooltip-bg: rgb(50, 50, 50);
-    --tooltip-color: rgb(180, 180, 180);
-    --transition-hover-border-color: rgb(80, 80, 80);
+    --table-hover-bg: var(--bg-3);
+    --toast-bg: var(--bg-3);
+    --toast-header-bg: var(--bg-4);
+    --toast-header-color: var(--heading-color);
+    --tooltip-arrow-color: rgb(60, 60, 60);
+    --tooltip-bg: rgb(60, 60, 60);
+    --tooltip-color: var(--text-muted-color);
+    --transition-hover-border-color: var(--heading-color);
 }
 
 html.dark {
-    --heading-color: rgb(180, 180, 180);
-    --text-color: rgb(128, 128, 128);
     --text-muted-color: rgb(80, 80, 80);
+    --footer-bg: rgb(29, 29, 29);
     --bg-1: rgb(30, 30, 30);
     --bg-2: rgb(31, 31, 31);
-    --bg-3: rgb(32, 32, 32);
-    --bg-4: rgb(33, 33, 33);
-    --bg-5: rgb(34, 34, 34);
-    --bg-6: rgb(35, 35, 35);
-    --bg-7: rgb(36, 36, 36);
-    --bg-8: rgb(38, 38, 38);
     --fill-2: rgb(180, 180, 180);
     --fill-3: rgb(204, 204, 204);
     --fill-4: rgb(230, 230, 230);
-    --secondary-font-color: rgb(180, 180, 180);
+    --heading-color: rgb(180, 180, 180);
     --link-color: rgb(180, 180, 180);
     --link-hover-color: rgb(248, 248, 248);
     --border-color: rgb(38, 38, 38);
@@ -194,8 +181,8 @@ html.dark {
     --code-color: rgb(180, 180, 180);
     --accordion-button-bg: rgb(38, 38, 38);
     --accordion-button-hover-bg: rgb(40, 40, 40);
-    --accordion-button-color: var(--primary-font-color);
-    --accordion-button-icon-color: var(--primary-font-color);
+    --accordion-button-color: var(--text-color);
+    --accordion-button-icon-color: var(--text-color);
     --accordion-body-bg: rgb(34, 34, 34);
     --badge-bg: rgb(50, 50, 50);
     --badge-color: rgb(180, 180, 180);
@@ -237,8 +224,8 @@ html.dark {
     --modal-backdrop-bg: rgb(31, 31, 31);
     --modal-header-bg: rgb(43, 43, 43);
     --nav-item-active-border-color: rgb(200, 200, 200);
-    --nav-side-nav-item-hover-bg: rgb(34, 34, 34);
-    --nav-side-overlay-bg: rgb(31, 31, 31);
+    --nav-mobile-nav-item-hover-bg: rgb(34, 34, 34);
+    --nav-mobile-overlay-bg: rgb(31, 31, 31);
     --nav-item-disabled-color: rgb(80, 80, 80);
     --nav-item-active-color: rgb(200, 200, 200);
     --pagination-item-bg: rgb(50, 50, 50);
@@ -753,11 +740,11 @@ html {
 body {
     position: relative;
     background-color: var(--bg-1);
-    font-family: var(--font-family-0);
+    font-family: var(--text-font);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: var(--primary-font-color);
+    color: var(--text-color);
     text-align: left;
     -webkit-text-size-adjust: 100%;
 }
@@ -786,8 +773,8 @@ hr {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-    font-family: var(--font-family-1);
-    color: var(--secondary-font-color);
+    font-family: var(--heading-font);
+    color: var(--heading-color);
     font-weight: 500;
     line-height: 1.2;
     margin-top: 0;
@@ -959,7 +946,7 @@ pre,
 code,
 kbd,
 samp {
-    font-family: var(--font-family-mono);
+    font-family: var(--code-font);
     font-size: 1em;
     direction: ltr;
     unicode-bidi: bidi-override;
@@ -3790,7 +3777,6 @@ fieldset:disabled .btn {
     padding: .5rem 0;
     margin: .125rem 0 0;
     font-size: 1rem;
-    color: var(--dropdown-menu-color);
     text-align: left;
     list-style: none;
     background-color: var(--dropdown-menu-bg);
@@ -3990,7 +3976,7 @@ fieldset:disabled .btn {
 }
 
 .dropdown-item.disabled, .dropdown-item:disabled {
-    color: var(--dropdown-item-disabled-color);
+    color: var(--text-muted-color);
     pointer-events: none;
     background-color: transparent;
 }
@@ -4004,7 +3990,6 @@ fieldset:disabled .btn {
     padding: .5rem 1rem;
     margin-bottom: 0;
     font-size: .875rem;
-    color: var(--dropdown-header-color);
     white-space: nowrap;
 }
 
@@ -4032,12 +4017,13 @@ fieldset:disabled .btn {
     text-align: center;
 }
 
-.nav-side {
+.nav-mobile {
     position: fixed;
     top: 0;
     width: 256px;
     height: 100%;
     flex-direction: column;
+    background-color: var(--nav-mobile-bg);
     overflow-x: hidden;
     overflow-y: auto;
     z-index: 1040;
@@ -4045,29 +4031,29 @@ fieldset:disabled .btn {
     transition: transform 300ms ease;
 }
 
-.nav-side .nav-link {
+.nav-mobile .nav-link {
     position: relative;
     display: block;
     padding: .75rem 1.5rem;
 }
 
-.nav-side .nav-link:hover {
-    background-color: var(--nav-side-nav-item-hover-bg);
+.nav-mobile .nav-link:hover {
+    background-color: var(--nav-mobile-nav-item-hover-bg);
 }
 
-.nav-side .nav-dropdown {
+.nav-mobile .nav-dropdown {
     display: flex;
 }
 
-.nav-side .nav-dropdown::after {
+.nav-mobile .nav-dropdown::after {
     flex-shrink: 0;
     width: 1.25rem;
     height: 1.25rem;
-    background-color: var(--nav-side-dropdown-icon-color);
+    background-color: var(--nav-mobile-dropdown-icon-color);
     margin-left: auto;
     content: "";
-    -webkit-mask-image: var(--nav-side-dropdown-icon);
-            mask-image: var(--nav-side-dropdown-icon);
+    -webkit-mask-image: var(--nav-mobile-dropdown-icon);
+            mask-image: var(--nav-mobile-dropdown-icon);
     -webkit-mask-repeat: no-repeat;
             mask-repeat: no-repeat;
     -webkit-mask-size: 28px;
@@ -4077,7 +4063,7 @@ fieldset:disabled .btn {
     transition: transform 200ms ease-in-out;
 }
 
-.nav-side.is-visible {
+.nav-mobile.is-visible {
     transform: translate3d(0, 0, 0);
 }
 
@@ -4091,15 +4077,15 @@ fieldset:disabled .btn {
     }
 }
 
-.nav-side-overlay {
+.nav-mobile-overlay {
     position: absolute;
-    background-color: var(--nav-side-overlay-bg);
+    background-color: var(--nav-mobile-overlay-bg);
     opacity: 0;
     z-index: 1039;
     transition: opacity 300ms;
 }
 
-.nav-side-overlay.is-visible {
+.nav-mobile-overlay.is-visible {
     top: 0;
     right: 0;
     bottom: 0;
@@ -4121,6 +4107,7 @@ fieldset:disabled .btn {
 }
 
 .nav-link:hover, .nav-link:focus {
+    color: var(--nav-item-hover-color);
     text-decoration: none;
 }
 
@@ -4149,6 +4136,7 @@ fieldset:disabled .btn {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    background-color: var(--navbar-bg);
     padding-top: .5rem;
     padding-bottom: .5rem;
     transition: background-color 300ms, padding-top 300ms, padding-bottom 300ms, box-shadow 300ms;
@@ -4303,6 +4291,18 @@ fieldset:disabled .btn {
     border-bottom-right-radius: .25rem;
 }
 
+.card-solid {
+    background-color: var(--card-solid-bg);
+}
+
+.card-solid .card-header {
+    background-color: var(--card-solid-header-bg);
+}
+
+.card-solid .card-footer {
+    background-color: var(--card-solid-footer-bg);
+}
+
 .card-highlight {
     border: 2px solid var(--card-highlight-color);
 }
@@ -4328,11 +4328,6 @@ fieldset:disabled .btn {
     border-radius: .25rem;
 }
 
-.breadcrumb-bg {
-    background-color: var(--breadcrumb-bg);
-    transition: background 300ms;
-}
-
 .breadcrumb-item {
     display: flex;
     font-weight: 500;
@@ -4353,11 +4348,6 @@ fieldset:disabled .btn {
 
 .breadcrumb-item.active {
     color: var(--breadcrumb-icon-color);
-}
-
-.breadcrumb-alt .breadcrumb-item + .breadcrumb-item::before {
-    -webkit-mask-image: var(--breadcrumb-icon-alt);
-            mask-image: var(--breadcrumb-icon-alt);
 }
 
 .pagination {
@@ -4981,22 +4971,6 @@ fieldset:disabled .btn {
     background-color: var(--bg-4) !important;
 }
 
-.bg-5 {
-    background-color: var(--bg-5) !important;
-}
-
-.bg-6 {
-    background-color: var(--bg-6) !important;
-}
-
-.bg-7 {
-    background-color: var(--bg-7) !important;
-}
-
-.bg-8 {
-    background-color: var(--bg-8) !important;
-}
-
 .bg-transparent {
     background-color: transparent !important;
 }
@@ -5011,10 +4985,6 @@ fieldset:disabled .btn {
 
 .fill-3 {
     fill: var(--fill-3) !important;
-}
-
-.fill-4 {
-    fill: var(--fill-4) !important;
 }
 
 .fill-none {
