@@ -5,7 +5,7 @@
     background: transparent;
     background-clip: padding-box;
     color: var(--form-control-color);
-    padding: .375rem .75rem;
+    padding: .75rem;
     border: 1px solid var(--form-control-border-color);
     border-radius: .25rem;
     appearance: none;
@@ -36,12 +36,11 @@
         height: 3rem;
         background-color: var(--form-control-file-button-bg);
         color: var(--form-control-file-button-color);
-        padding: .375rem .75rem;
         border-style: solid;
         border-color: inherit;
         border-width: 0;
         border-radius: 0;
-        margin: (-.375rem) (-.75rem);
+        margin: (-.75rem);
         margin-inline-end: .75rem;
         pointer-events: none;
         transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
@@ -53,12 +52,11 @@
         height: 3rem;
         background-color: var(--form-control-file-button-bg);
         color: var(--form-control-file-button-color);
-        padding: .375rem .75rem;
         border-style: solid;
         border-color: inherit;
         border-width: 0;
         border-radius: 0;
-        margin: (-.375rem) (-.75rem);
+        margin: (-.75rem);
         margin-inline-end: .75rem;
         pointer-events: none;
         transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
@@ -129,6 +127,9 @@ textarea.form-control {
     &:focus {
         outline: 0;
         border-color: var(--form-control-focus-border-color);
+    }
+    & > option {
+        background-color: var(--form-control-solid-bg);
     }
     &[multiple],
     &[size]:not([size="1"]) {
