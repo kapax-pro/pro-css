@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@400;500;700&display=swap");
 html {
-    --bg-1: rgb(242, 244, 248);
-    --bg-2: rgb(238, 240, 244);
-    --bg-3: rgb(234, 236, 240);
-    --bg-4: rgb(228, 230, 234);
+    --bg-1: rgb(234, 234, 234);
+    --bg-2: rgb(236, 236, 236);
+    --bg-3: rgb(240, 240, 240);
+    --bg-4: rgb(244, 244, 244);
+    --bg-5: rgb(248, 248, 248);
     --heading-font: 'Roboto', sans-serif;
     --heading-color: rgb(80, 80, 80);
     --text-font: 'Roboto', sans-serif;
@@ -15,23 +16,23 @@ html {
     --link-hover-color: rgb(30, 30, 30);
     --code-font: 'Roboto Mono', monospace;
     --code-color: rgb(72, 72, 72);
-    --code-bg: var(--bg-3);
+    --code-bg: var(--bg-4);
     --pre-color: rgb(72, 72, 72);
-    --pre-bg: var(--bg-3);
-    --mark-bg: var(--bg-3);
+    --pre-bg: var(--bg-4);
+    --mark-bg: var(--bg-4);
     --blockquote-color: var(--heading-color);
     --blockquote-border-color: var(--heading-color);
     --blockquote-footer-color: var(--text-color);
-    --border-color: rgb(224, 226, 230);
-    --hr-color: rgb(224, 226, 230);
+    --border-color: rgb(220, 220, 220);
+    --hr-color: rgb(220, 220, 220);
     --fill-1: var(--heading-color);
     --fill-2: var(--text-color);
     --fill-3: var(--text-muted-color);
-    --accordion-button-bg: rgb(232, 234, 238);
-    --accordion-button-hover-bg: rgb(228, 230, 234);
+    --accordion-button-bg: rgb(235, 235, 235);
+    --accordion-button-hover-bg: rgb(231, 231, 231);
     --accordion-button-color: var(--text-color);
     --accordion-button-icon-color: var(--text-color);
-    --accordion-body-bg: rgb(236, 238, 242);
+    --accordion-body-bg: rgb(242, 242, 242);
     --alert-primary-bg: rgb(60, 60, 60);
     --alert-primary-color: rgb(210, 210, 210);
     --alert-primary-heading-color: rgb(210, 210, 210);
@@ -50,12 +51,12 @@ html {
     --alert-error-link-color: rgb(120, 56, 62);
     --alert-error-close-bg: rgb(120, 56, 62);
     --alert-error-close-hover-bg: rgb(109, 51, 57);
-    --badge-bg: rgb(214, 216, 220);
+    --badge-bg: rgb(230, 230, 230);
     --badge-color: var(--heading-color);
     --breadcrumb-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M7 21L14.9 3H17L9.1 21H7Z' /></svg>");
     --breadcrumb-icon-color: rgb(128, 128, 128);
     --btn-color: rgb(100, 100, 100);
-    --btn-hover-bg: rgb(228, 230, 234);
+    --btn-hover-bg: rgb(234, 234, 234);
     --btn-hover-color: rgb(100, 100, 100);
     --btn-primary-bg: rgb(70, 70, 70);
     --btn-primary-hover-bg: rgb(60, 60, 60);
@@ -69,12 +70,12 @@ html {
     --btn-primary-dark-bg-hover-bg: rgb(250, 250, 250);
     --btn-primary-dark-bg-color: rgb(50, 50, 50);
     --btn-primary-dark-bg-hover-color: rgb(50, 50, 50);
-    --btn-secondary-bg: rgb(228, 230, 234);
-    --btn-secondary-hover-bg: rgb(222, 224, 228);
+    --btn-secondary-bg: rgb(234, 234, 234);
+    --btn-secondary-hover-bg: rgb(228, 228, 228);
     --btn-secondary-color: rgb(100, 100, 100);
     --btn-secondary-hover-color: rgb(100, 100, 100);
-    --btn-secondary-light-bg-bg: rgb(228, 230, 234);
-    --btn-secondary-light-bg-hover-bg: rgb(222, 224, 228);
+    --btn-secondary-light-bg-bg: rgb(234, 234, 234);
+    --btn-secondary-light-bg-hover-bg: rgb(228, 228, 228);
     --btn-secondary-light-bg-color: rgb(100, 100, 100);
     --btn-secondary-light-bg-hover-color: rgb(100, 100, 100);
     --btn-secondary-dark-bg-bg: rgb(50, 50, 50);
@@ -94,63 +95,60 @@ html {
     --btn-close-bg: rgb(128, 128, 128);
     --btn-close-hover-bg: rgb(50, 50, 50);
     --btn-close-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z' /></svg>");
-    --card-solid-bg: var(--bg-3);
-    --card-solid-header-bg: var(--bg-4);
-    --card-solid-footer-bg: var(--bg-4);
-    --card-highlight-color: rgb(44, 44, 44);
-    --card-highlight-title-color: rgb(180, 180, 180);
-    --dropdown-menu-bg: var(--bg-1);
+    --card-solid-bg: var(--bg-4);
+    --card-solid-header-bg: var(--bg-5);
+    --card-solid-footer-bg: var(--bg-5);
+    --card-highlight-color: rgb(60, 60, 60);
+    --card-highlight-title-color: rgb(210, 210, 210);
+    --dropdown-menu-bg: var(--bg-4);
     --dropdown-item-hover-bg: var(--bg-3);
     --form-control-color: var(--text-color);
     --form-control-placeholder-color: rgb(180, 180, 180);
-    --form-control-disabled-placeholder-color: rgb(200, 200, 200);
-    --form-control-border-color: rgb(214, 216, 220);
-    --form-control-focus-border-color: rgb(174, 176, 180);
-    --form-control-disabled-border-color: rgb(234, 236, 240);
-    --form-control-file-button-bg: rgb(224, 226, 230);
-    --form-control-hover-file-button-bg: rgb(214, 216, 220);
+    --form-control-border-color: rgb(220, 220, 220);
+    --form-control-focus-border-color: rgb(180, 180, 180);
+    --form-control-file-button-bg: rgb(230, 230, 230);
+    --form-control-hover-file-button-bg: rgb(220, 220, 220);
     --form-control-file-button-color: var(--text-color);
-    --form-control-solid-bg: var(--bg-4);
-    --form-control-solid-focus-bg: rgb(224, 226, 230);
-    --form-control-solid-disabled-bg: rgb(230, 232, 236);
+    --form-control-solid-bg: var(--bg-5);
+    --form-control-solid-focus-bg: rgb(250, 250, 250);
     --form-select-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path fill='rgb(128, 128, 128)' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>");
     --form-check-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1'  viewBox='0 0 24 24'><path fill='rgb(128, 128, 128)' d='M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z' /></svg>");
     --form-radio-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='rgb(128, 128, 128)'/></svg>");
     --form-radio-solid-bg: rgb(230, 230, 230);
     --form-switch-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgb(180, 180, 180)'/></svg>");
     --form-switch-checked-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='rgb(128, 128, 128)'/></svg>");
-    --form-input-group-bg: rgb(224, 226, 230);
+    --form-input-group-bg: rgb(230, 230, 230);
     --form-invalid-bg: rgb(181, 97, 105);
     --form-invalid-color: rgb(206, 171, 174);
-    --modal-content-bg: var(--bg-3);
-    --modal-backdrop-bg: var(--bg-1);
-    --modal-header-bg: var(--bg-4);
+    --modal-content-bg: var(--bg-4);
+    --modal-header-bg: var(--bg-5);
+    --modal-backdrop-bg: var(--bg-2);
     --nav-item-color: var(--text-color);
     --nav-item-hover-color: var(--heading-color);
     --nav-item-active-border-color: var(--heading-color);
     --nav-item-disabled-color: var(--text-muted-color);
     --nav-item-active-color: var(--heading-color);
-    --nav-mobile-bg: var(--bg-2);
-    --nav-mobile-overlay-bg: var(--bg-1);
+    --nav-mobile-bg: var(--bg-4);
+    --nav-mobile-overlay-bg: rgb(20, 20, 20);
     --nav-mobile-nav-item-hover-bg: var(--bg-3);
     --nav-mobile-dropdown-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' /></svg>");
     --nav-mobile-dropdown-icon-color: rgb(128, 128, 128);
-    --navbar-bg: var(--bg-2);
-    --pagination-item-bg: rgb(194, 196, 200);
-    --pagination-item-hover-bg: rgb(174, 176, 180);
-    --pagination-item-active-bg: rgb(174, 176, 180);
+    --navbar-bg: var(--bg-4);
+    --pagination-item-bg: rgb(200, 200, 200);
+    --pagination-item-hover-bg: rgb(180, 180, 180);
+    --pagination-item-active-bg: rgb(180, 180, 180);
     --pagination-item-color: var(--text-color);
     --pagination-item-hover-color: var(--heading-color);
-    --progress-bg: var(--bg-4);
+    --progress-bg: var(--bg-5);
     --progress-bar-bg: rgb(60, 60, 60);
     --progress-bar-color: var(--text-muted-color);
     --table-color: var(--text-color);
     --table-border-color: var(--border-color);
     --table-head-th-color: var(--heading-color);
     --table-bg: transparent;
-    --table-hover-bg: var(--bg-3);
-    --toast-bg: var(--bg-3);
-    --toast-header-bg: var(--bg-4);
+    --table-hover-bg: var(--bg-1);
+    --toast-bg: var(--bg-4);
+    --toast-header-bg: var(--bg-5);
     --toast-header-color: var(--heading-color);
     --tooltip-arrow-color: rgb(60, 60, 60);
     --tooltip-bg: rgb(60, 60, 60);
@@ -159,45 +157,50 @@ html {
 }
 
 html.dark {
-    --bg-1: rgb(30, 30, 30);
-    --bg-2: rgb(31, 31, 31);
-    --bg-3: rgb(33, 33, 33);
-    --bg-4: rgb(35, 35, 35);
+    --bg-1: rgb(28, 28, 28);
+    --bg-2: rgb(29, 29, 29);
+    --bg-3: rgb(30, 30, 30);
+    --bg-4: rgb(33, 33, 33);
+    --bg-5: rgb(35, 35, 35);
     --heading-color: rgb(180, 180, 180);
     --text-muted-color: rgb(80, 80, 80);
     --link-color: rgb(180, 180, 180);
     --link-hover-color: rgb(248, 248, 248);
     --code-color: rgb(180, 180, 180);
     --pre-color: rgb(180, 180, 180);
-    --border-color: rgb(38, 38, 38);
-    --hr-color: rgb(38, 38, 38);
-    --accordion-button-bg: rgb(38, 38, 38);
-    --accordion-button-hover-bg: rgb(40, 40, 40);
-    --accordion-body-bg: rgb(34, 34, 34);
-    --badge-bg: rgb(50, 50, 50);
+    --border-color: rgb(36, 36, 36);
+    --hr-color: rgb(36, 36, 36);
+    --accordion-button-bg: rgb(32, 32, 32);
+    --accordion-button-hover-bg: rgb(33, 33, 33);
+    --accordion-body-bg: rgb(31, 31, 31);
+    --alert-primary-bg: rgb(220, 220, 220);
+    --alert-primary-color: rgb(80, 80, 80);
+    --alert-primary-heading-color: rgb(80, 80, 80);
+    --alert-primary-link-color: rgb(80, 80, 80);
+    --alert-primary-close-bg: rgb(80, 80, 80);
+    --alert-primary-close-hover-bg: rgb(60, 60, 60);
+    --badge-bg: rgb(38, 38, 38);
     --btn-color: rgb(150, 150, 150);
-    --btn-hover-bg: rgb(34, 34, 34);
+    --btn-hover-bg: rgb(35, 35, 35);
     --btn-hover-color: rgb(150, 150, 150);
     --btn-primary-bg: rgb(200, 200, 200);
     --btn-primary-hover-bg: rgb(220, 220, 220);
     --btn-primary-color: rgb(80, 80, 80);
     --btn-primary-hover-color: rgb(80, 80, 80);
-    --btn-secondary-bg: rgb(34, 34, 34);
-    --btn-secondary-hover-bg: rgb(35, 35, 35);
+    --btn-secondary-bg: rgb(35, 35, 35);
+    --btn-secondary-hover-bg: rgb(36, 36, 36);
     --btn-secondary-color: rgb(150, 150, 150);
     --btn-secondary-hover-color: rgb(150, 150, 150);
     --btn-theme-toggle-hover-icon-bg: rgb(200, 200, 200);
     --btn-theme-toggle-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'><path d='M3.55,18.54L4.96,19.95L6.76,18.16L5.34,16.74M11,22.45C11.32,22.45 13,22.45 13,22.45V19.5H11M12,5.5A6,6 0 0,0 6,11.5A6,6 0 0,0 12,17.5A6,6 0 0,0 18,11.5C18,8.18 15.31,5.5 12,5.5M20,12.5H23V10.5H20M17.24,18.16L19.04,19.95L20.45,18.54L18.66,16.74M20.45,4.46L19.04,3.05L17.24,4.84L18.66,6.26M13,0.55H11V3.5H13M4,10.5H1V12.5H4M6.76,4.84L4.96,3.05L3.55,4.46L5.34,6.26L6.76,4.84Z' /></svg>");
     --btn-menu-toggle-hover-icon-bg: rgb(200, 200, 200);
     --btn-close-hover-bg: rgb(200, 200, 200);
-    --card-highlight-color: rgb(200, 200, 200);
+    --card-highlight-color: rgb(220, 220, 220);
     --card-highlight-title-color: rgb(80, 80, 80);
     --form-control-color: var(--text-color);
     --form-control-placeholder-color: rgb(60, 60, 60);
-    --form-control-disabled-placeholder-color: rgb(40, 40, 40);
     --form-control-border-color: rgb(40, 40, 40);
     --form-control-focus-border-color: rgb(60, 60, 60);
-    --form-control-disabled-border-color: rgb(35, 35, 35);
     --form-control-file-button-bg: rgb(40, 40, 40);
     --form-control-hover-file-button-bg: rgb(45, 45, 45);
     --form-control-solid-focus-bg: rgb(37, 37, 37);
@@ -704,7 +707,7 @@ html {
 
 body {
     position: relative;
-    background-color: var(--bg-1);
+    background-color: var(--bg-3);
     font-family: var(--text-font);
     font-size: 1rem;
     font-weight: 400;
@@ -2893,20 +2896,7 @@ iframe {
 }
 
 .form-control:disabled, .form-control[readonly] {
-    opacity: 1;
-    border-color: var(--form-control-disabled-border-color);
-}
-
-.form-control:disabled::-moz-placeholder, .form-control[readonly]::-moz-placeholder {
-    color: var(--form-control-disabled-placeholder-color);
-}
-
-.form-control:disabled:-ms-input-placeholder, .form-control[readonly]:-ms-input-placeholder {
-    color: var(--form-control-disabled-placeholder-color);
-}
-
-.form-control:disabled::placeholder, .form-control[readonly]::placeholder {
-    color: var(--form-control-disabled-placeholder-color);
+    opacity: .5;
 }
 
 .form-control[type="file"] {
@@ -2966,7 +2956,7 @@ iframe {
 }
 
 .form-control-solid:disabled, .form-control-solid[readonly] {
-    background-color: var(--form-control-solid-disabled-bg);
+    opacity: .5;
 }
 
 .form-control-color {
@@ -3037,20 +3027,7 @@ textarea.form-control {
 }
 
 .form-select:disabled {
-    opacity: 1;
-    border-color: var(--form-control-disabled-border-color);
-}
-
-.form-select:disabled::-moz-placeholder {
-    color: var(--form-control-disabled-border-color);
-}
-
-.form-select:disabled:-ms-input-placeholder {
-    color: var(--form-control-disabled-border-color);
-}
-
-.form-select:disabled::placeholder {
-    color: var(--form-control-disabled-border-color);
+    opacity: .5;
 }
 
 .form-select-solid {
@@ -3063,7 +3040,7 @@ textarea.form-control {
 }
 
 .form-select-solid:disabled, .form-select-solid[readonly] {
-    background-color: var(--form-control-solid-disabled-bg);
+    opacity: .5;
 }
 
 .form-check,
@@ -3173,7 +3150,7 @@ textarea.form-control {
     background-position: right center;
 }
 
-.form-switch-input[disabled] ~ .form__switch-label, .form-switch-input:disabled ~ .form__switch-label {
+.form-switch-input[disabled] ~ .form-switch-label, .form-switch-input:disabled ~ .form-switch-label {
     opacity: .5;
 }
 
@@ -3452,6 +3429,11 @@ textarea.form-control {
 fieldset:disabled .btn {
     pointer-events: none;
     opacity: .5;
+}
+
+.btn-sm {
+    font-size: .875rem;
+    padding: .5rem .75rem;
 }
 
 .btn-block {
@@ -4057,7 +4039,7 @@ fieldset:disabled .btn {
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: .85;
+    opacity: .5;
 }
 
 .nav-link {
@@ -4936,6 +4918,10 @@ fieldset:disabled .btn {
 
 .bg-4 {
     background-color: var(--bg-4) !important;
+}
+
+.bg-5 {
+    background-color: var(--bg-5) !important;
 }
 
 .bg-transparent {
